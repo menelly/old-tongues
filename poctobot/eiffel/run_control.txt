@@ -1,0 +1,20 @@
+about to feed -10 g flour (this MUST raise a precondition violation)...
+
+sourdough: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+SOURDOUGH_STARTER   feed                   real_flour:                  
+<0000000000000000>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+SOURDOUGH_STARTER   feed                                                
+<0000000000000000>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+SOURDOUGH_CONTROL   make                                                
+<0000000000000000>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+SOURDOUGH_CONTROL   root's creation                                     
+<0000000000000000>                         Routine failure.              Exit
+-------------------------------------------------------------------------------

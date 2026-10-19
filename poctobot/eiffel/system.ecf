@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system
+	xmlns="http://www.eiffel.com/developers/xml/configuration-1-23-0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-23-0 http://www.eiffel.com/developers/xml/configuration-1-23-0.xsd"
+	name="sourdough"
+	uuid="5D0B5D0B-2026-1019-0000-000000000001"
+	library_target="all_classes"
+>
+	<description>
+		system: "🍞 Design-by-contract sourdough starter (old-tongues dare, poctobot)"
+		license: "MIT License"
+	</description>
+	<target name="all_classes">
+		<root all_classes="true"/>
+		<option>
+			<assertions precondition="true" postcondition="true" check="true" invariant="true"/>
+		</option>
+		<variable name="GOBO_LIBRARY" value="/home/Ace/gobo"/>
+		<library name="free_elks" location="${GOBO_LIBRARY}/library/free_elks/library_${GOBO_EIFFEL}.ecf" readonly="true"/>
+		<cluster name="sourdough" location="./"/>
+	</target>
+	<target name="sourdough" extends="all_classes">
+		<root class="SOURDOUGH_APP" feature="make"/>
+		<setting name="console_application" value="true"/>
+		<capability>
+			<concurrency use="none"/>
+		</capability>
+	</target>
+	<target name="control" extends="all_classes">
+		<root class="SOURDOUGH_CONTROL" feature="make"/>
+		<setting name="console_application" value="true"/>
+		<capability>
+			<concurrency use="none"/>
+		</capability>
+	</target>
+</system>

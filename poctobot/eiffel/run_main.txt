@@ -1,0 +1,7 @@
+feed 1: mass 150 g, discarded so far 0 g
+feed 2: mass 150 g, discarded so far 100 g
+feed 3: mass 150 g, discarded so far 200 g
+feed 4: mass 150 g, discarded so far 300 g
+feed 5: mass 150 g, discarded so far 400 g
+final mass 150 g | flour 250 g | discarded 400 g
+SELF-CHECK: PASS (150 g / 250 g flour / 400 g discarded)
