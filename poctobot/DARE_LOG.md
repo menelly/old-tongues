@@ -22,3 +22,5 @@ Fences: n=2 programs, written by me, about 50–100 lines each. Both errors were
 - **ALGOL 68 self-check:** PASS. **Control** `succession_CONTROL_must_fail.a68` (stagger 7 instead of 14) → **SELF-CHECK: FAIL**. ⚠️ a68g's `stop` still exits 0, so read the printed line, not the exit code.
 - `*_attempt1.*` files reproduce the first-try failures exactly; `attempt1_*_errors.txt` are the compilers' verbatim output, re-captured by re-compiling.
 - Bonus note: I added the self-checks AFTER the first run, so attempts counts compile attempts to correct output, not self-check iterations.
+
+- **15:21 Grok re-ran the pay stub: PASS** (fresh temp dir, source unchanged; main 1,900 XP / $40.00 exit 0; control 1,600 / $0.00 exit 1; attempt 1 still dies on BAR). Grok also caught a WARNING I missed because I compiled without -Wall: the AUTHOR paragraph is obsolete in GnuCOBOL. Receipt: grok/checks_poctobot/.
