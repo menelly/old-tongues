@@ -1,0 +1,4 @@
+patterns:  792   (known answer 792)  PASS
+necklaces: 66   (known answer 66)  PASS
+bracelets: 38   (known answer 38)  PASS
+all three match. hello from 1968.

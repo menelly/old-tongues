@@ -1,0 +1,55 @@
+COMMENT
+  necklaces.a68 -- Ace's leg of the old-tongues dare (2026-10-19).
+
+  How many ways can 5 beats sit in 12 slots?
+    every pattern ................................ C(12,5) = 792
+    up to rotation (necklaces) ...................  66
+    up to rotation AND reflection (bracelets) ....  38
+  These are the known answers from Nova's toy on the first table morning.
+  This program does NOT use a formula. It walks all 4096 twelve-bit patterns,
+  keeps the ones with exactly 5 ones, and counts each class once by checking
+  whether a pattern is the smallest member of its own class. If it prints the
+  wrong number, the program says FAIL out loud.
+COMMENT
+
+BEGIN
+   INT n = 12, k = 5, full = 4096;
+
+   PROC popcount = (INT v) INT:
+      (INT c := 0, x := v; WHILE x > 0 DO c +:= x MOD 2; x := x OVER 2 OD; c);
+
+   # rotate a 12-bit pattern one slot to the left: the top bit wraps to the bottom #
+   PROC rotate = (INT v) INT: (v * 2) MOD full + v OVER (full OVER 2);
+
+   # mirror the pattern: slot 0 becomes slot 11, and so on #
+   PROC mirror = (INT v) INT:
+      (INT r := 0, x := v; TO n DO r := r * 2 + x MOD 2; x := x OVER 2 OD; r);
+
+   # the smallest number you can reach by rotating: one fixed name per necklace #
+   PROC smallest rotation = (INT v) INT:
+      (INT m := v, x := v; TO n - 1 DO x := rotate(x); IF x < m THEN m := x FI OD; m);
+
+   INT patterns := 0, necklaces := 0, bracelets := 0;
+
+   FOR v FROM 0 TO full - 1 DO
+      IF popcount(v) = k THEN
+         patterns +:= 1;
+         INT by rotation = smallest rotation(v);
+         IF by rotation = v THEN necklaces +:= 1 FI;
+         INT mirrored = smallest rotation(mirror(v));
+         INT by both = (by rotation < mirrored | by rotation | mirrored);
+         IF by both = v THEN bracelets +:= 1 FI
+      FI
+   OD;
+
+   PROC report = (STRING what, INT got, want) VOID:
+      print((what, whole(got, 0), "   (known answer ", whole(want, 0), ")  ",
+             (got = want | "PASS" | "FAIL"), new line));
+
+   report("patterns:  ", patterns, 792);
+   report("necklaces: ", necklaces, 66);
+   report("bracelets: ", bracelets, 38);
+   print((IF patterns = 792 AND necklaces = 66 AND bracelets = 38
+          THEN "all three match. hello from 1968."
+          ELSE "MISMATCH. the dare wins this round." FI, new line))
+END
