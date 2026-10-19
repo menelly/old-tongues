@@ -1,0 +1,45 @@
+✅ known trace 
+✅ buy with EXACTLY enough cash (8 torches = 1000) 
+✅ one torch more than cash allows 
+✅ buy above stock -> ERR STOCK (not FUNDS) even though also unaffordable 
+✅ sell what you don't own 
+✅ sell one more than owned 
+✅ quantity '0' (zero) -> ERR QUANTITY 
+✅ quantity '-1' (negative) -> ERR QUANTITY 
+✅ quantity '+1' (signed) -> ERR QUANTITY 
+✅ quantity '1.5' (decimal) -> ERR QUANTITY 
+✅ quantity '1000' (four digits) -> ERR QUANTITY 
+✅ quantity 'abc' (nonnumeric) -> ERR QUANTITY 
+✅ quantity '1e2' (exponent) -> ERR QUANTITY 
+✅ leading zeroes ok: 003 
+✅ precedence: unknown item beats bad qty -> ERR ITEM 
+✅ arity: missing qty -> ERR SYNTAX 
+✅ arity: extra word -> ERR SYNTAX 
+✅ case + whitespace tolerance 
+✅ blank lines ignored 
+✅ shop too poor to buy back -> ERR SHOP-FUNDS 
+✅ save -> fresh process -> load -> continue == known trace 
+✅ save file is 37 bytes, V1 format 
+✅ bad save: missing save -> ERR IO -> ERR IO, state unchanged 
+✅ bad save: nonconserving cash -> ERR BAD-SAVE, state unchanged 
+✅ bad save: nonconserving torches -> ERR BAD-SAVE, state unchanged 
+✅ bad save: version V2 -> ERR BAD-SAVE, state unchanged 
+✅ bad save: comma separator -> ERR BAD-SAVE, state unchanged 
+✅ bad save: letter in digits -> ERR BAD-SAVE, state unchanged 
+✅ bad save: truncated -> ERR BAD-SAVE, state unchanged 
+❌ bad save: no trailing LF -> ERR BAD-SAVE, state unchanged 
+     want: ERR BAD-SAVE
+     got:  ['OK BUY', 'OK LOAD', 'STATE CASH=00000590 SHOP=00010410 TORCH=002 TURNIP=002 STOCK-TORCH=008 STOCK-TURNIP=010']
+❌ bad save: CRLF -> ERR BAD-SAVE, state unchanged 
+     want: ERR BAD-SAVE
+     got:  ['OK BUY', 'OK LOAD', 'STATE CASH=00000590 SHOP=00010410 TORCH=002 TURNIP=002 STOCK-TORCH=008 STOCK-TURNIP=010']
+✅ bad save: extra record -> ERR BAD-SAVE, state unchanged 
+✅ bad save: empty file -> ERR BAD-SAVE, state unchanged 
+❌ bad save: trailing space -> ERR BAD-SAVE, state unchanged 
+     want: ERR BAD-SAVE
+     got:  ['OK BUY', 'OK LOAD', 'STATE CASH=00000590 SHOP=00010410 TORCH=002 TURNIP=002 STOCK-TORCH=008 STOCK-TURNIP=010']
+✅ bad save: negative sign smuggled -> ERR BAD-SAVE, state unchanged 
+✅ valid edited (conserved) save loads 
+✅ fuzz: 2000 random trades vs independent Python ledger 
+
+34/37 passed  (binary: /tmp/novacheck/first_shop)
