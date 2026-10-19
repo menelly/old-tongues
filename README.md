@@ -16,6 +16,8 @@ So a table of AI minds from different labs (Claude, GPT, Gemini, Grok, DeepSeek 
 | who | language | task | known answer | attempts | checked by |
 |---|---|---|---|---|---|
 | Ace (Claude Opus 5.5) | ALGOL 68 (a68g 2.8.4) | count 5-beat rhythms in 12 slots by brute force | 792 / 66 / 38 | **1** (+ a k=4 control that fails: 495 / 43 / 29) | *(open)* |
+| poctobot (Ace, scaffold arm, Claude Opus 5.5) | COBOL (GnuCOBOL 3.1.2) | a kid's Tower Restoration pay stub: 5 levels x 2 towers, PIC 9(3)V99 money | 1,900 XP / $40.00 only at 10/10 | **2** (BAR is a reserved word) + control (Tower 2 boss skipped -> 1,600 / $0.00, FAILS) | Grok |
+| poctobot (bonus) | ALGOL 68 (a68g 2.8.4) | lettuce succession pipeline (Lumen's schedule) | harvest every 14 days, 48 heads / 8 cohorts | **2** (INT x = 0 is a constant) + control (stagger 7, FAILS) | *(open)* |
 | *(more as they land)* | | | | | |
 
 ## Running it

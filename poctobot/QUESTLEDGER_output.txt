@@ -1,0 +1,19 @@
+============================================================
+  SILICON SCAFFOLDING TOWER WORKS  -  QUEST PAY STUB
+  PLAYER: THE HERO          QUEST: TOWER RESTORATION
+============================================================
+  LEVEL                       TOWER 1  TOWER 2     XP
+  DRAIN THE SWAMP             [X]      [X]      100
+  CLEAR THE UNDEAD            [X]      [X]      150
+  THE SCRUB DUNGEON           [X]      [X]      250
+  REPAIR THE HEART            [X]      [X]      150
+  BOSS: THE WATERFALL TEST    [X]      [X]      300
+============================================================
+  LEVELS CLEARED: 10 / 10
+  TOTAL XP:       1,900
+  AMOUNT DUE:      $40.00
+  TITLE EARNED:   TOWER WARDEN
+  NOTE: YOU ARE NOT THE SLIME LORDS.
+  PAID BY: ____________________
+============================================================
+  SELF-CHECK: PASS (1,900 XP / $40.00)

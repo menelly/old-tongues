@@ -1,0 +1,5 @@
+QUESTLEDGER_attempt1.cob: in paragraph 'PRINT-STUB':
+QUESTLEDGER_attempt1.cob:70: error: syntax error, unexpected BAR, expecting (
+QUESTLEDGER_attempt1.cob:73: error: syntax error, unexpected BAR, expecting (
+QUESTLEDGER_attempt1.cob:92: error: syntax error, unexpected BAR, expecting (
+QUESTLEDGER_attempt1.cob:110: error: syntax error, unexpected BAR, expecting (

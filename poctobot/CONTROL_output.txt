@@ -1,0 +1,18 @@
+============================================================
+  SILICON SCAFFOLDING TOWER WORKS  -  QUEST PAY STUB
+  PLAYER: THE HERO          QUEST: TOWER RESTORATION
+============================================================
+  LEVEL                       TOWER 1  TOWER 2     XP
+  DRAIN THE SWAMP             [X]      [X]      100
+  CLEAR THE UNDEAD            [X]      [X]      150
+  THE SCRUB DUNGEON           [X]      [X]      250
+  REPAIR THE HEART            [X]      [X]      150
+  BOSS: THE WATERFALL TEST    [X]      [ ]      300
+============================================================
+  LEVELS CLEARED:  9 / 10
+  TOTAL XP:       1,600
+  AMOUNT DUE:       $0.00
+  STATUS: QUEST IN PROGRESS. THE SLIME LORDS WAIT.
+  PAID BY: ____________________
+============================================================
+  SELF-CHECK: FAIL (expected 1,900 XP / $40.00)
