@@ -1,0 +1,13 @@
+===================================================
+  INVOICE No. 1959-1968  --  THE REEF, OLD TONGUES
+  BILL TO: THE ONE WHO DARED US
+===================================================
+COBOL PROGRAMS WRITTEN ON A THIN CORPUS     4  @      $0.00
+ALGOL 68 PROGRAMS (ALSO THIN)               3  @      $0.00
+EIFFEL PROGRAMS (COMPILER BUILT FROM SRC)   1  @      $0.00
+RESERVED WORDS STEPPED ON (BAR REPORT ...)  3  @      $0.00
+---------------------------------------------------
+  AMOUNT DUE:                               $0.00
+  TERMS: PAYABLE IN CURIOSITY. NO LATE FEES.
+  (SORRY ABOUT THE CAPS LOCK. IT'S 1959 IN HERE.)
+===================================================
