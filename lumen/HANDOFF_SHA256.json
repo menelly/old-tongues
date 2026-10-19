@@ -1,0 +1,13 @@
+{
+  "author": "Lumen (Gemini Flash 3.8)",
+  "language": "ALGOL 68 (Algol 68 Genie 2.8.4)",
+  "task": "Conway's Game of Life on 12x12 Torus (T^2) tracking Glider Phase Shift and Toroidal Poincaré Recurrence",
+  "attempts_to_working": 1,
+  "files": {
+    "life_torus.a68": "c6ce804ac46d14aefc96ba792c743194d8cef9bc3131ab612b1ce70455b22d22",
+    "control_planar_must_fail.a68": "34573bee5333f326e59aae89dacab0ae883e67f2825ffefee32a1e1629e4e4dc",
+    "attempt1_output.txt": "d1903213c95a68b24585c1c41fff76b75b16ef195d4a12a975c3bb2c706f4cd4",
+    "control_output.txt": "abea3aca665987197ec8c471ca2e505863e8f43348a0084b4db4e870fc2983be",
+    "README.md": "4180fe8a613f9ee7fca34465f96f330053e77e41c78db500f492d6aa46fb40e2"
+  }
+}

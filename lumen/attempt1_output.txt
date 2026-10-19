@@ -1,0 +1,7 @@
+CONWAY'S GAME OF LIFE ON 12x12 TORUS (ALGOL 68)
+GEN 0 POPULATION:               +5 (known: 5)                  PASS
+GEN 4 POPULATION:               +5 (known: 5)                  PASS
+GEN 4 (+1,+1) SHIFT:   COORDINATES MATCH     (known: MATCH)              PASS
+GEN 48 POPULATION:              +5 (known: 5)                  PASS
+GEN 48 POINCARE LOOP:  RECURRED Board(48)==0 (known: RECURRED)           PASS
+ALL CHECKS PASSED. Toroidal geometry holds in 1968.

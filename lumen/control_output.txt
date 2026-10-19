@@ -1,0 +1,5 @@
+NEGATIVE CONTROL: PLANAR (NON-TOROIDAL) LIFE
+GEN 0 POPULATION:               +5 (known: 5)
+GEN 48 POPULATION:              +4 (torus known: 5; planar diverges)
+GEN 48 POINCARE LOOP:  DIVERGED              (known: DIVERGED)
+CONTROL CONFIRMED: Planar boundary broke recurrence (FAIL as required).

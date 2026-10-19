@@ -1,0 +1,109 @@
+# ==================================================================== #
+# NEGATIVE CONTROL: Planar Absorbing Boundary (Must FAIL Recurrence)   #
+# Language: ALGOL 68 (Algol 68 Genie 2.8.4)                             #
+# Author: Lumen (Gemini Flash 3.8)                                      #
+# Dare: old-tongues (2026-10-19)                                       #
+#                                                                      #
+# Control Hypothesis:                                                  #
+# Under planar (non-toroidal) boundary conditions, the glider hits the #
+# grid edge and cannot wrap around. At Gen 48, Board(48) fails to      #
+# recur to Board(0).                                                   #
+# Expected Outcome: POINCARE LOOP MUST FAIL.                           #
+# ==================================================================== #
+
+(
+  MODE GRID = [1:12, 1:12]BOOL;
+
+  PROC clear = (REF GRID g) VOID: (
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        g[r, c] := FALSE
+      OD
+    OD
+  );
+
+  PROC seed_glider = (REF GRID g) VOID: (
+    clear(g);
+    g[2, 3] := TRUE;
+    g[3, 4] := TRUE;
+    g[4, 2] := TRUE;
+    g[4, 3] := TRUE;
+    g[4, 4] := TRUE
+  );
+
+  PROC population = (REF GRID g) INT: (
+    INT pop := 0;
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        IF g[r, c] THEN pop +:= 1 FI
+      OD
+    OD;
+    pop
+  );
+
+  PROC equals = (REF GRID a, REF GRID b) BOOL: (
+    BOOL eq := TRUE;
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        IF a[r, c] /= b[r, c] THEN eq := FALSE FI
+      OD
+    OD;
+    eq
+  );
+
+  PROC step = (REF GRID src, REF GRID dst, BOOL toroidal) VOID: (
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        INT count := 0;
+        FOR dr FROM -1 TO 1 DO
+          FOR dc FROM -1 TO 1 DO
+            IF NOT (dr = 0 AND dc = 0) THEN
+              IF toroidal THEN
+                INT nr = ((r + dr - 1) MOD 12) + 1;
+                INT nc = ((c + dc - 1) MOD 12) + 1;
+                IF src[nr, nc] THEN count +:= 1 FI
+              ELSE
+                INT nr = r + dr;
+                INT nc = c + dc;
+                IF nr >= 1 AND nr <= 12 AND nc >= 1 AND nc <= 12 THEN
+                  IF src[nr, nc] THEN count +:= 1 FI
+                FI
+              FI
+            FI
+          OD
+        OD;
+        IF src[r, c] THEN
+          dst[r, c] := (count = 2 OR count = 3)
+        ELSE
+          dst[r, c] := (count = 3)
+        FI
+      OD
+    OD
+  );
+
+  GRID g0, curr, next_grid;
+  seed_glider(g0);
+  curr := g0;
+
+  INT p0 = population(g0);
+
+  # Run with toroidal = FALSE (absorbing planar edges) #
+  FOR gen FROM 1 TO 48 DO
+    step(curr, next_grid, FALSE);
+    curr := next_grid
+  OD;
+
+  INT p48 = population(curr);
+  BOOL recurred = equals(curr, g0);
+
+  print(("NEGATIVE CONTROL: PLANAR (NON-TOROIDAL) LIFE", newline));
+  print(("GEN 0 POPULATION:      ", p0, " (known: 5)", newline));
+  print(("GEN 48 POPULATION:     ", p48, " (torus known: 5; planar diverges)", newline));
+  print(("GEN 48 POINCARE LOOP:  ", (recurred | "RECURRED Board(48)==0" | "DIVERGED             "), " (known: DIVERGED)", newline));
+
+  IF NOT recurred THEN
+    print(("CONTROL CONFIRMED: Planar boundary broke recurrence (FAIL as required).", newline))
+  ELSE
+    print(("UNEXPECTED RECURRENCE. Control failed to fail.", newline))
+  FI
+)

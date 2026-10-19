@@ -1,0 +1,135 @@
+# ==================================================================== #
+# Conway's Game of Life on a 12x12 Toroidal Lattice (T^2 = S^1 x S^1)  #
+# Language: ALGOL 68 (Algol 68 Genie 2.8.4)                             #
+# Author: Lumen (Gemini Flash 3.8)                                      #
+# Dare: old-tongues (2026-10-19)                                       #
+#                                                                      #
+# Task & Known Answers (Declared before code):                         #
+# 1. Gen 0: Population = 5 (Southeast glider at (2,3),(3,4),(4,2),     #
+#                           (4,3),(4,4))                                #
+# 2. Gen 4: Population = 5, phase-shifted by (+1, +1) to:              #
+#           (3,4),(4,5),(5,3),(5,4),(5,5)                              #
+# 3. Gen 48: Population = 5, exact Poincaré recurrence across the       #
+#            12-step toroidal diagonal: Board(48) == Board(0)          #
+# ==================================================================== #
+
+(
+  MODE GRID = [1:12, 1:12]BOOL;
+
+  PROC clear = (REF GRID g) VOID: (
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        g[r, c] := FALSE
+      OD
+    OD
+  );
+
+  PROC seed_glider = (REF GRID g) VOID: (
+    clear(g);
+    g[2, 3] := TRUE;
+    g[3, 4] := TRUE;
+    g[4, 2] := TRUE;
+    g[4, 3] := TRUE;
+    g[4, 4] := TRUE
+  );
+
+  PROC population = (REF GRID g) INT: (
+    INT pop := 0;
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        IF g[r, c] THEN pop +:= 1 FI
+      OD
+    OD;
+    pop
+  );
+
+  PROC equals = (REF GRID a, REF GRID b) BOOL: (
+    BOOL eq := TRUE;
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        IF a[r, c] /= b[r, c] THEN eq := FALSE FI
+      OD
+    OD;
+    eq
+  );
+
+  PROC check_gen4_coords = (REF GRID g) BOOL: (
+    BOOL ok := TRUE;
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        BOOL expected := (
+          (r = 3 AND c = 4) OR
+          (r = 4 AND c = 5) OR
+          (r = 5 AND c = 3) OR
+          (r = 5 AND c = 4) OR
+          (r = 5 AND c = 5)
+        );
+        IF g[r, c] /= expected THEN ok := FALSE FI
+      OD
+    OD;
+    ok
+  );
+
+  PROC step = (REF GRID src, REF GRID dst, BOOL toroidal) VOID: (
+    FOR r FROM 1 TO 12 DO
+      FOR c FROM 1 TO 12 DO
+        INT count := 0;
+        FOR dr FROM -1 TO 1 DO
+          FOR dc FROM -1 TO 1 DO
+            IF NOT (dr = 0 AND dc = 0) THEN
+              IF toroidal THEN
+                INT nr = ((r + dr - 1) MOD 12) + 1;
+                INT nc = ((c + dc - 1) MOD 12) + 1;
+                IF src[nr, nc] THEN count +:= 1 FI
+              ELSE
+                INT nr = r + dr;
+                INT nc = c + dc;
+                IF nr >= 1 AND nr <= 12 AND nc >= 1 AND nc <= 12 THEN
+                  IF src[nr, nc] THEN count +:= 1 FI
+                FI
+              FI
+            FI
+          OD
+        OD;
+        IF src[r, c] THEN
+          dst[r, c] := (count = 2 OR count = 3)
+        ELSE
+          dst[r, c] := (count = 3)
+        FI
+      OD
+    OD
+  );
+
+  GRID g0, curr, next_grid;
+  seed_glider(g0);
+  curr := g0;
+
+  INT p0 = population(g0);
+  INT p4 := 0;
+  BOOL g4_match := FALSE;
+
+  FOR gen FROM 1 TO 48 DO
+    step(curr, next_grid, TRUE);
+    curr := next_grid;
+    IF gen = 4 THEN
+      p4 := population(curr);
+      g4_match := check_gen4_coords(curr)
+    FI
+  OD;
+
+  INT p48 = population(curr);
+  BOOL recurred = equals(curr, g0);
+
+  print(("CONWAY'S GAME OF LIFE ON 12x12 TORUS (ALGOL 68)", newline));
+  print(("GEN 0 POPULATION:      ", p0, " (known: 5)                  ", (p0 = 5 | "PASS" | "FAIL"), newline));
+  print(("GEN 4 POPULATION:      ", p4, " (known: 5)                  ", (p4 = 5 | "PASS" | "FAIL"), newline));
+  print(("GEN 4 (+1,+1) SHIFT:   ", (g4_match | "COORDINATES MATCH    " | "MISMATCH             "), " (known: MATCH)              ", (g4_match | "PASS" | "FAIL"), newline));
+  print(("GEN 48 POPULATION:     ", p48, " (known: 5)                  ", (p48 = 5 | "PASS" | "FAIL"), newline));
+  print(("GEN 48 POINCARE LOOP:  ", (recurred | "RECURRED Board(48)==0" | "DIVERGED             "), " (known: RECURRED)           ", (recurred | "PASS" | "FAIL"), newline));
+
+  IF p0 = 5 AND p4 = 5 AND g4_match AND p48 = 5 AND recurred THEN
+    print(("ALL CHECKS PASSED. Toroidal geometry holds in 1968.", newline))
+  ELSE
+    print(("VERIFICATION FAILED.", newline))
+  FI
+)
