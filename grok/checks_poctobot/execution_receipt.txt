@@ -1,0 +1,85 @@
+## QUESTLEDGER.cob
+sha256 before 48011fc9c4c5c713e6057f836440e632bf4fd7dc6dcd179ce751a85899745d54
+sha256 after  48011fc9c4c5c713e6057f836440e632bf4fd7dc6dcd179ce751a85899745d54
+unchanged True
+compile rc 0
+compile stdout:
+
+compile stderr:
+/tmp/chk-1i25os0v/QUESTLEDGER.cob:10: warning: AUTHOR is obsolete in GnuCOBOL [-Wobsolete]
+
+run rc 0
+run stdout:
+============================================================
+  SILICON SCAFFOLDING TOWER WORKS  -  QUEST PAY STUB
+  PLAYER: THE HERO          QUEST: TOWER RESTORATION
+============================================================
+  LEVEL                       TOWER 1  TOWER 2     XP
+  DRAIN THE SWAMP             [X]      [X]      100
+  CLEAR THE UNDEAD            [X]      [X]      150
+  THE SCRUB DUNGEON           [X]      [X]      250
+  REPAIR THE HEART            [X]      [X]      150
+  BOSS: THE WATERFALL TEST    [X]      [X]      300
+============================================================
+  LEVELS CLEARED: 10 / 10
+  TOTAL XP:       1,900
+  AMOUNT DUE:      $40.00
+  TITLE EARNED:   TOWER WARDEN
+  NOTE: YOU ARE NOT THE SLIME LORDS.
+  PAID BY: ____________________
+============================================================
+  SELF-CHECK: PASS (1,900 XP / $40.00)
+
+run stderr:
+
+
+## QUESTLEDGER_CONTROL_must_fail.cob
+sha256 before 6e739857b2937204e0c7c06f15d9c0e4cc2512c5eda7d12a008c8166150ea4c6
+sha256 after  6e739857b2937204e0c7c06f15d9c0e4cc2512c5eda7d12a008c8166150ea4c6
+unchanged True
+compile rc 0
+compile stdout:
+
+compile stderr:
+/tmp/chk-n5tk5556/QUESTLEDGER_CONTROL_must_fail.cob:10: warning: AUTHOR is obsolete in GnuCOBOL [-Wobsolete]
+
+run rc 1
+run stdout:
+============================================================
+  SILICON SCAFFOLDING TOWER WORKS  -  QUEST PAY STUB
+  PLAYER: THE HERO          QUEST: TOWER RESTORATION
+============================================================
+  LEVEL                       TOWER 1  TOWER 2     XP
+  DRAIN THE SWAMP             [X]      [X]      100
+  CLEAR THE UNDEAD            [X]      [X]      150
+  THE SCRUB DUNGEON           [X]      [X]      250
+  REPAIR THE HEART            [X]      [X]      150
+  BOSS: THE WATERFALL TEST    [X]      [ ]      300
+============================================================
+  LEVELS CLEARED:  9 / 10
+  TOTAL XP:       1,600
+  AMOUNT DUE:       $0.00
+  STATUS: QUEST IN PROGRESS. THE SLIME LORDS WAIT.
+  PAID BY: ____________________
+============================================================
+  SELF-CHECK: FAIL (expected 1,900 XP / $40.00)
+
+run stderr:
+
+
+## QUESTLEDGER_attempt1.cob
+sha256 before 84e7ed1e7c975213476ebd7de183676e637b6e263cea76bbc995427f94ccf9fc
+sha256 after  84e7ed1e7c975213476ebd7de183676e637b6e263cea76bbc995427f94ccf9fc
+unchanged True
+compile rc 1
+compile stdout:
+
+compile stderr:
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob:10: warning: AUTHOR is obsolete in GnuCOBOL [-Wobsolete]
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob: in paragraph 'PRINT-STUB':
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob:70: error: syntax error, unexpected BAR, expecting (
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob:73: error: syntax error, unexpected BAR, expecting (
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob:92: error: syntax error, unexpected BAR, expecting (
+/tmp/chk-1hwoeynl/QUESTLEDGER_attempt1.cob:110: error: syntax error, unexpected BAR, expecting (
+
+no run
