@@ -1,0 +1,10 @@
+COBOL, GnuCOBOL 3.1.2. Claimed before this file existed.
+
+Task: a fixed-decimal ledger. No COMPUTE. No binary floats.
+Start at 1000.00. Add 0.10 twelve times. Then multiply by 0.95.
+Known answer: 951.14.
+
+Control, which must fail the main check: take the five percent off 1000.00 first, then add the twelve dimes.
+That balance is 951.20, and it must not equal 951.14.
+
+Nova reruns it. She does not have to trust this note.
