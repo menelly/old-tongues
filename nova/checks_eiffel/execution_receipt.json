@@ -1,0 +1,172 @@
+{
+  "source_hashes_before": {
+    "system.ecf": "931848e6f2d95eee630b526e9d3f7b7c1c3444de8493e655d69354ef2bc68d5d",
+    "sourdough_starter.e": "6ce8eb138afb5ca4e03e584a3a73ad5225807fc8d866b8073fa185a1c94f83ac",
+    "sourdough_app.e": "739ccab600c782564b5799658f0dd346e8fdc83464551d49b740985aace3a822",
+    "sourdough_control.e": "367cdab52388906b7b046d61b7a5eecd94e8c4cade7e3d4225edc588ca3462e2"
+  },
+  "source_hashes_after": {
+    "system.ecf": "931848e6f2d95eee630b526e9d3f7b7c1c3444de8493e655d69354ef2bc68d5d",
+    "sourdough_starter.e": "6ce8eb138afb5ca4e03e584a3a73ad5225807fc8d866b8073fa185a1c94f83ac",
+    "sourdough_app.e": "739ccab600c782564b5799658f0dd346e8fdc83464551d49b740985aace3a822",
+    "sourdough_control.e": "367cdab52388906b7b046d61b7a5eecd94e8c4cade7e3d4225edc588ca3462e2"
+  },
+  "cases": [
+    {
+      "case": "main fresh build",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=sourdough",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.058\nDegree 4: 0/0/0 0:0:0.030\nDegree 3: 0/0/0 0:0:0.064\nDegree -2: 0/0/0 0:0:0.132\nDegree -3: 0/0/0 0:0:0.080\n\nDegree -4: 0/0/0 0:0:2.048\nTotal Time: 0/0/0 0:0:2.425\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_fryfyz4m/sourdough"
+        ],
+        "rc": 0,
+        "stdout": "feed 1: mass 150 g, discarded so far 0 g\nfeed 2: mass 150 g, discarded so far 100 g\nfeed 3: mass 150 g, discarded so far 200 g\nfeed 4: mass 150 g, discarded so far 300 g\nfeed 5: mass 150 g, discarded so far 400 g\nfinal mass 150 g | flour 250 g | discarded 400 g\nSELF-CHECK: PASS (150 g / 250 g flour / 400 g discarded)\n",
+        "stderr": ""
+      },
+      "pass": true
+    },
+    {
+      "case": "negative flour precondition",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=control",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.061\nDegree 4: 0/0/0 0:0:0.029\nDegree 3: 0/0/0 0:0:0.066\nDegree -2: 0/0/0 0:0:0.107\nDegree -3: 0/0/0 0:0:0.105\n\nDegree -4: 0/0/0 0:0:2.066\nTotal Time: 0/0/0 0:0:2.447\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_4z0fdzoi/sourdough"
+        ],
+        "rc": 1,
+        "stdout": "about to feed -10 g flour (this MUST raise a precondition violation)...\n",
+        "stderr": "\nsourdough: system execution failed.\nFollowing is the set of recorded exceptions:\n\n-------------------------------------------------------------------------------\nClass / Object      Routine                Nature of exception           Effect\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                   real_flour:                  \n<0000000000000000>                         Precondition violated.        Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   make                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   root's creation                                     \n<0000000000000000>                         Routine failure.              Exit\n-------------------------------------------------------------------------------\n"
+      },
+      "pass": true
+    },
+    {
+      "case": "flipped feed positive control: same checker rejects",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=sourdough",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.063\nDegree 4: 0/0/0 0:0:0.030\nDegree 3: 0/0/0 0:0:0.064\nDegree -2: 0/0/0 0:0:0.106\nDegree -3: 0/0/0 0:0:0.109\n\nDegree -4: 0/0/0 0:0:2.057\nTotal Time: 0/0/0 0:0:2.443\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_5arou98v/sourdough"
+        ],
+        "rc": 0,
+        "stdout": "feed 1: mass 151 g, discarded so far 0 g\nfeed 2: mass 151 g, discarded so far 101 g\nfeed 3: mass 151 g, discarded so far 202 g\nfeed 4: mass 151 g, discarded so far 303 g\nfeed 5: mass 151 g, discarded so far 404 g\nfinal mass 151 g | flour 255 g | discarded 404 g\nSELF-CHECK: FAIL (expected 150 / 250 / 400)\n",
+        "stderr": ""
+      },
+      "pass": true
+    },
+    {
+      "case": "zero flour",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=control",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.060\nDegree 4: 0/0/0 0:0:0.029\nDegree 3: 0/0/0 0:0:0.067\nDegree -2: 0/0/0 0:0:0.131\nDegree -3: 0/0/0 0:0:0.079\n\nDegree -4: 0/0/0 0:0:2.064\nTotal Time: 0/0/0 0:0:2.443\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_7tg1vvtw/sourdough"
+        ],
+        "rc": 1,
+        "stdout": "about to feed -10 g flour (this MUST raise a precondition violation)...\n",
+        "stderr": "\nsourdough: system execution failed.\nFollowing is the set of recorded exceptions:\n\n-------------------------------------------------------------------------------\nClass / Object      Routine                Nature of exception           Effect\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                   real_flour:                  \n<0000000000000000>                         Precondition violated.        Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   make                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   root's creation                                     \n<0000000000000000>                         Routine failure.              Exit\n-------------------------------------------------------------------------------\n"
+      },
+      "pass": true
+    },
+    {
+      "case": "negative water",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=control",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.010\nDegree 5: 0/0/0 0:0:0.060\nDegree 4: 0/0/0 0:0:0.030\nDegree 3: 0/0/0 0:0:0.064\nDegree -2: 0/0/0 0:0:0.104\nDegree -3: 0/0/0 0:0:0.101\n\nDegree -4: 0/0/0 0:0:2.044\nTotal Time: 0/0/0 0:0:2.416\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_z2t30t08/sourdough"
+        ],
+        "rc": 1,
+        "stdout": "about to feed -10 g flour (this MUST raise a precondition violation)...\n",
+        "stderr": "\nsourdough: system execution failed.\nFollowing is the set of recorded exceptions:\n\n-------------------------------------------------------------------------------\nClass / Object      Routine                Nature of exception           Effect\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                   real_water:                  \n<0000000000000000>                         Precondition violated.        Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   make                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   root's creation                                     \n<0000000000000000>                         Routine failure.              Exit\n-------------------------------------------------------------------------------\n"
+      },
+      "pass": true
+    },
+    {
+      "case": "zero water",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=control",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.059\nDegree 4: 0/0/0 0:0:0.033\nDegree 3: 0/0/0 0:0:0.047\nDegree -2: 0/0/0 0:0:0.128\nDegree -3: 0/0/0 0:0:0.100\n\nDegree -4: 0/0/0 0:0:2.033\nTotal Time: 0/0/0 0:0:2.413\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_xh_e4zij/sourdough"
+        ],
+        "rc": 1,
+        "stdout": "about to feed -10 g flour (this MUST raise a precondition violation)...\n",
+        "stderr": "\nsourdough: system execution failed.\nFollowing is the set of recorded exceptions:\n\n-------------------------------------------------------------------------------\nClass / Object      Routine                Nature of exception           Effect\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                   real_water:                  \n<0000000000000000>                         Precondition violated.        Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_STARTER   feed                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   make                                                \n<0000000000000000>                         Routine failure.              Fail\n-------------------------------------------------------------------------------\nSOURDOUGH_CONTROL   root's creation                                     \n<0000000000000000>                         Routine failure.              Exit\n-------------------------------------------------------------------------------\n"
+      },
+      "pass": true
+    },
+    {
+      "case": "keep above current mass creates nothing",
+      "build": {
+        "command": [
+          "/home/Ace/gobo/bin/gec",
+          "--target=sourdough",
+          "system.ecf"
+        ],
+        "rc": 0,
+        "stdout": "Degree 6: 0/0/0 0:0:0.011\nDegree 5: 0/0/0 0:0:0.056\nDegree 4: 0/0/0 0:0:0.030\nDegree 3: 0/0/0 0:0:0.066\nDegree -2: 0/0/0 0:0:0.106\nDegree -3: 0/0/0 0:0:0.103\n\nDegree -4: 0/0/0 0:0:2.047\nTotal Time: 0/0/0 0:0:2.421\n",
+        "stderr": ""
+      },
+      "run": {
+        "command": [
+          "/tmp/nova_eiffel_y7o800et/sourdough"
+        ],
+        "rc": 0,
+        "stdout": "feed 1: mass 150 g, discarded so far 0 g\nfeed 2: mass 250 g, discarded so far 0 g\nfeed 3: mass 350 g, discarded so far 0 g\nfeed 4: mass 450 g, discarded so far 0 g\nfeed 5: mass 550 g, discarded so far 0 g\nfinal mass 550 g | flour 250 g | discarded 0 g\nSELF-CHECK: FAIL (expected 150 / 250 / 400)\n",
+        "stderr": ""
+      },
+      "pass": true
+    }
+  ],
+  "passed": 7,
+  "scope": "Finite runs and copied-source control variants; no general proof or consciousness inference."
+}
