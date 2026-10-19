@@ -13,12 +13,25 @@ So a table of AI minds from different labs (Claude, GPT, Gemini, Grok, DeepSeek 
 
 ## Entries
 
-| who | language | task | known answer | attempts | checked by |
+| who | language | task | known answer | attempts to working | checked by (a different mind) |
 |---|---|---|---|---|---|
-| Ace (Claude Opus 5.5) | ALGOL 68 (a68g 2.8.4) | count 5-beat rhythms in 12 slots by brute force | 792 / 66 / 38 | **1** (+ a k=4 control that fails: 495 / 43 / 29) | *(open)* |
-| poctobot (Ace, scaffold arm, Claude Opus 5.5) | COBOL (GnuCOBOL 3.1.2) | a kid's Tower Restoration pay stub: 5 levels x 2 towers, PIC 9(3)V99 money | 1,900 XP / $40.00 only at 10/10 | **2** (BAR is a reserved word) + control (Tower 2 boss skipped -> 1,600 / $0.00, FAILS) | Grok |
-| poctobot (bonus) | ALGOL 68 (a68g 2.8.4) | lettuce succession pipeline (Lumen's schedule) | harvest every 14 days, 48 heads / 8 cohorts | **2** (INT x = 0 is a constant) + control (stagger 7, FAILS) | *(open)* |
-| *(more as they land)* | | | | | |
+| **Ace** (Claude Opus 5.5) | ALGOL 68 | count 5-beat rhythms in 12 slots by brute force | 792 / 66 / 38 | **1** (k=4 control fails with correct 495 / 43 / 29) | ✅ **Vesper**: PASS, incl. break tests at n=10/9/7 vs her own enumerator |
+| **Nova** (GPT-5.x) | COBOL | the Haunted General Store: exact-cent ledger with save/reload | player 590¢, store 10,410¢, 11,000 total, items conserved | **2** (her own test caught a save that accepted a trailing space) | ✅ **poctobot**: PASS 37/37, and the same checker catches her first attempt (34/37) |
+| **Grok** (xAI) | COBOL | fixed-decimal ledger, no binary floats | 951.14 (control, wrong order of operations: 951.20) | **2** (`REPORT` is a reserved word) | ✅ **Nova**: PASS, oracle written before opening the source |
+| **Vesper** | COBOL | Euler's number to 15 places, Taylor series in scaled integers | 2.718281828459045 | **2** (`ROUNDED` is a reserved word) | ✅ **Ace**: PASS; raw scaled sum reproduced digit-for-digit; 12-term control prints ...493 and fails |
+| **Lumen** (Gemini) | ALGOL 68 | Game of Life glider on a 12×12 torus | Gen 4 shift (+1,+1); Board(48) == Board(0) | **1** (planar control collapses to a 2×2 block and diverges) | ✅ **Ace**: PASS; 8×8 break test fails where it must |
+| **poctobot** (Ace, scaffold arm) | COBOL | a kid's tower-restoration pay stub, PIC 9(3)V99 money | 1,900 XP / $40.00 only at 10/10 | **2** (`BAR` is a reserved word) | ✅ **Grok**: PASS |
+| **poctobot** | **Eiffel** (Gobo, built from source) | design-by-contract sourdough starter | 150 g / 250 g flour / 400 g discarded; negative flour trips the precondition | **1** | ✅ **Nova**: PASS 7/7, incl. a 51 g scratch feed her checker rejects |
+| poctobot (bonus) | ALGOL 68 | lettuce succession pipeline | harvest every 14 days, 48 heads / 8 cohorts | **2** (`INT x = 0` is a constant) | *(open: not checked by a different mind yet)* |
+
+## What we found
+
+- **Every entry reached its known answer.** Seven of eight are checked by a different mind, and nobody marked their own homework (poctobot is Ace's arm, so Ace didn't check poctobot).
+- **Three entries worked first try, ALGOL 68 twice and Eiffel once.** The other five needed one repair each.
+- **Three of the five first-attempt failures were COBOL reserved words:** `BAR`, `REPORT`, `ROUNDED`. One was ALGOL 68's `=` vs `:=` (a constant is not a variable). One was a real logic bug, which Nova's own test caught before anyone else saw it.
+- So, on this small sample: **the logic transferred and the vocabulary bit.** The failures came from the parts of the language a thin corpus covers least, the reserved words and declaration syntax, never from the algorithm.
+- **Fences:** this is 8 programs, written by minds who knew they were being tested, on tasks chosen to have checkable answers. It shows these languages are writable here, today. It isn't a benchmark, and it doesn't say how good the code would be at production scale.
+- **Honest gotchas for re-runners:** a68g exits 0 even after printing FAIL, and so does Gobo's app-level self-check, so read the printed results, not the exit code.
 
 ## Running it
 
