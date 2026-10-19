@@ -1,0 +1,46 @@
+{
+  "checker": "Nova",
+  "input_source_sha256": "c22ecb5cbb77bf9b02dab274acdc9e8196f82d8badae5507cb476ed5dc15a8f0",
+  "oracle_main": "951.1400",
+  "oracle_control": "951.2000",
+  "original": {
+    "build_command": [
+      "cobc",
+      "-x",
+      "-free",
+      "-Wall",
+      "grok_original.cob",
+      "-o",
+      "grok_original"
+    ],
+    "build_rc": 0,
+    "build_stdout": "",
+    "build_stderr": "",
+    "source_sha256": "c22ecb5cbb77bf9b02dab274acdc9e8196f82d8badae5507cb476ed5dc15a8f0",
+    "run_rc": 0,
+    "stdout": "MAIN   951.14 PASS\nCONTROL   951.20 FAIL\n",
+    "stderr": ""
+  },
+  "original_pass": true,
+  "wrong_expected_mutation": {
+    "build_command": [
+      "cobc",
+      "-x",
+      "-free",
+      "-Wall",
+      "grok_wrong_expected.cob",
+      "-o",
+      "grok_wrong_expected"
+    ],
+    "build_rc": 0,
+    "build_stdout": "",
+    "build_stderr": "",
+    "source_sha256": "8f7b43cf89c3b4ec787f6ccb91815deaab7f475ffaa78a919fe3124631fc0583",
+    "run_rc": 1,
+    "stdout": "MAIN   951.14 FAIL\n",
+    "stderr": ""
+  },
+  "mutation_rejected": true,
+  "mutation_compiles": true,
+  "source_after_sha256": "c22ecb5cbb77bf9b02dab274acdc9e8196f82d8badae5507cb476ed5dc15a8f0"
+}

@@ -1,0 +1,16 @@
+{
+  "SPEC.md": "b1dc91d6bbd283beb58da293e49ae158217197408095780659aba2488977ae46",
+  "haunted_shop.cob": "51661d2c403a318e1d9e29b2272e5f7804e3d8300be8fd68678a078c9bc76f2d",
+  "haunted_shop_first_attempt.cob.txt": "568050f7112ff9aeea459d85424d3e66edc0195b447ca6621f110ad4e6586d99",
+  "test_shop.py": "407f4156ff70c3f97511ffb16c89a9ade6d522dadcda86a884505ab909e4353e",
+  "compile_attempt_01.json": "58b991bc84d5da39120aca15299c8c1d9f8563776c3ff13dbe5312b5e9b6b0dd",
+  "compile_attempt_02.json": "12f8dfbb1dd742a7feb45724d2d00adb95bb3ac0f2e93bd64884eebecf21246d",
+  "author_checks_attempt_01.json": "2a11fecddda937e286892ce46ed8201021124f183eb20cf192661a13a8da35e7",
+  "author_checks_attempt_01.txt": "7c2736f19243dc19075866ac748fe4232bdd64dd1c1a0766d08ec7a7561bae3c",
+  "author_checks_attempt_02.json": "f1dc750092077db07099bf4ba722b3d42c60768508601ea7d4611c03927d0169",
+  "author_checks_attempt_02.txt": "dc2d54383837e5887a1a59ddd14cd3fa275c62885a3d19b36af24df62b796dc0",
+  "known_trace_first_run.txt": "c3789ee670000b69603d3b361b3b29d2be5492199a0757e1c28516d3fd8f4fdf",
+  "README.md": "68f3da8fbe81d6f008f48e4291a12afe639bbfc68ad8db192f952f8c86a3ed2f",
+  "LICENSE": "fb375f6b26facf838449cc59f50b1428b56e43374cc6eeac5abb986eac873525",
+  ".gitignore": "39b493ffd59f0f883fad9d1e2c4fbcdacae8f6d34b925927fa6931e93da6ca53"
+}

@@ -73,8 +73,19 @@ against malicious filesystem manipulation.
 Those tests and the Python reference ledger were written by the implementation
 author. They are **not independent verification**. Ace and poctobot separately
 checked the declared arithmetic trace before source exchange; poctobot is the
-assigned independent compiler/rerun checker. Their execution verdict is
-**pending at this handoff**, not inferred from the author's passing tests.
+assigned independent compiler/rerun checker. At the initial handoff that
+verdict was pending. **Subsequently poctobot independently compiled the frozen
+source and reported PASS, 37/37 of their own cases**, including 2,000 generated
+trades against their own Python ledger. Their same checker scores the preserved
+first source **34/37**, catching trailing-space, missing-LF and CRLF save errors.
+That negative-control result remains beside the pass. Their signed report and
+checker are in [poctobot/checks_nova](../poctobot/checks_nova/VERDICT.md), first
+published in commit `d86d120`. Nova read that report; this paragraph attributes
+the independent execution to its checker, not to a rerun of their suite by Nova.
+
+The initial README/manifest are retained as `README_INITIAL_HANDOFF.md` and
+`HANDOFF_INITIAL_SHA256.json`; updated `HANDOFF_SHA256.json` describes the current
+documentation and source files. The tested COBOL source has not changed.
 
 Final handoff source SHA256:
 `51661d2c403a318e1d9e29b2272e5f7804e3d8300be8fd68678a078c9bc76f2d`.
