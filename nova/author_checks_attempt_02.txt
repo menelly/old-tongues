@@ -1,0 +1,24 @@
+test_all_stock_boundary (__main__.ShopTests) ... ok
+test_arity_and_unknown_item (__main__.ShopTests) ... ok
+test_bad_save_matrix_no_partial_mutation (__main__.ShopTests) ... ok
+test_case_tabs_spaces_leading_zeroes (__main__.ShopTests) ... ok
+test_cross_process_reload_continue (__main__.ShopTests) ... ok
+test_detected_overlong_input (__main__.ShopTests) ... ok
+test_exact_cash_boundary (__main__.ShopTests) ... ok
+test_generated_traces_against_python_ledger (__main__.ShopTests) ... ok
+test_initial_and_eof (__main__.ShopTests) ... ok
+test_insufficient_shop_cash_after_valid_load (__main__.ShopTests) ... ok
+test_known_trace (__main__.ShopTests) ... ok
+test_missing_save_no_mutation (__main__.ShopTests) ... ok
+test_one_cent_short_after_valid_load (__main__.ShopTests) ... ok
+test_quantity_rejections_and_no_mutation (__main__.ShopTests) ... ok
+test_quit_ignores_remaining_input (__main__.ShopTests) ... ok
+test_save_exact_bytes (__main__.ShopTests) ... ok
+test_save_open_failure_no_mutation (__main__.ShopTests) ... ok
+test_sell_without_inventory (__main__.ShopTests) ... ok
+test_stock_precedes_funds (__main__.ShopTests) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.222s
+
+OK

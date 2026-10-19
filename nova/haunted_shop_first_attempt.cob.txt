@@ -1,0 +1,301 @@
+       >>SOURCE FORMAT FREE
+*> SPDX-License-Identifier: MIT
+*> Author: Nova. 2026-10-19. Fictional exact-cent shop ledger.
+identification division.
+program-id. haunted-shop.
+
+environment division.
+input-output section.
+file-control.
+    select command-file assign to "/dev/stdin"
+        organization is line sequential
+        file status is command-status.
+    select save-file assign to "haunted-shop.sav"
+        organization is line sequential
+        file status is save-status.
+
+data division.
+file section.
+fd command-file.
+01 command-record pic x(512).
+fd save-file.
+01 save-record pic x(512).
+
+working-storage section.
+01 command-status pic xx.
+01 save-status pic xx.
+01 stop-flag pic 9 value 0.
+   88 finished value 1.
+01 invalid-save pic 9 value 0.
+01 line-data pic x(512).
+01 saved-line pic x(512).
+01 command-word pic x(256).
+01 item-word pic x(256).
+01 quantity-word pic x(256).
+01 extra-word pic x(256).
+01 quantity-length binary-long.
+01 trade-quantity pic 9(3).
+01 trade-price pic 9(3).
+01 trade-amount pic 9(10).
+01 held-items pic 9(3).
+01 available-items pic 9(3).
+01 total-check pic 9(10).
+
+01 ledger.
+   05 player-cash pic 9(8) value 1000.
+   05 shop-cash pic 9(8) value 10000.
+   05 player-torch pic 9(3) value 0.
+   05 player-turnip pic 9(3) value 0.
+   05 shop-torch pic 9(3) value 10.
+   05 shop-turnip pic 9(3) value 12.
+
+01 pending-ledger.
+   05 pending-player-cash pic 9(8).
+   05 pending-shop-cash pic 9(8).
+   05 pending-player-torch pic 9(3).
+   05 pending-player-turnip pic 9(3).
+   05 pending-shop-torch pic 9(3).
+   05 pending-shop-turnip pic 9(3).
+
+procedure division.
+main.
+    open input command-file
+    if command-status not = "00"
+        display "ERR IO"
+        move 1 to return-code
+        stop run
+    end-if
+    perform until finished
+        read command-file
+            at end set finished to true
+            not at end
+                if command-status = "00"
+                    move command-record to line-data
+                    perform handle-command
+                else
+                    display "ERR SYNTAX"
+                end-if
+        end-read
+    end-perform
+    close command-file
+    move 0 to return-code
+    stop run.
+
+handle-command.
+    inspect line-data converting x"09" to " "
+    if line-data = spaces exit paragraph end-if
+    if function length(function trim(line-data)) > 200
+        display "ERR SYNTAX"
+        exit paragraph
+    end-if
+    move function upper-case(line-data) to line-data
+    move spaces to command-word item-word quantity-word extra-word
+    unstring function trim(line-data) delimited by all space
+        into command-word item-word quantity-word extra-word
+    end-unstring
+    evaluate function trim(command-word)
+        when "BUY"
+        when "SELL"
+            if item-word = spaces or quantity-word = spaces
+                or extra-word not = spaces
+                display "ERR SYNTAX"
+            else
+                perform trade
+            end-if
+        when "STATE"
+        when "SAVE"
+        when "LOAD"
+        when "HELP"
+        when "QUIT"
+            if item-word not = spaces
+                display "ERR SYNTAX"
+            else
+                evaluate function trim(command-word)
+                    when "STATE" perform show-state
+                    when "SAVE" perform save-ledger
+                    when "LOAD" perform load-ledger
+                    when "HELP"
+                        display "COMMANDS STATE BUY item n SELL item n "
+                            "SAVE LOAD HELP QUIT"
+                    when "QUIT"
+                        display "BYE"
+                        set finished to true
+                end-evaluate
+            end-if
+        when other display "ERR SYNTAX"
+    end-evaluate.
+
+trade.
+    if item-word not = "TORCH" and item-word not = "TURNIP"
+        display "ERR ITEM"
+        exit paragraph
+    end-if
+    compute quantity-length =
+        function length(function trim(quantity-word))
+    if quantity-length < 1 or quantity-length > 3
+        display "ERR QUANTITY"
+        exit paragraph
+    end-if
+    if quantity-word(1:quantity-length) is not numeric
+        display "ERR QUANTITY"
+        exit paragraph
+    end-if
+    move function numval(quantity-word) to trade-quantity
+    if trade-quantity = 0
+        display "ERR QUANTITY"
+        exit paragraph
+    end-if
+    if item-word = "TORCH"
+        move player-torch to held-items
+        move shop-torch to available-items
+        if command-word = "BUY"
+            move 125 to trade-price
+        else
+            move 75 to trade-price
+        end-if
+    else
+        move player-turnip to held-items
+        move shop-turnip to available-items
+        if command-word = "BUY"
+            move 40 to trade-price
+        else
+            move 25 to trade-price
+        end-if
+    end-if
+    compute trade-amount = trade-price * trade-quantity
+    if command-word = "BUY"
+        if trade-quantity > available-items
+            display "ERR STOCK"
+            exit paragraph
+        end-if
+        if trade-amount > player-cash
+            display "ERR FUNDS"
+            exit paragraph
+        end-if
+        subtract trade-amount from player-cash
+        add trade-amount to shop-cash
+        add trade-quantity to held-items
+        subtract trade-quantity from available-items
+    else
+        if trade-quantity > held-items
+            display "ERR INVENTORY"
+            exit paragraph
+        end-if
+        if trade-amount > shop-cash
+            display "ERR SHOP-FUNDS"
+            exit paragraph
+        end-if
+        add trade-amount to player-cash
+        subtract trade-amount from shop-cash
+        subtract trade-quantity from held-items
+        add trade-quantity to available-items
+    end-if
+    if item-word = "TORCH"
+        move held-items to player-torch
+        move available-items to shop-torch
+    else
+        move held-items to player-turnip
+        move available-items to shop-turnip
+    end-if
+    if command-word = "BUY"
+        display "OK BUY"
+    else
+        display "OK SELL"
+    end-if.
+
+show-state.
+    display "STATE CASH=" player-cash " SHOP=" shop-cash
+        " TORCH=" player-torch " TURNIP=" player-turnip
+        " STOCK-TORCH=" shop-torch " STOCK-TURNIP=" shop-turnip.
+
+save-ledger.
+    open output save-file
+    if save-status not = "00"
+        display "ERR IO"
+        exit paragraph
+    end-if
+    move spaces to save-record
+    string "V1|" player-cash "|" shop-cash "|"
+        player-torch "|" player-turnip "|"
+        shop-torch "|" shop-turnip
+        into save-record
+    end-string
+    write save-record
+    if save-status not = "00"
+        close save-file
+        display "ERR IO"
+        exit paragraph
+    end-if
+    close save-file
+    if save-status = "00"
+        display "OK SAVE"
+    else
+        display "ERR IO"
+    end-if.
+
+load-ledger.
+    open input save-file
+    if save-status not = "00"
+        display "ERR IO"
+        exit paragraph
+    end-if
+    move 0 to invalid-save
+    read save-file
+    if save-status not = "00"
+        move 1 to invalid-save
+    end-if
+    move save-record to saved-line
+    read save-file
+    if save-status not = "10"
+        move 1 to invalid-save
+    end-if
+    close save-file
+    if invalid-save = 1
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    if function length(function trim(saved-line trailing)) not = 36
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    if saved-line(1:3) not = "V1|"
+        or saved-line(12:1) not = "|"
+        or saved-line(21:1) not = "|"
+        or saved-line(25:1) not = "|"
+        or saved-line(29:1) not = "|"
+        or saved-line(33:1) not = "|"
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    if saved-line(4:8) is not numeric
+        or saved-line(13:8) is not numeric
+        or saved-line(22:3) is not numeric
+        or saved-line(26:3) is not numeric
+        or saved-line(30:3) is not numeric
+        or saved-line(34:3) is not numeric
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    move function numval(saved-line(4:8)) to pending-player-cash
+    move function numval(saved-line(13:8)) to pending-shop-cash
+    move function numval(saved-line(22:3)) to pending-player-torch
+    move function numval(saved-line(26:3)) to pending-player-turnip
+    move function numval(saved-line(30:3)) to pending-shop-torch
+    move function numval(saved-line(34:3)) to pending-shop-turnip
+    compute total-check = pending-player-cash + pending-shop-cash
+    if total-check not = 11000
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    compute total-check = pending-player-torch + pending-shop-torch
+    if total-check not = 10
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    compute total-check = pending-player-turnip + pending-shop-turnip
+    if total-check not = 12
+        display "ERR BAD-SAVE"
+        exit paragraph
+    end-if
+    move pending-ledger to ledger
+    display "OK LOAD".

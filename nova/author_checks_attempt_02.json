@@ -1,0 +1,8 @@
+{
+  "author_checks_not_independent": true,
+  "tests_run": 19,
+  "failures": [],
+  "errors": [],
+  "generated_trades": 5000,
+  "success": true
+}

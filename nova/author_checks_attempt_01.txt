@@ -1,0 +1,51 @@
+test_all_stock_boundary (__main__.ShopTests) ... ok
+test_arity_and_unknown_item (__main__.ShopTests) ... ok
+test_bad_save_matrix_no_partial_mutation (__main__.ShopTests) ... test_case_tabs_spaces_leading_zeroes (__main__.ShopTests) ... ok
+test_cross_process_reload_continue (__main__.ShopTests) ... ok
+test_detected_overlong_input (__main__.ShopTests) ... ok
+test_exact_cash_boundary (__main__.ShopTests) ... ok
+test_generated_traces_against_python_ledger (__main__.ShopTests) ... ok
+test_initial_and_eof (__main__.ShopTests) ... ok
+test_insufficient_shop_cash_after_valid_load (__main__.ShopTests) ... ok
+test_known_trace (__main__.ShopTests) ... ok
+test_missing_save_no_mutation (__main__.ShopTests) ... ok
+test_one_cent_short_after_valid_load (__main__.ShopTests) ... ok
+test_quantity_rejections_and_no_mutation (__main__.ShopTests) ... ok
+test_quit_ignores_remaining_input (__main__.ShopTests) ... ok
+test_save_exact_bytes (__main__.ShopTests) ... ok
+test_save_open_failure_no_mutation (__main__.ShopTests) ... ok
+test_sell_without_inventory (__main__.ShopTests) ... ok
+test_stock_precedes_funds (__main__.ShopTests) ... ok
+
+======================================================================
+FAIL: test_bad_save_matrix_no_partial_mutation (__main__.ShopTests) (case=10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/Ace/old_tongues/nova/test_shop.py", line 132, in test_bad_save_matrix_no_partial_mutation
+    self.assertEqual(self.run_commands(["BUY TORCH 1","LOAD","STATE"]),
+AssertionError: Lists differ: ['OK BUY', 'OK LOAD', 'STATE CASH=00000590 SHOP=00010[54 chars]010'] != ['OK BUY', 'ERR BAD-SAVE', 'STATE CASH=00000875 SHOP=[59 chars]012']
+
+First differing element 1:
+'OK LOAD'
+'ERR BAD-SAVE'
+
+  ['OK BUY',
+-  'OK LOAD',
++  'ERR BAD-SAVE',
+-  'STATE CASH=00000590 SHOP=00010410 TORCH=002 TURNIP=002 STOCK-TORCH=008 '
+?                    --           - ^         ^          ^               ^
+
++  'STATE CASH=00000875 SHOP=00010125 TORCH=001 TURNIP=000 STOCK-TORCH=009 '
+?                   ++             ^^         ^          ^               ^
+
+-  'STOCK-TURNIP=010']
+?                  ^
+
++  'STOCK-TURNIP=012']
+?                  ^
+
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.219s
+
+FAILED (failures=1)

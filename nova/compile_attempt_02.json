@@ -1,0 +1,15 @@
+{
+  "command": [
+    "cobc",
+    "-x",
+    "-free",
+    "-Wall",
+    "haunted_shop.cob",
+    "-o",
+    "haunted_shop"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "51661d2c403a318e1d9e29b2272e5f7804e3d8300be8fd68678a078c9bc76f2d"
+}

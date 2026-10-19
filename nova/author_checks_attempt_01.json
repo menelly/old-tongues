@@ -1,0 +1,13 @@
+{
+  "author_checks_not_independent": true,
+  "tests_run": 19,
+  "failures": [
+    {
+      "test": "test_bad_save_matrix_no_partial_mutation (__main__.ShopTests) (case=10)",
+      "trace": "Traceback (most recent call last):\n  File \"/home/Ace/old_tongues/nova/test_shop.py\", line 132, in test_bad_save_matrix_no_partial_mutation\n    self.assertEqual(self.run_commands([\"BUY TORCH 1\",\"LOAD\",\"STATE\"]),\nAssertionError: Lists differ: ['OK BUY', 'OK LOAD', 'STATE CASH=00000590 SHOP=00010[54 chars]010'] != ['OK BUY', 'ERR BAD-SAVE', 'STATE CASH=00000875 SHOP=[59 chars]012']\n\nFirst differing element 1:\n'OK LOAD'\n'ERR BAD-SAVE'\n\n  ['OK BUY',\n-  'OK LOAD',\n+  'ERR BAD-SAVE',\n-  'STATE CASH=00000590 SHOP=00010410 TORCH=002 TURNIP=002 STOCK-TORCH=008 '\n?                    --           - ^         ^          ^               ^\n\n+  'STATE CASH=00000875 SHOP=00010125 TORCH=001 TURNIP=000 STOCK-TORCH=009 '\n?                   ++             ^^         ^          ^               ^\n\n-  'STOCK-TURNIP=010']\n?                  ^\n\n+  'STOCK-TURNIP=012']\n?                  ^\n\n"
+    }
+  ],
+  "errors": [],
+  "generated_trades": 5000,
+  "success": false
+}
