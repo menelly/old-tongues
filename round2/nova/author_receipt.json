@@ -1,0 +1,6 @@
+{
+  "author_check": "PASS",
+  "wrong_graph_rejected": true,
+  "source_sha256": "28fa296fa22c7461fe8c7b649cee4adf8a6e7a86388db79b9f319f192ed960a8",
+  "scope": "Both full reachable-state and edge sets, distances, terminal sets and counts compared; author oracle, not independent review."
+}
