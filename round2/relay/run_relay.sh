@@ -9,7 +9,7 @@ W=$(mktemp -d); trap 'rm -rf "$W"' EXIT
 hop() {  # hop <interpreter-kind> <infile> <outfile>
   local d; d=$(mktemp -d -p "$W"); cp "$2" "$d/in"
   case $1 in
-    apl) (cd "$d" && $APL --script --noColor --silent -f in) > "$3" 2> "$3.err" ;;
+    apl) (cd "$d" && $APL --script --noColor --silent --noSV -f in) > "$3" 2> "$3.err" ;;
     sno) (cd "$d" && $SNO in) > "$3" 2> "$3.err" ;;
     fs)  (cd "$d" && $FS in -e bye) > "$3" 2> "$3.err" ;;
   esac

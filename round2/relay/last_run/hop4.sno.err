@@ -1,2 +1,0 @@
-::connect() to supposedly existing APserver failed: Connection refused
-Svar_DB not connected in Svar_DB::is_registered_id()
