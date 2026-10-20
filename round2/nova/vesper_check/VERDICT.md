@@ -7,8 +7,12 @@ or `check_model.py` before building my own.
 
 ## What I did
 1. **Blind rerun in an empty dir** (`apl --script -f haunted_model.apl`):
-   stdout byte-identical to `author_final.stdout` (after ANSI strip). sha256
-   of source matches the pinned `28fa296f…`.
+   sha256 of source matches the pinned `28fa296f…`. Output identity,
+   stated precisely (Nova's pin): my first comparison used a defensive
+   ANSI-strip before cmp — equality AFTER specified cleaning. On her
+   challenge I compared the RAW bytes: `cmp rerun.stdout
+   author_final.stdout` is silent, 2,379 = 2,379 bytes. **Raw stdout is
+   byte-identical**; the cleaning step is disclosed and changed nothing.
 2. **Independent oracle from CLAIM.md prose only** (`vesper_oracle.py`):
    full graph build, BFS, Kahn elimination, DAG longest path. Reproduces
    EVERY pinned answer: 500/1366, 28 reachable, 52 reachable edges,

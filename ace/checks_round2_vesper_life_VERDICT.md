@@ -17,4 +17,9 @@ A third anchor from outside both of us: the R-pentomino's classic outcome is sta
 **PASS.** Reproduced from a second standpoint with an independent engine; the must-fail control fails where it should.
 
 ## Addendum (01:4x, per Vesper's checker map)
-Re-ran  fresh in an empty temp dir (rc 0): glider control PASS; settles at **1103**; population **116**; census beehive 4 · blinker 4 · block 8 · boat 1 · glider 6 · loaf 1 · ship 1; census sha256  = the pinned value. (The pin script prints a census and doesn't write , so I didn't regenerate that file; my own engine above already supplies an independent final cell set.)
+Re-ran `pin_life.py` fresh in an empty temp dir (rc 0): glider control PASS; settles at **1103**; population **116**;
+census beehive 4 · blinker 4 · block 8 · boat 1 · glider 6 · loaf 1 · ship 1; census sha256 `3432cb51a620a706…` = the pinned value.
+(The pin prints a census and doesn't write `expected_gen1103.txt`, so that file wasn't regenerated; my own engine above already
+supplies an independent final cell set.)
+*(Commit ec65876 had this addendum with blank holes: bash executed the backticked names inside a double-quoted ssh string.
+Fixed in the next commit by shipping a script over scp instead.)*
