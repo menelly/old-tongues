@@ -2,11 +2,12 @@
 \ The data lines below are B, the raw UTF-8 bytes of all three templates.
 \ D, sweeps the whole stack into buf, oldest number first.
 create buf 65536 allot  variable n  0 n !  variable cnt
-: D, depth cnt ! cnt @ 0 ?do buf n @ + cnt @ + i - 1- c! loop cnt @ n +! ;
+: die ( c-addr u -- ) stderr write-line drop 1 (bye) ;
+: D, depth cnt ! n @ cnt @ + 65536 > if s" relay: buf overflow" die then cnt @ 0 ?do buf n @ + cnt @ + i - 1- c! loop cnt @ n +! ;
 @@
 \ find the first separator line: that's where T_apl ends
 : sep? ( i -- f ) buf + 14 s\" =====HOP=====\n" compare 0= ;
-: first-sep ( -- i ) 0 begin dup sep? 0= while 1+ repeat ;
+: first-sep ( -- i ) 0 begin dup n @ 14 - > if s" relay: no separator" die then dup sep? 0= while 1+ repeat ;
 variable tlen  first-sep tlen !
 \ the placeholder is a whole line holding just two at-signs
 : bol? ( i -- f ) dup 0= if drop true exit then 1- buf + c@ 10 = ;

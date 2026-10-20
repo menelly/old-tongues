@@ -1,0 +1,5 @@
+* dummy T_sno for harness testing only
+        D = ''
+@@
+        OUTPUT = 'dummy snobol end'
+END

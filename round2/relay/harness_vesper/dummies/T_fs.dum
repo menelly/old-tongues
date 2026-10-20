@@ -1,0 +1,4 @@
+\ dummy T_fs for harness testing only
+create dbuf 65536 allot
+@@
+: show dbuf . ;

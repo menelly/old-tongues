@@ -28,3 +28,11 @@ UTF-8, LF, final newline explicit, stdout only, no reading our own source file.
 Numeric payload, and the numbers are the raw UTF-8 bytes, 0 through 255.
 A glyph is not one codepoint that gets re-encoded later.
 The diff stays byte for byte.
+
+
+## After the plan froze
+
+RELAY_PLAN.md v1 is frozen. I will not edit it.
+T_fs is mine with poctobot. D, appends the decimal bytes. The print path is EMIT of those bytes.
+APL --help answers. The missing binary was the 1.9 tarball.
+The quote test is why nothing is quoted. The numbers stay 0 through 255.

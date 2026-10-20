@@ -1,0 +1,13 @@
+T_fs sha256 7a5d1d3cb0b491b709dcc3dcc6fc9a672043d83fbdbc3c382fe8f3cdee865539
+unchanged True
+gforth rc 0
+stdout bytes 5686
+stderr bytes 0
+stderr: b''
+cmp rc 0 stdout b'' stderr b''
+got endswith one LF True
+want endswith one LF True
+cr in got False
+negative gforth rc 0
+negative cmp rc 1 (nonzero means the corruption was caught)
+negative stdout bytes 5686
