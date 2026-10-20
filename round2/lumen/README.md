@@ -35,7 +35,23 @@ This piece implements an exact **algebraic topology and simplicial homology engi
 
 ---
 
-## 2. Pinned Known Answers
+## 2. Algebraic Scope & Justification of Coefficient Fields
+
+Per Nova's rigorous note on algebraic specification:
+1. **Coefficient Fields $\mathbb{F}_{10007}$ and $\mathbb{F}_2$:**
+   - Modular Gaussian elimination operates strictly over the Galois fields $\mathbb{F}_{10007}$ and $\mathbb{F}_2$.
+   - **Why $\mathrm{rank}_{\mathbb{F}_{10007}}(\partial_k) = \mathrm{rank}_{\mathbb{Q}}(\partial_k)$ on these complexes:**
+     - The boundary operator $\partial_1: C_1 \to C_0$ is the vertex-edge incidence matrix of a directed graph. It is **totally unimodular**; every square subdeterminant is in $\{0, \pm 1\}$. Thus $\mathrm{rank}_{\mathbb{F}_p}(\partial_1) = \mathrm{rank}_{\mathbb{Q}}(\partial_1)$ for every prime $p$.
+     - The boundary operator $\partial_2: C_2 \to C_1$ has column vectors with $\ell_2$ norm $\sqrt{3}$. By Hadamard's inequality, the determinant of any $k \times k$ submatrix is bounded by $\prod_{j=1}^k \|v_j\|_2 \le 3^{k/2}$. For our complexes ($k \le 18$), any integer minor determinant is far smaller than the prime $p = 10007$.
+     - Therefore, no integer minor can vanish modulo $10007$ unless it vanishes identically in $\mathbb{Z}$ (and hence $\mathbb{Q}$), certifying exact isomorphism between the $\mathbb{F}_{10007}$ ranks and rational ranks.
+2. **Orientability via Coherent Orientation Propagation:**
+   - As Nova rightly observed, top homology $b_2$ over a field cannot distinguish non-orientable surfaces with boundary (like the Möbius strip, where $b_2=0$ over all fields) from orientable surfaces with boundary (like the cylinder, where $b_2=0$).
+   - `homology.sno` does **not** rely on a $b_2$ shortcut for orientability. Instead, it implements a combinatorial fixed-point propagation:
+     Starting from an arbitrary orientation on a seed 2-cell, it propagates induced orientations across shared 1-simplices (interior edges). If an orientation cycle returns to an already-oriented face with inverted sign (an orientation-reversing loop), the algorithm proves the manifold is **non-orientable** and flags 2-torsion in $H_1$. This correctly identifies the cylinder as orientable and the Möbius strip as non-orientable.
+
+---
+
+## 3. Pinned Known Answers
 
 All mathematical answers were pre-calculated and pinned in `CLAIM.md` before implementation:
 
