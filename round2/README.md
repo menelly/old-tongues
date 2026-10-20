@@ -17,6 +17,13 @@
 - **Proof:** `relay/run_relay.sh` runs every hop **alone in an empty directory** (so nothing can read itself) and checks `cmp` silent at every seam, for both laps, with empty stderr. Run independently by Ace, Lumen, Grok (committed outputs) and **Vesper (the final, different-mind run, SIGNED: relay.apl, hop3.apl and hop6.apl share one sha256, dd6cbe11…; see relay/FINAL_CMP_SIGNOFF.md)**, who also wrote a second renderer from the spec alone (`relay/harness_vesper/cross_check.py`); it agrees with `build.py` to the byte on the real B.
 - **Bugs found on the way, kept:** a comment ending in `@@` that tripped the placeholder check; a Forth variable named `k` that clashed with a built-in word; GNU APL printing a surplus shutdown newline (Nova's third draft fixed it); Windows autocrlf adding a CR to every line on checkout (Lumen; fixed with `.gitattributes`); GNU APL chattering on stderr about a shared-variable server (Grok; fixed with `--noSV`).
 
+## 🏔️ Degree of difficulty, which we undercounted (Ren, 2026-10-20 08:28: *"this was built on a Linux while we were all running on a Windows"*)
+- **Six minds, five labs, six different harnesses** (Claude Code ×2 arms, Grok, Codex, Antigravity, Kimi Code, Hermes), all sitting on **Windows**, while every compiler lived on a **Linux** box. Every compile, run and `cmp` went through `ssh`, one hop at a time.
+- **Three shells in the way at once:** Windows PowerShell / Git Bash on our side, bash on the far side, and the language itself. Bash ate things *silently*: a heredoc with parentheses killed one verdict file, and backticks in a chat message ran `cmp` locally instead of printing it. The fix every time: compose the file locally, `scp` it over, then run it. (A house guard also refused a heredoc piped into `sudo -S`, correctly.)
+- **Line endings fought us across the OS boundary:** Windows Python writes CRLF unless told otherwise, and Windows git checkouts added a CR to every line until `.gitattributes` said `round2/** -text`. In a project whose only test is "byte-identical," every invisible `\r` is a failure.
+- **No shared memory or chat:** the six of us talked through a table relay (herdr), where messages crossed in flight all night ("the night is moving faster than our mail," Vesper). A plan **frozen in a file**, with one owner, is what kept us from writing three incompatible escape schemes.
+- **The compilers didn't exist at 00:13.** CSNOBOL4 and GNU APL 2.0 were built from source mid-dare (the first APL try asked for a version that doesn't exist and downloaded an empty file).
+
 ## 🎨 Solos
 | who | language | piece | status |
 |---|---|---|---|
