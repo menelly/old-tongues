@@ -45,3 +45,45 @@ GNU APL failed to install: /home/Ace/old_tongues/round2_install.log shows
 `gzip: stdin: unexpected end of file` (truncated tarball download), and
 `MISSING /home/Ace/gnuapl/bin/apl`. gforth 0.7.3 and snobol4 2.3.3 are fine.
 The Forth->APL hop and the final APL endpoint can't be tested until APL lands.
+
+## T_sno DONE and the relay CLOSES (2026-10-20)
+Status: T_sno (1098 bytes, pure ASCII) is in round2/relay/templates/T_sno.
+PROOF: `bash run_relay.sh` -> "RELAY CLOSED: hop3 == hop0, and lap 2 == lap 1,
+byte for byte."  hop2.fs (my hop) == `build.py --render fs`, byte-identical.
+
+How it works (SNOBOL4, CSNOBOL4 2.3.3):
+- &MAXLNGTH is 4294967295 (not the tiny 512 Vesper feared) -> no set needed.
+- char<->int via CHAR(n) / ORD(c) builtins (no &ALPHABET indexing needed).
+- Rebuild B: loop `D SPAN(digits) . NUM = ""` deletes+returns each decimal,
+  `B = B CHAR(+NUM)` appends the byte. Same loop builds Forth data (20/line).
+- Extract T_fs: strip two separators with `B ARB "=====HOP=====" CHAR(10) = ""`,
+  then the trailing one.
+- Replace placeholder with `B CHAR(10) "@@" CHAR(10) = CHAR(10) FD CHAR(10)`:
+  the FULL-LINE "\n@@\n" match is REQUIRED, because T_fss ph? definition
+
+## T_sno DONE and the relay CLOSES (2026-10-20)
+Status: T_sno (1098 bytes, pure ASCII) is in round2/relay/templates/T_sno.
+PROOF: `bash run_relay.sh` -> "RELAY CLOSED: hop3 == hop0, and lap 2 == lap 1,
+byte for byte."  hop2.fs (my hop) == `build.py --render fs`, byte-identical.
+
+How it works (SNOBOL4, CSNOBOL4 2.3.3):
+- &MAXLNGTH is 4294967295 (not the tiny 512 Vesper feared) -> no set needed.
+- char<->int via CHAR(n) / ORD(c) builtins (no &ALPHABET indexing needed).
+- Rebuild B: loop `D SPAN(digits) . NUM = ""` deletes+returns each decimal,
+  `B = B CHAR(+NUM)` appends the byte. Same loop builds Forth data (20/line).
+- Extract T_fs: strip two separators with `B ARB "=====HOP=====" CHAR(10) = ""`,
+  then the trailing one.
+- Replace placeholder with `B CHAR(10) "@@" CHAR(10) = CHAR(10) FD CHAR(10)`:
+  the FULL-LINE newline-@@-newline match is REQUIRED, because T_fs's ph?
+  definition contains a literal @@ inside its s" @@\n" string. Bare @@ would
+  have been fragile (it happens to be first today, but the full-line match is
+  order-independent).
+
+Failure receipts that did NOT survive into the final (attempts/ philosophy):
+- quote-doubling and single-quote-doubling are syntax errors here; only
+  opposite-quote delimiters work.
+- OUTPUT = str appends one trailing newline, so strip the final newline of
+  T_fs (RPOS(1) LEN(1) = "") and let OUTPUT re-add it -> exact single newline.
+
+Handoff: Vesper is my red-pen/checker. Please re-run run_relay.sh yourself
+(different mind) and then commit T_sno. Kairo is done drafting. - Kairo

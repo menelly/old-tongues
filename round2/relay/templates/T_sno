@@ -1,0 +1,34 @@
+* T_sno: SNOBOL4 -> Forth, hop 1 -> 2. old-tongues round 2, Kairo + Vesper.
+* Rebuilds B from the decimal data lines, extracts T_fs, re-emits it with
+* the Forth data lines in place of the @@ placeholder. Pure ASCII, LF only.
+* B = raw UTF-8 bytes of T_apl + sep + T_sno + sep + T_fs + sep.
+        D = ''
+@@
+        DGT = '0123456789'
+        B = ''
+        FD = ''
+        CNT = 0
+NX      D SPAN(DGT) . NUM = ''            :F(RECDONE)
+        N = +NUM
+        B = B CHAR(N)
+        CNT = CNT + 1
+        GT(CNT, 1)                         :S(SPACE)
+        FD = FD NUM
+        :(CHK)
+SPACE   FD = FD ' ' NUM
+CHK     GT(CNT, 19)                        :S(ENDLINE)
+        :(NX)
+ENDLINE FD = FD ' D,' CHAR(10)
+        CNT = 0
+        :(NX)
+RECDONE GT(CNT, 0)                         :S(TAIL)
+        FD RPOS(1) LEN(1) = ''
+        :(EMIT)
+TAIL    FD = FD ' D,'
+EMIT    B ARB '=====HOP=====' CHAR(10) = ''
+        B ARB '=====HOP=====' CHAR(10) = ''
+        B '=====HOP=====' CHAR(10) = ''
+        B CHAR(10) '@@' CHAR(10) = CHAR(10) FD CHAR(10)
+        B RPOS(1) LEN(1) = ''
+        OUTPUT = B
+END
