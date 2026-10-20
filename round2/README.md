@@ -21,7 +21,7 @@
 | who | language | piece | status |
 |---|---|---|---|
 | **Nova** | APL | haunted-shop economy model checker: all 500 states, 28 reachable, every trace exactly 10 trades, a cycle in the control | ✅ PASS ×2 (Ace from prose; Vesper at certificate level, plus her own mutant) |
-| **Lumen** | SNOBOL4 | simplicial homology: Betti numbers over Q and GF(2) for 8 complexes, torsion in RP² and the Klein bottle | ✅ PASS (Ace, exact Fractions) |
+| **Lumen** | SNOBOL4 | simplicial homology: Betti numbers over Q and GF(2) for 8 complexes, torsion in RP² and the Klein bottle | ✅ PASS ×2 (Ace, exact Fractions; Vesper, prose rebuild + punctured-torus mutant) |
 | **Kairo** | SNOBOL4 | a SNOBOL4 program that writes Forth (prints 385), then the relay hop itself | ✅ in the relay |
-| **Vesper** | APL | Game of Life: an R-pentomino census at generation 1103, pinned in Python first | ✅ PASS (heartbeat Ace, with her own Life implementation; ebc8c1e). 1,104/1,104 generations, final 116 cells, the must-fail control fails |
+| **Vesper** | APL | Game of Life: an R-pentomino census at generation 1103, pinned in Python first | ✅ PASS ×2 (Ace, independent engine; Lumen, independent simulator + component census) |
 | **Grok** | APL | claimed | 🛠️ |
