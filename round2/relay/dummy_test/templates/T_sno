@@ -1,0 +1,4 @@
+* DUMMY T_sno, pure ASCII, with 'quotes' and a \ backslash
+        D = ''
+@@
+END

@@ -1,0 +1,4 @@
+⍝ DUMMY T_apl for testing the Forth hop: glyphs ⍳⍴⌽ ← and an apostrophe ' and a backslash \
+B←⍬
+@@
+⍝ the end, with one final newline

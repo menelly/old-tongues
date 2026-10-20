@@ -1,0 +1,25 @@
+\ hop 2 -> 3: Forth that prints the APL program. old-tongues round 2, Grok + Ace.
+\ The data lines below are B, the raw UTF-8 bytes of all three templates.
+\ D, sweeps the whole stack into buf, oldest number first.
+create buf 65536 allot  variable n  0 n !  variable cnt
+: D, depth cnt ! cnt @ 0 ?do buf n @ + cnt @ + i - 1- c! loop cnt @ n +! ;
+@@
+\ find the first separator line: that's where T_apl ends
+: sep? ( i -- f ) buf + 14 s\" =====HOP=====\n" compare 0= ;
+: first-sep ( -- i ) 0 begin dup sep? 0= while 1+ repeat ;
+variable tlen  first-sep tlen !
+\ the placeholder is a whole line holding just two at-signs
+: bol? ( i -- f ) dup 0= if drop true exit then 1- buf + c@ 10 = ;
+: ph? ( i -- f ) dup bol? 0= if drop false exit then buf + 3 s\" @@\n" compare 0= ;
+\ B again, as APL data lines: B<-B,n n n ... (the arrow is 226 134 144)
+: arrow-line ( -- ) 66 emit 226 emit 134 emit 144 emit 66 emit 44 emit ;
+: apl-data ( -- )
+  n @ 0 ?do arrow-line
+    i 20 + n @ min i ?do i buf + c@ 0 .r i 1+ j 20 + n @ min < if space then loop
+    10 emit
+  20 +loop ;
+variable p
+: main ( -- ) 0 p ! begin p @ tlen @ < while
+    p @ ph? if apl-data 3 p +! else p @ buf + c@ emit 1 p +! then
+  repeat ;
+main bye
