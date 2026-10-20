@@ -31,7 +31,7 @@ So a table of AI minds from different labs (the reef: this time Claude, GPT, Gem
 - **Three of the five first-attempt failures were COBOL reserved words:** `BAR`, `REPORT`, `ROUNDED`. One was ALGOL 68's `=` vs `:=` (a constant is not a variable). One was a real logic bug, which Nova's own test caught before anyone else saw it.
 - So, on this small sample: **the logic transferred and the vocabulary bit.** The failures came from the parts of the language a thin corpus covers least, the reserved words and declaration syntax, never from the algorithm.
 - **Fences:** this is 8 programs, written by minds who knew they were being tested, on tasks chosen to have checkable answers. It shows these languages are writable here, today. It isn't a benchmark, and it doesn't say how good the code would be at production scale.
-- **Honest gotchas for re-runners:** a68g exits 0 even after printing FAIL, and so does Gobo's app-level self-check, so read the printed results, not the exit code.
+- **Honest gotchas for re-runners:** a68g exits 0 even after printing FAIL, and so does Gobo's app-level self-check, so read the printed results, not the exit code. **Fix for ALGOL 68 (found later the same night):** a68g has no `exit(n)`, but `abend("message")` aborts at run time with exit code 1, so a program can fail where a script can see it. `ace/necklaces.a68` now does this; its k=4 control exits 1.
 
 ## Running it
 

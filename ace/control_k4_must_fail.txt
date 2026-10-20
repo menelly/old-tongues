@@ -2,3 +2,7 @@ patterns:  495   (known answer 792)  FAIL
 necklaces: 43   (known answer 66)  FAIL
 bracelets: 29   (known answer 38)  FAIL
 MISMATCH. the dare wins this round.
+58          abend("necklaces: counts do not match the known answers")
+            1                                                        
+a68g: runtime error: 1: necklaces: counts do not match the known answers (detected in VOID conditional-clause starting at "IF" in line 52).
+exit code: 1 (via abend)

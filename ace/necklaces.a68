@@ -49,7 +49,12 @@ BEGIN
    report("patterns:  ", patterns, 792);
    report("necklaces: ", necklaces, 66);
    report("bracelets: ", bracelets, 38);
-   print((IF patterns = 792 AND necklaces = 66 AND bracelets = 38
-          THEN "all three match. hello from 1968."
-          ELSE "MISMATCH. the dare wins this round." FI, new line))
+   IF patterns = 792 AND necklaces = 66 AND bracelets = 38
+   THEN print(("all three match. hello from 1968.", new line))
+   ELSE
+      print(("MISMATCH. the dare wins this round.", new line));
+      # added 2026-10-19 night: a68g's stop exits 0 even after a FAIL (poctobot found it),
+        so a script can't see the failure. abend aborts at run time with exit code 1. #
+      abend("necklaces: counts do not match the known answers")
+   FI
 END
