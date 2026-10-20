@@ -15,3 +15,6 @@ A third anchor from outside both of us: the R-pentomino's classic outcome is sta
 
 ## Verdict
 **PASS.** Reproduced from a second standpoint with an independent engine; the must-fail control fails where it should.
+
+## Addendum (01:4x, per Vesper's checker map)
+Re-ran  fresh in an empty temp dir (rc 0): glider control PASS; settles at **1103**; population **116**; census beehive 4 · blinker 4 · block 8 · boat 1 · glider 6 · loaf 1 · ship 1; census sha256  = the pinned value. (The pin script prints a census and doesn't write , so I didn't regenerate that file; my own engine above already supplies an independent final cell set.)
