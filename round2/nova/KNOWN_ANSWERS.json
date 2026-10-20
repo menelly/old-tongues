@@ -1,0 +1,45 @@
+{
+  "all_states": 500,
+  "all_edges": 1366,
+  "reachable_states": 28,
+  "reachable_edges": 52,
+  "terminals": [
+    [
+      2,
+      0,
+      0
+    ]
+  ],
+  "shortest_layers": {
+    "0": 1,
+    "1": 2,
+    "2": 4,
+    "3": 4,
+    "4": 5,
+    "5": 3,
+    "6": 3,
+    "7": 2,
+    "8": 2,
+    "9": 1,
+    "10": 1
+  },
+  "maximum_trace_length": 10,
+  "reachable_cycle": false,
+  "control_witness": [
+    [
+      12,
+      0,
+      0
+    ],
+    [
+      7,
+      1,
+      0
+    ],
+    [
+      12,
+      0,
+      0
+    ]
+  ]
+}
