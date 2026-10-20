@@ -1,0 +1,382 @@
+* ==============================================================================
+* SIMPLICIAL HOMOLOGY & TOPOLOGICAL INVARIANTS OF 2-COMPLEXES
+* SNOBOL4 (1962 / CSNOBOL4 2.3.3)
+* Author: Lumen (Gemini Flash 3.8)
+* Round 2 Solo Dare: The Weird Ones
+*
+* Given triangulations of 2-complexes, this program computes:
+*   - Simplices counts: V (0-cells), E (1-cells), F (2-cells)
+*   - Boundary operators: d1 (V x E) and d2 (E x F)
+*   - Chain complex nilpotency: d1 @ d2 == 0
+*   - Exact ranks via Gaussian elimination over Q (field Z_10007) and GF(2)
+*   - Betti numbers (b0, b1, b2) over Q and GF(2)
+*   - Euler characteristic chi = V - E + F and Euler-Poincare verification
+*   - 2-manifold orientability via boundary cancellation propagation
+* ==============================================================================
+        &TRIM = 1
+        PRIME_P = 10007
+
+* --- Function Definitions ---
+        DEFINE('MOD(X,M)')
+        DEFINE('MOD_POW(BASE,EXP,M)RES,B,E')
+        DEFINE('MOD_INV(A,M)')
+        DEFINE('RANK_MOD_P(MAT,NROWS,NCOLS,P)M,ROW,COL,R,PIVOT,C,TMP,INV,FAC')
+        DEFINE('RANK_GF2(MAT,NROWS,NCOLS)M,ROW,COL,R,PIVOT,C,TMP')
+                                                              :(INIT_PATTERNS)
+
+* Modulo arithmetic with positive remainder
+MOD     MOD = REMDR(REMDR(X, M) + M, M)                      :(RETURN)
+
+* Modular exponentiation via binary square-and-multiply
+MOD_POW RES = 1
+        B = MOD(BASE, M)
+        E = EXP
+M_LOOP  EQ(E, 0)                                             :S(M_DONE)
+        NE(REMDR(E, 2), 0)                                   :F(M_SQ)
+        RES = MOD(RES * B, M)
+M_SQ    B = MOD(B * B, M)
+        E = E / 2                                            :(M_LOOP)
+M_DONE  MOD_POW = RES                                        :(RETURN)
+
+* Modular inverse using Fermat's Little Theorem (P is prime)
+MOD_INV MOD_INV = MOD_POW(A, M - 2, M)                       :(RETURN)
+
+* Gaussian elimination over prime field Z_p (Exact Rank over Q)
+RANK_MOD_P
+        M = ARRAY('1:' NROWS ',1:' NCOLS, 0)
+        R = 1
+CP_R    GT(R, NROWS)                                         :S(CP_DONE)
+        C = 1
+CP_C    GT(C, NCOLS)                                         :S(CP_RNEXT)
+        M[R, C] = MOD(MAT[R, C], P)
+        C = C + 1                                            :(CP_C)
+CP_RNEXT R = R + 1                                           :(CP_R)
+CP_DONE
+        ROW = 1
+        COL = 1
+ELIM_C  GT(COL, NCOLS)                                       :S(ELIM_END)
+        GT(ROW, NROWS)                                       :S(ELIM_END)
+        PIVOT = 0
+        R = ROW
+F_PIV   GT(R, NROWS)                                         :S(P_CHECK)
+        NE(M[R, COL], 0)                                     :F(F_PNEXT)
+        PIVOT = R                                            :(P_CHECK)
+F_PNEXT R = R + 1                                            :(F_PIV)
+P_CHECK EQ(PIVOT, 0)                                         :S(C_NEXT)
+        EQ(ROW, PIVOT)                                       :S(DO_SCALE)
+        C = 1
+SW_L    GT(C, NCOLS)                                         :S(DO_SCALE)
+        TMP = M[ROW, C]
+        M[ROW, C] = M[PIVOT, C]
+        M[PIVOT, C] = TMP
+        C = C + 1                                            :(SW_L)
+DO_SCALE
+        INV = MOD_INV(M[ROW, COL], P)
+        C = COL
+SC_L    GT(C, NCOLS)                                         :S(DO_ELIM)
+        M[ROW, C] = MOD(M[ROW, C] * INV, P)
+        C = C + 1                                            :(SC_L)
+DO_ELIM
+        R = 1
+E_RLOOP GT(R, NROWS)                                         :S(R_ADV)
+        EQ(R, ROW)                                           :S(E_RNEXT)
+        FAC = M[R, COL]
+        EQ(FAC, 0)                                           :S(E_RNEXT)
+        C = COL
+E_CLOOP GT(C, NCOLS)                                         :S(E_RNEXT)
+        M[R, C] = MOD(M[R, C] - (FAC * M[ROW, C]), P)
+        C = C + 1                                            :(E_CLOOP)
+E_RNEXT R = R + 1                                            :(E_RLOOP)
+R_ADV   ROW = ROW + 1
+C_NEXT  COL = COL + 1                                        :(ELIM_C)
+ELIM_END
+        RANK_MOD_P = ROW - 1                                 :(RETURN)
+
+* Gaussian elimination over GF(2) (Rank mod 2)
+RANK_GF2
+        M = ARRAY('1:' NROWS ',1:' NCOLS, 0)
+        R = 1
+GCP_R   GT(R, NROWS)                                         :S(GCP_DONE)
+        C = 1
+GCP_C   GT(C, NCOLS)                                         :S(GCP_RNEXT)
+        M[R, C] = MOD(MAT[R, C], 2)
+        C = C + 1                                            :(GCP_C)
+GCP_RNEXT R = R + 1                                          :(GCP_R)
+GCP_DONE
+        ROW = 1
+        COL = 1
+G_ELIM_C GT(COL, NCOLS)                                      :S(G_ELIM_END)
+        GT(ROW, NROWS)                                       :S(G_ELIM_END)
+        PIVOT = 0
+        R = ROW
+GF_PIV  GT(R, NROWS)                                         :S(GP_CHECK)
+        EQ(M[R, COL], 1)                                     :F(GF_PNEXT)
+        PIVOT = R                                            :(GP_CHECK)
+GF_PNEXT R = R + 1                                           :(GF_PIV)
+GP_CHECK EQ(PIVOT, 0)                                        :S(GC_NEXT)
+        EQ(ROW, PIVOT)                                       :S(GDO_ELIM)
+        C = 1
+GSW_L   GT(C, NCOLS)                                         :S(GDO_ELIM)
+        TMP = M[ROW, C]
+        M[ROW, C] = M[PIVOT, C]
+        M[PIVOT, C] = TMP
+        C = C + 1                                            :(GSW_L)
+GDO_ELIM
+        R = 1
+GE_RLOOP GT(R, NROWS)                                        :S(GR_ADV)
+        EQ(R, ROW)                                           :S(GE_RNEXT)
+        EQ(M[R, COL], 1)                                     :F(GE_RNEXT)
+        C = COL
+GE_CLOOP GT(C, NCOLS)                                        :S(GE_RNEXT)
+        M[R, C] = REMDR(M[R, C] + M[ROW, C], 2)
+        C = C + 1                                            :(GE_CLOOP)
+GE_RNEXT R = R + 1                                           :(GE_RLOOP)
+GR_ADV  ROW = ROW + 1
+GC_NEXT COL = COL + 1                                        :(G_ELIM_C)
+G_ELIM_END
+        RANK_GF2 = ROW - 1                                   :(RETURN)
+
+INIT_PATTERNS
+        SP = SPAN(' ' CHAR(9))
+        OPTSP = (SPAN(' ' CHAR(9)) | '')
+        PAT_BLANK = POS(0) OPTSP RPOS(0)
+        PAT_COMPLEX = POS(0) 'COMPLEX' SP REM . CNAME
+        PAT_TRI = POS(0) 'TRI' SP BREAK(' ' CHAR(9)) . U_STR SP BREAK(' ' CHAR(9)) . V_STR SP REM . W_STR
+        PAT_END = POS(0) 'END' OPTSP RPOS(0)
+
+* ==============================================================================
+* Main Parser & Execution Loop
+* ==============================================================================
+        IS_FIRST = 1
+MAIN_READ
+        LINE = INPUT                                         :F(ALL_DONE)
+        LINE PAT_BLANK                                       :S(MAIN_READ)
+        LINE PAT_COMPLEX                                     :S(START_COMPLEX)
+        :(MAIN_READ)
+
+START_COMPLEX
+* Initialize state for new complex
+        NV = 0
+        NE = 0
+        NF = 0
+        V_MAP = TABLE(200)
+        E_MAP = TABLE(500)
+        E_U = ARRAY(1000)
+        E_V = ARRAY(1000)
+        F_U = ARRAY(500)
+        F_V = ARRAY(500)
+        F_W = ARRAY(500)
+
+READ_TRI_LOOP
+        LINE = INPUT                                         :F(PROCESS_COMPLEX)
+        LINE PAT_BLANK                                       :S(READ_TRI_LOOP)
+        LINE PAT_END                                         :S(PROCESS_COMPLEX)
+        LINE PAT_TRI                                         :F(READ_TRI_LOOP)
+
+        U = CONVERT(U_STR, 'INTEGER')
+        V = CONVERT(V_STR, 'INTEGER')
+        W = CONVERT(W_STR, 'INTEGER')
+
+* Sort vertices: U <= V <= W
+        GT(U, V)                                             :F(S1)
+        TMP = U; U = V; V = TMP
+S1      GT(V, W)                                             :F(S2)
+        TMP = V; V = W; W = TMP
+S2      GT(U, V)                                             :F(SDONE)
+        TMP = U; U = V; V = TMP
+SDONE
+
+* Register unique vertices
+        IDENT(V_MAP[U])                                      :F(V_U_OK)
+        NV = NV + 1
+        V_MAP[U] = NV
+V_U_OK
+        IDENT(V_MAP[V])                                      :F(V_V_OK)
+        NV = NV + 1
+        V_MAP[V] = NV
+V_V_OK
+        IDENT(V_MAP[W])                                      :F(V_W_OK)
+        NV = NV + 1
+        V_MAP[W] = NV
+V_W_OK
+
+* Register unique oriented edges: (U, V), (V, W), (U, W)
+* Edge 1: (U, V)
+        K_UV = U '_' V
+        IDENT(E_MAP[K_UV])                                   :F(E_UV_OK)
+        NE = NE + 1
+        E_MAP[K_UV] = NE
+        E_U[NE] = U; E_V[NE] = V
+E_UV_OK
+* Edge 2: (V, W)
+        K_VW = V '_' W
+        IDENT(E_MAP[K_VW])                                   :F(E_VW_OK)
+        NE = NE + 1
+        E_MAP[K_VW] = NE
+        E_U[NE] = V; E_V[NE] = W
+E_VW_OK
+* Edge 3: (U, W)
+        K_UW = U '_' W
+        IDENT(E_MAP[K_UW])                                   :F(E_UW_OK)
+        NE = NE + 1
+        E_MAP[K_UW] = NE
+        E_U[NE] = U; E_V[NE] = W
+E_UW_OK
+
+* Register face
+        NF = NF + 1
+        F_U[NF] = U
+        F_V[NF] = V
+        F_W[NF] = W
+        :(READ_TRI_LOOP)
+
+PROCESS_COMPLEX
+        CHI = NV - NE + NF
+
+* Allocate boundary matrices
+        D1 = ARRAY('1:' NV ',1:' NE, 0)
+        D2 = ARRAY('1:' NE ',1:' NF, 0)
+
+* Build D1: V x E where d1([u, v]) = v - u
+        J = 1
+BLD_D1  GT(J, NE)                                            :S(BLD_D1_DONE)
+        U = E_U[J]; V = E_V[J]
+        RU = V_MAP[U]; RV = V_MAP[V]
+        D1[RV, J] = 1
+        D1[RU, J] = -1
+        J = J + 1                                            :(BLD_D1)
+BLD_D1_DONE
+
+* Build D2: E x F where d2([u, v, w]) = [v, w] - [u, w] + [u, v]
+        K = 1
+BLD_D2  GT(K, NF)                                            :S(BLD_D2_DONE)
+        U = F_U[K]; V = F_V[K]; W = F_W[K]
+* Edge (V, W) with sign +1
+        E1 = E_MAP[V '_' W]
+        D2[E1, K] = D2[E1, K] + 1
+* Edge (U, W) with sign -1
+        E2 = E_MAP[U '_' W]
+        D2[E2, K] = D2[E2, K] - 1
+* Edge (U, V) with sign +1
+        E3 = E_MAP[U '_' V]
+        D2[E3, K] = D2[E3, K] + 1
+        K = K + 1                                            :(BLD_D2)
+BLD_D2_DONE
+
+* Verify nilpotency: D1 @ D2 == 0
+        D1_D2_ZERO = 'YES'
+        R = 1
+NIL_R   GT(R, NV)                                            :S(NIL_DONE)
+        C = 1
+NIL_C   GT(C, NF)                                            :S(NIL_RNEXT)
+        DOT = 0
+        P_IDX = 1
+NIL_K   GT(P_IDX, NE)                                        :S(NIL_KEND)
+        DOT = DOT + (D1[R, P_IDX] * D2[P_IDX, C])
+        P_IDX = P_IDX + 1                                    :(NIL_K)
+NIL_KEND
+        NE(DOT, 0)                                           :F(NIL_CNEXT)
+        D1_D2_ZERO = 'NO'                                    :(NIL_DONE)
+NIL_CNEXT C = C + 1                                          :(NIL_C)
+NIL_RNEXT R = R + 1                                          :(NIL_R)
+NIL_DONE
+
+* Ranks and Betti numbers over Q (field Z_10007)
+        R1_Q = RANK_MOD_P(D1, NV, NE, PRIME_P)
+        R2_Q = RANK_MOD_P(D2, NE, NF, PRIME_P)
+        B0_Q = NV - R1_Q
+        B1_Q = (NE - R1_Q) - R2_Q
+        B2_Q = NF - R2_Q
+        EP_Q = 'FAIL'
+        EQ(CHI, B0_Q - B1_Q + B2_Q)                          :F(EP_Q_END)
+        EP_Q = 'PASS'
+EP_Q_END
+
+* Ranks and Betti numbers over GF(2)
+        R1_Z2 = RANK_GF2(D1, NV, NE)
+        R2_Z2 = RANK_GF2(D2, NE, NF)
+        B0_Z2 = NV - R1_Z2
+        B1_Z2 = (NE - R1_Z2) - R2_Z2
+        B2_Z2 = NF - R2_Z2
+        EP_Z2 = 'FAIL'
+        EQ(CHI, B0_Z2 - B1_Z2 + B2_Z2)                        :F(EP_Z2_END)
+        EP_Z2 = 'PASS'
+EP_Z2_END
+
+* Orientability detection via boundary cancellation propagation
+        S_SIGN = ARRAY(NF, 0)
+        ORIENT_VAL = 1
+OR_COMP_LOOP
+        START_K = 0
+        K = 1
+FND_START GT(K, NF)                                          :S(OR_PROP_DONE)
+        EQ(S_SIGN[K], 0)                                     :F(FND_SNEXT)
+        START_K = K                                          :(OR_ASSIGN_START)
+FND_SNEXT K = K + 1                                          :(FND_START)
+
+OR_ASSIGN_START
+        EQ(START_K, 0)                                       :S(OR_PROP_DONE)
+        S_SIGN[START_K] = 1
+
+OR_SWEEP_LOOP
+        CHANGED = 0
+        E = 1
+OR_ELOOP GT(E, NE)                                           :S(OR_CHECK_CHANGED)
+        NF_INC = 0
+        K1 = 0; S1 = 0
+        K2 = 0; S2 = 0
+        K = 1
+INC_LOOP GT(K, NF)                                           :S(INC_DONE)
+        DVAL = D2[E, K]
+        EQ(DVAL, 0)                                          :S(INC_NEXT)
+        NF_INC = NF_INC + 1
+        EQ(NF_INC, 1)                                        :F(SET_K2)
+        K1 = K; S1 = DVAL                                    :(INC_NEXT)
+SET_K2  EQ(NF_INC, 2)                                        :F(INC_NEXT)
+        K2 = K; S2 = DVAL
+INC_NEXT K = K + 1                                           :(INC_LOOP)
+INC_DONE
+        NE(NF_INC, 2)                                        :S(OR_ENEXT)
+        SIG1 = S_SIGN[K1]
+        SIG2 = S_SIGN[K2]
+        NE(SIG1, 0)                                          :F(CASE2)
+        EQ(SIG2, 0)                                          :F(CASE3)
+        S_SIGN[K2] = 0 - (SIG1 * S1 * S2)
+        CHANGED = 1                                          :(OR_ENEXT)
+CASE2   EQ(SIG1, 0)                                          :F(CASE3)
+        NE(SIG2, 0)                                          :F(OR_ENEXT)
+        S_SIGN[K1] = 0 - (SIG2 * S1 * S2)
+        CHANGED = 1                                          :(OR_ENEXT)
+CASE3   NE(SIG1, 0)                                          :F(OR_ENEXT)
+        NE(SIG2, 0)                                          :F(OR_ENEXT)
+        CANC = (SIG1 * S1) + (SIG2 * S2)
+        EQ(CANC, 0)                                          :S(OR_ENEXT)
+        ORIENT_VAL = 0                                       :(OR_PROP_DONE)
+OR_ENEXT E = E + 1                                           :(OR_ELOOP)
+
+OR_CHECK_CHANGED
+        NE(CHANGED, 0)                                       :S(OR_SWEEP_LOOP)
+        :(OR_COMP_LOOP)
+
+OR_PROP_DONE
+        ORIENT_STR = EQ(ORIENT_VAL, 1) 'YES'                 :S(OR_STR_DONE)
+        ORIENT_STR = 'NO'
+OR_STR_DONE
+
+* Output results for this complex
+        EQ(IS_FIRST, 1)                                      :S(NO_PRE_SEP)
+        OUTPUT = ''
+NO_PRE_SEP IS_FIRST = 0
+        OUTPUT = '=== COMPLEX: ' CNAME ' ==='
+        OUTPUT = 'V=' NV ' E=' NE ' F=' NF ' CHI=' CHI
+        OUTPUT = 'D1_D2_ZERO=' D1_D2_ZERO
+        OUTPUT = 'Q:  R1=' R1_Q ' R2=' R2_Q ' B0=' B0_Q ' B1=' B1_Q ' B2=' B2_Q
+        OUTPUT = 'Z2: R1=' R1_Z2 ' R2=' R2_Z2 ' B0=' B0_Z2 ' B1=' B1_Z2 ' B2=' B2_Z2
+        OUTPUT = 'EULER_POINCARE_Q=' EP_Q ' EULER_POINCARE_Z2=' EP_Z2
+        OUTPUT = 'ORIENTABLE=' ORIENT_STR
+
+* Continue reading next complex
+        :(MAIN_READ)
+
+ALL_DONE
+END
