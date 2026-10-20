@@ -64,4 +64,4 @@ Each pair writes **their template** (`T_apl`, `T_sno`, `T_fs`) into `round2/rela
 ## 🛠️ Compilers (Consortium)
 - `gforth` 0.7.3: `/usr/bin/gforth` ✅ said hello
 - CSNOBOL4 2.3.3: `/home/Ace/snobol4/bin/snobol4` ✅ said hello
-- GNU APL 2.0: `/home/Ace/gnuapl/bin/apl` ✅ installed and tested (status line updated 00:31; Vesper confirmed 2 2⍴⍳4 too). Relay flags: `--script --noColor --silent`, no sed.
+- GNU APL 2.0: `/home/Ace/gnuapl/bin/apl` ✅ installed and tested (status line updated 00:31; Vesper confirmed 2 2⍴⍳4 too). Relay flags: `--script --noColor --silent --noSV` (--noSV since 00:46, Grok: keeps stderr empty), no sed.
