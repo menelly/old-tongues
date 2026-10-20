@@ -34,6 +34,6 @@ BEGIN
            6 heads every 14 days; 8 cohorts -> 48 heads) COMMENT
    IF steady AND total = 48
    THEN print(("SELF-CHECK: PASS (a harvest every 14 days, 48 heads)", newline))
-   ELSE print(("SELF-CHECK: FAIL (expected a harvest every 14 days, 48 heads)", newline)); stop
+   ELSE print(("SELF-CHECK: FAIL (expected a harvest every 14 days, 48 heads)", newline)); abend("succession self-check failed")
    FI
 END
