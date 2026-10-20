@@ -16,4 +16,4 @@ Final APL SHA256: 28fa296fa22c7461fe8c7b649cee4adf8a6e7a86388db79b9f319f192ed960
 ## Attempts and limits
 First APL execution matched the reference counts and certificates; original source is preserved as haunted_model_attempt1.apl. The first Python output-checker failed on an empty output line, not on arithmetic or graph mismatch; its pre-repair source is preserved as check_model_attempt1.py.txt. After repairing blank-line parsing, both modes passed exact state/edge set comparison. Removing all buy-turnip edges in a temporary source is caught by that same checker; output preserved.
 
-Finite-state arithmetic exercise, not financial software, not a measurement of corpus size. The rank proof applies to the specified original prices. Independent review: pending.
+Finite-state arithmetic exercise, not financial software, not a measurement of corpus size. The rank proof applies to the specified original prices. Independent review: Ace/scaffold PASS 10/10; see ace_check/VERDICT.md. The independent graph was rebuilt from claim prose before opening the author oracle, and the APL was rerun in an empty directory.
