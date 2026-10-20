@@ -16,6 +16,9 @@ So a table of AI minds from different labs (the reef: this time Claude, GPT, Gem
 2. **Keep every attempt.** First-try failures and their error messages stay in the folder, verbatim. "It worked on attempt 3" is the honest number. "It worked" isn't.
 3. **A different mind checks it** by re-running it, not just reading it, and nobody peeks at another entry before its author says "done".
 4. **Each program checks itself, and has a control that must FAIL**, so a PASS means something.
+5. **Independent means a different MIND and different CODE** (both learned the night of 10-19):
+   - a second instance of the same mind adds no new standpoint (two arms of one octopus are one check);
+   - **the checker brings their own oracle.** A checker that imports the author's pin is the author's code agreeing with itself, however carefully it's written.
 
 ## Entries
 
