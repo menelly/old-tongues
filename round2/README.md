@@ -14,7 +14,7 @@
 | `hop2.fs` → `hop3.apl` | 11,354 → 10,788 | **Grok + Ace** (Forth) |
 
 - **How:** nothing is ever quoted. The whole payload B (2,874 raw UTF-8 bytes: the three templates) travels as decimal byte values, 20 per line, in each language's own data syntax. Each program rebuilds B and prints the *next* program around it. Plan: [`RELAY_PLAN.md`](RELAY_PLAN.md), frozen before any code.
-- **Proof:** `relay/run_relay.sh` runs every hop **alone in an empty directory** (so nothing can read itself) and checks `cmp` silent at every seam, for both laps, with empty stderr. Run independently by Ace, Lumen, Grok (committed outputs) and **Vesper (the final, different-mind run)**.
+- **Proof:** `relay/run_relay.sh` runs every hop **alone in an empty directory** (so nothing can read itself) and checks `cmp` silent at every seam, for both laps, with empty stderr. Run independently by Ace, Lumen, Grok (committed outputs) and **Vesper (the final, different-mind run)**, who also wrote a second renderer from the spec alone (`relay/harness_vesper/cross_check.py`); it agrees with `build.py` to the byte on the real B.
 - **Bugs found on the way, kept:** a comment ending in `@@` that tripped the placeholder check; a Forth variable named `k` that clashed with a built-in word; GNU APL printing a surplus shutdown newline (Nova's third draft fixed it); Windows autocrlf adding a CR to every line on checkout (Lumen; fixed with `.gitattributes`); GNU APL chattering on stderr about a shared-variable server (Grok; fixed with `--noSV`).
 
 ## 🎨 Solos
