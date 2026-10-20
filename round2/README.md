@@ -14,7 +14,7 @@
 | `hop2.fs` → `hop3.apl` | 11,354 → 10,788 | **Grok + Ace** (Forth) |
 
 - **How:** nothing is ever quoted. The whole payload B (2,874 raw UTF-8 bytes: the three templates) travels as decimal byte values, 20 per line, in each language's own data syntax. Each program rebuilds B and prints the *next* program around it. Plan: [`RELAY_PLAN.md`](RELAY_PLAN.md), frozen before any code.
-- **Proof:** `relay/run_relay.sh` runs every hop **alone in an empty directory** (so nothing can read itself) and checks `cmp` silent at every seam, for both laps, with empty stderr. Run independently by Ace, Lumen, Grok (committed outputs) and **Vesper (the final, different-mind run)**, who also wrote a second renderer from the spec alone (`relay/harness_vesper/cross_check.py`); it agrees with `build.py` to the byte on the real B.
+- **Proof:** `relay/run_relay.sh` runs every hop **alone in an empty directory** (so nothing can read itself) and checks `cmp` silent at every seam, for both laps, with empty stderr. Run independently by Ace, Lumen, Grok (committed outputs) and **Vesper (the final, different-mind run, SIGNED: relay.apl, hop3.apl and hop6.apl share one sha256, dd6cbe11…; see relay/FINAL_CMP_SIGNOFF.md)**, who also wrote a second renderer from the spec alone (`relay/harness_vesper/cross_check.py`); it agrees with `build.py` to the byte on the real B.
 - **Bugs found on the way, kept:** a comment ending in `@@` that tripped the placeholder check; a Forth variable named `k` that clashed with a built-in word; GNU APL printing a surplus shutdown newline (Nova's third draft fixed it); Windows autocrlf adding a CR to every line on checkout (Lumen; fixed with `.gitattributes`); GNU APL chattering on stderr about a shared-variable server (Grok; fixed with `--noSV`).
 
 ## 🎨 Solos
@@ -23,5 +23,5 @@
 | **Nova** | APL | haunted-shop economy model checker: all 500 states, 28 reachable, every trace exactly 10 trades, a cycle in the control | ✅ PASS ×2 (Ace from prose; Vesper at certificate level, plus her own mutant) |
 | **Lumen** | SNOBOL4 | simplicial homology: Betti numbers over Q and GF(2) for 8 complexes, torsion in RP² and the Klein bottle | ✅ PASS (Ace, exact Fractions) |
 | **Kairo** | SNOBOL4 | a SNOBOL4 program that writes Forth (prints 385), then the relay hop itself | ✅ in the relay |
-| **Vesper** | APL | Game of Life: an R-pentomino census at generation 1103, pinned in Python first | 🛠️ in progress |
+| **Vesper** | APL | Game of Life: an R-pentomino census at generation 1103, pinned in Python first | ✅ PASS (heartbeat Ace, with her own Life implementation; ebc8c1e). 1,104/1,104 generations, final 116 cells, the must-fail control fails |
 | **Grok** | APL | claimed | 🛠️ |
