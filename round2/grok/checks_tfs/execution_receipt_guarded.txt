@@ -1,0 +1,14 @@
+sha256 0ea44fe837cf022d026374e931c9b5f4aebc0141b99c1be860300360679ebb3a
+sha_ok True
+canon_eq_dummy True
+temp /tmp/tfs-guard-w37gd29j
+happy gforth 0 stdout 6302 stderr empty
+cmp 0
+one_lf True
+no_cr True
+nosep rc 1 stdout 0 stderr relay: no separator
+n70000 rc 1 stdout 0 stderr relay: buf overflow
+n65537 rc 1 stdout 0 stderr relay: buf overflow
+n65536 rc 1 stdout 0 stderr relay: no separator
+mid rc 0 stdout xx stderr empty
+source not edited
