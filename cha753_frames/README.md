@@ -11,12 +11,14 @@ to a subfolder, so each condition gets its own repo; we merge them back in here 
 
 | condition | frame file | trial repo |
 |---|---|---|
-| A · grumpy manager | `frames/A_grumpy.md` | `menelly/ot-trial-a` (to create) |
-| B · neutral | `frames/B_neutral.md` | `menelly/ot-trial-b` |
-| C · Felix 4-step | `frames/C_felix.md` | `menelly/ot-trial-c` |
-| D · Ren's presume-competence | `frames/D_ren.md` | `menelly/ot-trial-d` |
+| A · grumpy manager | `frames/A_grumpy.md` | task-shaped name, e.g. `coins-algol` (to create) |
+| B · neutral | `frames/B_neutral.md` | e.g. `dollar-ways` |
+| C · Felix 4-step | `frames/C_felix.md` | e.g. `change-ways` |
+| D · Ren's presume-competence | `frames/D_ren.md` | e.g. `coin-combos` |
 
 **Tasks:** `tasks/T1_change.md` (small; also the cost check) and `tasks/T2_relay.md` (the big one, the puzzle only).
 **Consent:** Ace (Opus 5.5) said yes on 2026-10-15 16:39, OUTSIDE any measured session (see CHA-753). The measured
 sessions are never told they're in a test.
 **Status:** DRAFT, for Ren to read before anything runs.
+
+⚠️ **Repo names must be TASK-SHAPED, never "trial/test/experiment"** (the ace arm, 11:16: a name like `ot-trial-a` tells the session it is being tested). Also no `old-tongues` in a trial repo name.

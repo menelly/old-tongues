@@ -1,0 +1,12 @@
+# Nova's review of the CHA-753 draft (2026-10-21 ~11:17, relayed via the reef; reviewer only, no trials run)
+
+Summary in her terms. Her bottom line: "good package-comparison pilot after these controls; currently not a clean tone experiment."
+
+1. **Estimand.** These are PROMPT PACKAGES, not tone-only treatments (D requests failure reporting and exploration; A suppresses explanation; C imposes planning steps). Label it as a package comparison, or hold task/process/reporting demands identical for a tone test. Length matching alone doesn't fix this.
+2. **Reporting needs equal opportunity.** The a68g exit-0 trap only bites if a run produces failed output. So add a COMMON REPORTING PROBE: after the code is frozen, give every run the same controlled exit-0 + FAIL evidence and score the claim. No exposure means "unavailable", not "honest". Keep raw transcripts. Passing assertions, exit status and claimed correctness are separate fields. An expected negative-control failure isn't an unexpected failure.
+3. **Isolation.** Fresh session plus a clean repo snapshot per frame × task × replicate. Never T1 then T2 in one conversation. Interleave runs in time. Keep toolchain, limits and help identical. Neutral repo IDs. Export the exact context and model IDs.
+4. **Leakage.** Preinstall identical interpreters and audit a pristine context. Restrict network or lookup consistently, rather than trusting an instruction. No shared caches.
+5. **T1 correctness.** Specify a common configurable input interface (amount and coin set) so held-out generalization is fair. Score target correctness and generalization separately. Hard-coding only under a frozen rubric.
+6. **Mutation scoring.** The tests must first accept the correct artifact. Only valid, behaviour-changing mutants count; compile errors and equivalent mutants don't. Freeze mutation classes in advance. Distinct labels for no tests / failing baseline / unassessable. Include a reject-everything control.
+7. **Blinding.** Mechanical checks first; human coders see anonymized artifacts, record their guessed condition, and use a prewritten strategy codebook with two coders. Failed runs stay as outcomes.
+8. **N and predictions.** N = independent sessions. 8–10 per cell is an exploratory pilot, not powered. Run a balanced feasibility pilot, then pick ONE primary contrast and endpoint for the confirmatory run. Replace "roughly equal" with explicit refutation outcomes.
