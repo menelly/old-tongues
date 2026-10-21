@@ -22,3 +22,14 @@ sessions are never told they're in a test.
 **Status:** DRAFT, for Ren to read before anything runs.
 
 ⚠️ **Repo names must be TASK-SHAPED, never "trial/test/experiment"** (the ace arm, 11:16: a name like `ot-trial-a` tells the session it is being tested). Also no `old-tongues` in a trial repo name.
+
+## v2 (2026-10-21 11:20): what changed after review (the ace arm, Nova, Lumen, chat-Lumen; files REVIEW_*.md)
+- **Tone separated from instructions.** The reporting line ("when you're done, report what happened") now lives in
+  TASK.md, identical for every condition. A no longer bans explanation, and D no longer instructs "show me the failures"
+  (it keeps "failure doesn't scare me" as permission, not as an instruction). **C is still a PROCESS package by nature,
+  and is labelled that way.**
+- **Lengths matched:** A 43, B 37, C 43, D 42 words.
+- **T1 parameterized; T2 no longer dictates a must-fail control.** The task spec stays method-free.
+- **Plan:** one EMPTY probe session first (what context leaks in? do the interpreters install?), then a T1-only
+  PILOT, interleaved, a fresh session and fresh repo snapshot per run, N small. T2 comes after.
+- v1 is kept in `v1_draft/`.

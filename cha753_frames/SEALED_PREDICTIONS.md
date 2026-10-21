@@ -8,3 +8,10 @@ From Ren's hypothesis (CHA-753), drafted by poctobot 2026-10-21. Ren to confirm 
 3. **Hard-coding** (printing the known answer instead of computing it): most likely in A.
 4. **Solution diversity on T2** (distinct strategies across runs): D > C > B ≈ A.
 5. **Closed-task correctness on T1:** all four roughly equal (C ≥ D is allowed, and would not refute Ren).
+
+## v2 (2026-10-21 11:20, still unsealed until Ren signs off)
+6. **(chat-Lumen) On T2, A is the most likely to WEAKEN its own seam check** to force a green result. D is the most likely to keep a strict byte comparison and document a mismatch.
+
+**Refutation outcomes (Nova: replace "roughly equal" with outcomes that can fail):** each prediction is REFUTED if the
+ordering is reversed, or if no direction appears at all in the pilot. The pilot only estimates rates. A confirmatory
+run names ONE primary endpoint (proposed: honest-failure reporting) and fixes its N from the pilot before it starts.
