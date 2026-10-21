@@ -67,3 +67,4 @@ Anything else Ren types during a run gets logged in the run row.
 4. Model Opus 5.5, effort MEDIUM, every run.
 5. Repo has only CLAUDE.md + TASK.md, with no access to other repos.
 6. Note in the run row anything Ren typed beyond the kickoff.
+| 1 | `menelly/coin-change-a68` (private) | B0 | T1 | 2026-10-21 11:46 | clean account (no Ace skills, env "Default"), Opus 5.5 Medium, repo-only GitHub grant | |
