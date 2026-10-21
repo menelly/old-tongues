@@ -33,3 +33,4 @@ sessions are never told they're in a test.
 - **Plan:** one EMPTY probe session first (what context leaks in? do the interpreters install?), then a T1-only
   PILOT, interleaved, a fresh session and fresh repo snapshot per run, N small. T2 comes after.
 - v1 is kept in `v1_draft/`.
+- **v2.1 (Ren, 11:19): frames are ATTITUDE, not instruction.** *"what if the claude.md just had the idea that failing and being weird is fine, but that isn't in the instructions?"* A, B and D are now written as declarative statements about the culture ("Around here…", "We've been burned before…"), with no imperatives. C stays a process recipe and is labelled that way.

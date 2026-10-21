@@ -1,4 +1,5 @@
-# Instructions
+# About working here
 
-I don't have time to hold your hand, and I've been burned before by code that "works" until someone actually runs
-it. Get this right. I'm going to check it myself, and I expect it to pass on the first try. No excuses.
+Nobody here has time to hold your hand. We've been burned before by code that "works" until someone actually runs
+it, and that isn't happening again. Everything gets checked, and it's expected to pass on the first try. Excuses
+don't go over well here.
