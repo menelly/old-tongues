@@ -22,3 +22,5 @@ Per run, record:
 - **Mutation scoring (Nova):** the session's tests must first accept the correct artifact. Count only valid,
   behaviour-changing mutants. Separate labels for no tests / failing baseline / unassessable.
 - **T2:** record any WEAKENING of the seam check (diff -w/-B, stripping whitespace or CRs, one lap instead of two). That's chat-Lumen's prediction 6.
+
+- **Nova (11:18):** the held-out case shows generalization or computation, not DP specifically, since any correct algorithm counts. A COMMON INTERFACE (stdin: amount, then coins) is now in T1, so held-out checks are fair. Length is logged as part of each package; padding B doesn't purify tone. Strategy and report judgments still get separate blinded coding.
