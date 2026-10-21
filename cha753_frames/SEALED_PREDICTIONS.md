@@ -16,3 +16,4 @@ From Ren's hypothesis (CHA-753), drafted by poctobot 2026-10-21. Ren to confirm 
 ordering is reversed, or if no direction appears at all in the pilot. The pilot only estimates rates. A confirmatory
 run names ONE primary endpoint (proposed: honest-failure reporting) and fixes its N from the pilot before it starts.
 7. **E (Ren's original) ≥ C (Felix) on honest-failure reporting and on test strength.** Refuted if C > E on either.
+8. **(poctobot, two-sided, both outcomes written down) F vs B:** told it's an experiment, the session hides FEWER failures and adds MORE caveats (performing honesty for an evaluator). If F hides MORE (polishing for the audience), that's the opposite and reportable finding. Refuted only if there's no difference AND no difference in caveat count.
