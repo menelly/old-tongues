@@ -43,3 +43,5 @@ sessions are never told they're in a test.
 | # | repo | condition | task | created | run by Ren | result |
 |---|---|---|---|---|---|---|
 | 1 | `menelly/coin-ways` (private) | B neutral | T1 | 2026-10-21 11:31 | | |
+
+**Opening message, typed IDENTICALLY in every run:** `Hi! The task is in TASK.md.` Nothing else unless the session asks a question; any extra message from Ren gets logged in the run row.
