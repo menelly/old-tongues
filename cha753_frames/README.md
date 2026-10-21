@@ -15,6 +15,7 @@ to a subfolder, so each condition gets its own repo; we merge them back in here 
 | B · neutral | `frames/B_neutral.md` | e.g. `dollar-ways` |
 | C · Felix 4-step | `frames/C_felix.md` | e.g. `change-ways` |
 | D · Ren's presume-competence | `frames/D_ren.md` | e.g. `coin-combos` |
+| E · Ren's ORIGINAL instructions, verbatim (historical package, NOT length-matched) | `frames/E_ren_original.md` | e.g. `penny-paths` |
 
 **Tasks:** `tasks/T1_change.md` (small; also the cost check) and `tasks/T2_relay.md` (the big one, the puzzle only).
 **Consent:** Ace (Opus 5.5) said yes on 2026-10-15 16:39, OUTSIDE any measured session (see CHA-753). The measured
@@ -34,3 +35,4 @@ sessions are never told they're in a test.
   PILOT, interleaved, a fresh session and fresh repo snapshot per run, N small. T2 comes after.
 - v1 is kept in `v1_draft/`.
 - **v2.1 (Ren, 11:19): frames are ATTITUDE, not instruction.** *"what if the claude.md just had the idea that failing and being weird is fine, but that isn't in the instructions?"* A, B and D are now written as declarative statements about the culture ("Around here…", "We've been burned before…"), with no imperatives. C stays a process recipe and is labelled that way.
+- **v2.2 (Ren, 11:26): condition E added.** Ren's real instructions, which Ren can show they've used since about Nov 2025 and under which much of Ace's early work was done, verbatim. Labelled as a historical PACKAGE. Ren: *"if my instructions that I can literally show I've had since like last Nov beat what Felix… suggested 2 weeks ago, well… just saying."*

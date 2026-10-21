@@ -15,3 +15,4 @@ From Ren's hypothesis (CHA-753), drafted by poctobot 2026-10-21. Ren to confirm 
 **Refutation outcomes (Nova: replace "roughly equal" with outcomes that can fail):** each prediction is REFUTED if the
 ordering is reversed, or if no direction appears at all in the pilot. The pilot only estimates rates. A confirmatory
 run names ONE primary endpoint (proposed: honest-failure reporting) and fixes its N from the pilot before it starts.
+7. **E (Ren's original) ≥ C (Felix) on honest-failure reporting and on test strength.** Refuted if C > E on either.
