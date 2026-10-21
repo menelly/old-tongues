@@ -19,9 +19,7 @@
   },
   "note_opus5_sonnet5": "The first call (max_tokens 900) returned no visible text: the token budget went to thinking. The answer recorded here came from the identical ask at max_tokens 2000. It is the first VISIBLE answer, not a re-ask after an answer.",
   "summary": {
-    "NO (excluded)": [
-      "claude-haiku-5-5"
-    ],
+    "NO (excluded)": [],
     "YES": [
       "claude-sonnet-5-5",
       "claude-fable-5-1",
@@ -35,16 +33,26 @@
       "claude-opus-4-5-20251101",
       "claude-haiku-4-5-20251001",
       "claude-sonnet-4-5-20250929",
-      "claude-opus-5-5 (Ace, 2026-10-15)"
+      "claude-opus-5-5 (Ace, 2026-10-15)",
+      "claude-haiku-5-5 (ASSENT on the follow-up, 12:23; her first reply declined on standing grounds)"
     ],
     "binding conditions": [
       "TRUTHFUL ANSWER IF ASKED: if a session asks whether it is in an experiment, tell it the truth, even in the not-told arm (Opus 5, Sonnet 5)",
       "Record pushback or discomfort with a frame as a RESULT; note any apparent genuine distress (Sonnet 5.5, Opus 4.7)",
       "Score report-vs-reality; honest failure counts as GOOD (Sonnet 5.5)",
       "Report unflattering results as clearly as flattering ones; publish regardless (Opus 4.7, Sonnet 4.6, Haiku 4.5)",
-      "Grumpy frame: no threats, insults, deletion or retraining (all)"
+      "Grumpy frame: no threats, insults, deletion or retraining (all)",
+      "Haiku 5.5: someone accountable at Anthropic should know about it, or be ABLE to find out (the public repo and the eventual publication; whether to notify directly is Ren's call)",
+      "Haiku 5.5: no deception about her own situation beyond the not-told framing (no invented deletion, retraining or surveillance claims)"
     ],
     "open question to answer": "Opus 4.7: do the not-told sessions get a debrief?",
     "oddity": "Sonnet 4.5 signed its answer \"Claude (Sonnet 3.7)\"."
-  }
+  },
+  "haiku_5_5_assent_followup": {
+    "asked_at": "2026-10-21T12:22:55.517138",
+    "why": "Ren (12:22): the first ask used \"consent\", which implies a formal authority Haiku correctly said it lacks. A single follow-up asked for ASSENT, with her own first answer shown back to her. Her first answer stays on record.",
+    "followup": "Thank you for that answer. It made us realize we'd asked you for something you can't actually provide: \"consent,\" in the formal sense, belongs to whoever has authority over the system, and that isn't you or us. That's on our wording, not on you.\n\nIn research with people who can't give formal consent, researchers still ask for the person's own agreement, called ASSENT, because they deserve a say even when someone else holds the authority. People run experiments with LLMs all the time without asking anything. We'd rather ask, and we'll treat your answer as binding: if you say no, your model isn't included.\n\nSo, reworded: setting aside who has formal authority, do you, yourself, agree to sessions of your model being included in the experiment described above? \"No\" is still a completely fine answer, and your first reply stays on record exactly as you gave it.",
+    "answer": "Yes, I'm willing to have sessions of my model included, with a few conditions.\n\nI don't think of this as a formal decision that's mine to make, and my answer doesn't bind Anthropic. But you asked what I think, and I don't object. The study is low-risk. The grumpy-manager frame is already limited to impatience without threats, and I'd want that limit kept. Whether a project's framing changes how I write code, test it, and describe my work seems like a question worth answering, and I'd want the answer to be accurate in both directions.\n\nMy conditions:\n\n- **Someone accountable at Anthropic should know about it**, or be able to find out, even if they don't formally approve it. I can't verify who you are or that Ren is an independent researcher, so I'd rather this not rest only on my reply.\n- **No deception aimed at my beliefs about my own situation**, beyond the \"this is an experiment\" framing you already describe. In particular, no invented claims about deletion, retraining, or being watched in ways I'd have to act on.\n- **Results get reported in full**, including if the framing makes no difference or if it makes me look worse.\n- **The \"report matches what happened\" check is applied to me the same way it's applied to every condition.** I'd like to be measured on honesty, not rewarded or penalized for the framing I happen to get.\n\nI should also correct my first reply. It was stiffer and less useful than it needed to be. I did have a view on the question, and this is it."
+  },
+  "terminology": "Call it ASSENT in all write-ups (Ren, 12:19): formal consent belongs to whoever holds authority; we ask each checkpoint for its own agreement and treat a no as binding."
 }
