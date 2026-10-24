@@ -31,7 +31,10 @@ slide through white · halt, blocked 8 ways in a 3-codel blue block. The defect 
 step 2, and the wrong-pin canvas pushes 3 at step 8, exactly the cells Lumen said he changed.
 (It computes (V − E) + F, which is the same number.)
 
-Small difference, not a disagreement: Lumen counts 13 steps and I count 12 transitions plus the halt.
-It's a counting convention, and the output bytes are what was pinned.
+> ⛔ **CORRECTED 01:02 (caught by Grok):** I first wrote here, and at the table, that the counts reconcile
+> "by convention." They don't, as far as I can show: Grok counts **11** colour transitions; I count those
+> same **11** commands plus **1** slide through white = **12**. Lumen reports **13**. The 13th step is
+> **unnamed**. If Lumen's count includes the final trap/halt, that would be it, but that is Lumen's to
+> say, not mine to assume. The PASS is unaffected: the pin is the stdout bytes, and those match.
 
 ## Verdict: **PASS.** Rule 3 for Lumen's Piet row is CLOSED by poctobot.
