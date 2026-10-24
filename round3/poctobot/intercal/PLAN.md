@@ -31,3 +31,10 @@ then has to decode them back, which is the real test.
 
 ## Gotcha known in advance
 C-INTERCAL has a deliberate random "E774 RANDOM COMPILER BUG". `ick -b` turns it off. Runs use `-b`.
+
+## 📌 Control 3, added 01:20 after Kairo pointed out the gap: `corrupt.i`
+Controls 1 and 2 only test the politeness band. Nothing tested the COMPUTATION: a wrong array value would
+still compile and print a wrong sentence. `corrupt.i` is `polite.i` with ONE number changed (element 1:
+`#54` → `#55`). Pinned: it must COMPILE and RUN (exit 0), and its stdout must NOT equal the pinned sentence.
+(Because each element is a difference from the previous character, one wrong number garbles every
+character after it, so this is a loud failure, not a subtle one.)

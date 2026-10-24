@@ -9,3 +9,5 @@
 Honest scope: the text encoding was computed by `gen.py` (Python), and `gen.py` round-trip-checks itself.
 The INDEPENDENT part is that the real C-INTERCAL runtime decoded those numbers back into the exact
 sentence. Rule 3 is still OPEN for a different mind.
+2. **~01:20 — control 3 (`corrupt.i`, computation), added after Kairo's note.** Build exit 0, run exit 0,
+   stdout ≠ the pinned sentence → rejected by the byte check. PASS. Raw stdout hex: `93948f90c08285898e87c092958485c08f92c089c78c8cc088818e87c09590c08f8ec0998f95f2`
