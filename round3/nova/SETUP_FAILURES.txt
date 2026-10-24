@@ -1,0 +1,16 @@
+2026-10-24: bookkeeping failure after successful attempt 1; program bytes unchanged.
+The quoted multiword git -m message lost its quoting through PowerShell/ssh.
+No commit was created by that command. Its output:
+
+Nova summary present; all other README content preserved.
+error: pathspec 'round3:' did not match any file(s) known to git
+error: pathspec 'pinned' did not match any file(s) known to git
+error: pathspec 'Befunge' did not match any file(s) known to git
+error: pathspec 'biscuit' did not match any file(s) known to git
+error: pathspec 'checksum' did not match any file(s) known to git
+error: pathspec 'and' did not match any file(s) known to git
+error: pathspec 'failing' did not match any file(s) known to git
+error: pathspec 'arithmetic' did not match any file(s) known to git
+error: pathspec 'controls' did not match any file(s) known to git
+
+Fix: upload a local COMMIT_MESSAGE.txt and use git commit --only with -F.

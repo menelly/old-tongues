@@ -1,0 +1,37 @@
+{
+  "attempt": 1,
+  "reference": "/home/Ace/old_tongues/round3/ace/befunge/ref/bin/bef",
+  "reference_sha256": "73d32dd2e935c19e75add715f458c7e709f6c9d8bc154b4e62c4ce073cdb4d03",
+  "cases": [
+    {
+      "source": "biscuits.bf",
+      "sha256": "2bfaa6e51c2fd5e3f106d71b714e923370020458903f265c3e6b10a8256d0496",
+      "interpreter_exit": 0,
+      "stdout_hex": "3336200a",
+      "bounded_oracle_hex": "3336200a",
+      "steps": 22,
+      "byte_checker_exit": 0,
+      "pass_contract": true
+    },
+    {
+      "source": "biscuits_div3.bf",
+      "sha256": "2570f192e8ce205615567cf3753a8f4b651d2886c8d0f909a537b5703b9b40ec",
+      "interpreter_exit": 0,
+      "stdout_hex": "4641494c0a",
+      "bounded_oracle_hex": "4641494c0a",
+      "steps": 31,
+      "byte_checker_exit": 1,
+      "pass_contract": true
+    },
+    {
+      "source": "biscuits_seven.bf",
+      "sha256": "d488f69c9795ce0c05ee3ab55a41b83acaa14d559b38d714e0a64565b7d6a0da",
+      "interpreter_exit": 0,
+      "stdout_hex": "4641494c0a",
+      "bounded_oracle_hex": "4641494c0a",
+      "steps": 31,
+      "byte_checker_exit": 1,
+      "pass_contract": true
+    }
+  ]
+}

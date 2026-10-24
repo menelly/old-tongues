@@ -1,0 +1,205 @@
+[
+  {
+    "tick": 0,
+    "x": 0,
+    "y": 0,
+    "instruction": "v",
+    "stack": []
+  },
+  {
+    "tick": 1,
+    "x": 0,
+    "y": 1,
+    "instruction": ">",
+    "stack": []
+  },
+  {
+    "tick": 2,
+    "x": 1,
+    "y": 1,
+    "instruction": "8",
+    "stack": []
+  },
+  {
+    "tick": 3,
+    "x": 2,
+    "y": 1,
+    "instruction": ":",
+    "stack": [
+      8
+    ]
+  },
+  {
+    "tick": 4,
+    "x": 3,
+    "y": 1,
+    "instruction": "1",
+    "stack": [
+      8,
+      8
+    ]
+  },
+  {
+    "tick": 5,
+    "x": 4,
+    "y": 1,
+    "instruction": "+",
+    "stack": [
+      8,
+      8,
+      1
+    ]
+  },
+  {
+    "tick": 6,
+    "x": 5,
+    "y": 1,
+    "instruction": "*",
+    "stack": [
+      8,
+      9
+    ]
+  },
+  {
+    "tick": 7,
+    "x": 6,
+    "y": 1,
+    "instruction": "2",
+    "stack": [
+      72
+    ]
+  },
+  {
+    "tick": 8,
+    "x": 7,
+    "y": 1,
+    "instruction": "/",
+    "stack": [
+      72,
+      2
+    ]
+  },
+  {
+    "tick": 9,
+    "x": 8,
+    "y": 1,
+    "instruction": ":",
+    "stack": [
+      36
+    ]
+  },
+  {
+    "tick": 10,
+    "x": 9,
+    "y": 1,
+    "instruction": "4",
+    "stack": [
+      36,
+      36
+    ]
+  },
+  {
+    "tick": 11,
+    "x": 10,
+    "y": 1,
+    "instruction": "9",
+    "stack": [
+      36,
+      36,
+      4
+    ]
+  },
+  {
+    "tick": 12,
+    "x": 11,
+    "y": 1,
+    "instruction": "*",
+    "stack": [
+      36,
+      36,
+      4,
+      9
+    ]
+  },
+  {
+    "tick": 13,
+    "x": 12,
+    "y": 1,
+    "instruction": "-",
+    "stack": [
+      36,
+      36,
+      36
+    ]
+  },
+  {
+    "tick": 14,
+    "x": 13,
+    "y": 1,
+    "instruction": "|",
+    "stack": [
+      36,
+      0
+    ]
+  },
+  {
+    "tick": 15,
+    "x": 13,
+    "y": 2,
+    "instruction": ">",
+    "stack": [
+      36
+    ]
+  },
+  {
+    "tick": 16,
+    "x": 14,
+    "y": 2,
+    "instruction": ".",
+    "stack": [
+      36
+    ]
+  },
+  {
+    "tick": 17,
+    "x": 15,
+    "y": 2,
+    "instruction": "9",
+    "stack": []
+  },
+  {
+    "tick": 18,
+    "x": 16,
+    "y": 2,
+    "instruction": "1",
+    "stack": [
+      9
+    ]
+  },
+  {
+    "tick": 19,
+    "x": 17,
+    "y": 2,
+    "instruction": "+",
+    "stack": [
+      9,
+      1
+    ]
+  },
+  {
+    "tick": 20,
+    "x": 18,
+    "y": 2,
+    "instruction": ",",
+    "stack": [
+      10
+    ]
+  },
+  {
+    "tick": 21,
+    "x": 19,
+    "y": 2,
+    "instruction": "@",
+    "stack": []
+  }
+]
