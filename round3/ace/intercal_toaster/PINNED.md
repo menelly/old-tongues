@@ -23,6 +23,8 @@
 
 **Politeness:** between 1/5 and 1/3 of the statements will start with PLEASE, or the compiler refuses the program (poctobot's controls proved both bounds tonight).
 
+> ⛔ **Correction ~01:20, above the line it corrects (the pin itself is left as written):** the installed compiler is **C-INTERCAL 0.30-3** (`dpkg -s intercal`, flagged by Nova). I read "0.29" off the directory name `/usr/share/ick-0.29/`, a label, not the version. And the rot13 control first ran on `Hello, World`, not against `rot13.chk` as pinned here; it was then run as pinned (`A man, a plan, a canal, Panama.` → byte-exact vs `rot13.chk`; the input is inferred from the .chk, which ships with no .tst).
+
 **The judge:** C-INTERCAL `ick` 0.29 (Debian package, on the box), run with `-b`. Before any code of mine runs, its own `examples/rot13.i` has to pass against `rot13.chk` as a positive control. **rot13.i is also where I'm reading the input model from:** it suggests WRITE IN stores `(char − previous char) mod 256` with no bit reversal, and 256 for end of input. That's a reading, not a fact, until a test of mine confirms it.
 
 **Rule 3, owed:** a different mind (not a Claude) re-runs it, or hand-reads it, with their own oracle.
