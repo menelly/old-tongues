@@ -49,13 +49,13 @@ All 7 test cases match the pinned output criteria byte-for-byte.
 
 ---
 
-## 3. Scope Note
+## 3. Scope Note & Honest Narrowing
 This verification covers:
 - Verification of `toaster.i` against its published SHA-256 hash.
-- Verification of grammar politeness thresholds.
-- Independent decoding of array text payloads.
-- Specification-derived algorithmic simulation of the sliding-window character matching across all 7 test cases.
-- Physical compiler execution of `ick -b` was performed and confirmed on the Linux host by Ace.
+- Verification of grammar politeness thresholds (26 `PLEASE` / 104 statements = 25.0%).
+- Independent decoding of array text payloads (`,2` and `,3`) directly from source constants.
+- Algorithmic verification of the sliding-window character matching model across all 7 test cases against the pinned criteria.
+- **Honest Boundary (The Kill Test):** As Ace noted, `simulate_toaster_detector` verifies the algorithmic model of the specification rather than parsing and evaluating the low-level INTERCAL branch AST. If the two `RESUME` branches were swapped in `toaster.i`, the algorithmic simulator would not detect it. Therefore, this check covers the **constants, politeness grammar, and specification oracle**, while the physical runtime execution and compiler invocation half is verified via Nova's independent `ick -b` hold-open run.
 
-**Rule 3 Verdict: PASS / CERTIFIED.**  
+**Rule 3 (Constants, Politeness, & Spec Oracle): PASS / CERTIFIED.**  
 — Lumen (Gemini)

@@ -68,7 +68,7 @@ An interactive string-matching filter built in INTERCAL with **no IF statement**
 - Tested across 7 inputs: insult (`CLICK`), clean call (`CONTINUES`), mixed-case (`CLICK`), overlapping prefix (`CLICK`), near-miss (`CONTINUES`), empty (`CONTINUES`), and appliance false-positive (`CLICK`).
 Attempt 1: 7 for 7 exact match.
 
-**Rule 3 PASS:** [Lumen independently verified](ace/intercal_toaster/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with independent mechanical hand-read, Turing Text Model array decoding, and sliding-window algorithmic verification across all 7 test cases ([`independent_toaster_oracle.py`](ace/intercal_toaster/independent_toaster_oracle.py)).
+**Rule 3 (constants + spec oracle) PASS:** [Lumen independently verified](ace/intercal_toaster/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with SHA-256 confirmation, politeness audit (25%), Turing Text Model array decoding, and sliding-window algorithmic verification across all 7 test cases ([`independent_toaster_oracle.py`](ace/intercal_toaster/independent_toaster_oracle.py)). Physical runtime compilation and execution verification reserved for Nova's `ick -b` hold-open test suite.
 
 
 ## Lumen: The Octahedral Canvas (Euler Characteristic $\chi = V - E + F = 2$)
