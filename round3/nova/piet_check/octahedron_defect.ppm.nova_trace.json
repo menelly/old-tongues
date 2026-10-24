@@ -1,0 +1,730 @@
+{
+  "file": "octahedron_defect.ppm",
+  "sha256": "374a773144f7d29320922e4ebe0b865d232022de57e4f07da0f6cad5284d5bcb",
+  "width": 38,
+  "height": 6,
+  "stdout": "30",
+  "stdout_hex": "3330",
+  "command_transitions": 11,
+  "successful_moves": 12,
+  "steps": [
+    {
+      "source": [
+        0,
+        0
+      ],
+      "destination": [
+        6,
+        0
+      ],
+      "source_rgb": [
+        255,
+        192,
+        192
+      ],
+      "block_area": 6,
+      "dp": 0,
+      "cc": 0,
+      "operation": "push",
+      "before": [],
+      "after": [
+        6
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            5,
+            0
+          ],
+          "target": [
+            6,
+            0
+          ],
+          "colour": [
+            255,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        6,
+        0
+      ],
+      "destination": [
+        17,
+        0
+      ],
+      "source_rgb": [
+        255,
+        0,
+        0
+      ],
+      "block_area": 11,
+      "dp": 0,
+      "cc": 0,
+      "operation": "push",
+      "before": [
+        6
+      ],
+      "after": [
+        6,
+        11
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            16,
+            0
+          ],
+          "target": [
+            17,
+            0
+          ],
+          "colour": [
+            192,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        17,
+        0
+      ],
+      "destination": [
+        18,
+        0
+      ],
+      "source_rgb": [
+        192,
+        0,
+        0
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "subtract",
+      "before": [
+        6,
+        11
+      ],
+      "after": [
+        -5
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            17,
+            0
+          ],
+          "target": [
+            18,
+            0
+          ],
+          "colour": [
+            255,
+            255,
+            192
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        18,
+        0
+      ],
+      "destination": [
+        26,
+        0
+      ],
+      "source_rgb": [
+        255,
+        255,
+        192
+      ],
+      "block_area": 8,
+      "dp": 0,
+      "cc": 0,
+      "operation": "push",
+      "before": [
+        -5
+      ],
+      "after": [
+        -5,
+        8
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            25,
+            0
+          ],
+          "target": [
+            26,
+            0
+          ],
+          "colour": [
+            255,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        26,
+        0
+      ],
+      "destination": [
+        27,
+        0
+      ],
+      "source_rgb": [
+        255,
+        255,
+        0
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "add",
+      "before": [
+        -5,
+        8
+      ],
+      "after": [
+        3
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            26,
+            0
+          ],
+          "target": [
+            27,
+            0
+          ],
+          "colour": [
+            0,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        27,
+        0
+      ],
+      "destination": [
+        28,
+        0
+      ],
+      "source_rgb": [
+        0,
+        255,
+        0
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "duplicate",
+      "before": [
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "output": "",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            27,
+            0
+          ],
+          "target": [
+            28,
+            0
+          ],
+          "colour": [
+            255,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        28,
+        0
+      ],
+      "destination": [
+        29,
+        0
+      ],
+      "source_rgb": [
+        255,
+        0,
+        0
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "out_number",
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3
+      ],
+      "output": "3",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            28,
+            0
+          ],
+          "target": [
+            29,
+            0
+          ],
+          "colour": [
+            192,
+            0,
+            192
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        29,
+        0
+      ],
+      "destination": [
+        31,
+        0
+      ],
+      "source_rgb": [
+        192,
+        0,
+        192
+      ],
+      "block_area": 2,
+      "dp": 0,
+      "cc": 0,
+      "operation": "push",
+      "before": [
+        3
+      ],
+      "after": [
+        3,
+        2
+      ],
+      "output": "3",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            30,
+            0
+          ],
+          "target": [
+            31,
+            0
+          ],
+          "colour": [
+            255,
+            192,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        31,
+        0
+      ],
+      "destination": [
+        32,
+        0
+      ],
+      "source_rgb": [
+        255,
+        192,
+        255
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "subtract",
+      "before": [
+        3,
+        2
+      ],
+      "after": [
+        1
+      ],
+      "output": "3",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            31,
+            0
+          ],
+          "target": [
+            32,
+            0
+          ],
+          "colour": [
+            255,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        32,
+        0
+      ],
+      "destination": [
+        33,
+        0
+      ],
+      "source_rgb": [
+        255,
+        0,
+        0
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "not",
+      "before": [
+        1
+      ],
+      "after": [
+        0
+      ],
+      "output": "3",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            32,
+            0
+          ],
+          "target": [
+            33,
+            0
+          ],
+          "colour": [
+            192,
+            255,
+            192
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        33,
+        0
+      ],
+      "destination": [
+        34,
+        0
+      ],
+      "source_rgb": [
+        192,
+        255,
+        192
+      ],
+      "block_area": 1,
+      "dp": 0,
+      "cc": 0,
+      "operation": "out_number",
+      "before": [
+        0
+      ],
+      "after": [],
+      "output": "30",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            33,
+            0
+          ],
+          "target": [
+            34,
+            0
+          ],
+          "colour": [
+            255,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        34,
+        0
+      ],
+      "destination": [
+        34,
+        2
+      ],
+      "source_rgb": [
+        255,
+        255,
+        0
+      ],
+      "block_area": 1,
+      "dp": 1,
+      "cc": 1,
+      "operation": "white_slide_no_command",
+      "before": [],
+      "after": [],
+      "output": "30",
+      "boundary_attempts": [
+        {
+          "dp": 0,
+          "cc": 0,
+          "edge": [
+            34,
+            0
+          ],
+          "target": [
+            35,
+            0
+          ],
+          "colour": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "dp": 0,
+          "cc": 1,
+          "edge": [
+            34,
+            0
+          ],
+          "target": [
+            35,
+            0
+          ],
+          "colour": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "dp": 1,
+          "cc": 1,
+          "edge": [
+            34,
+            0
+          ],
+          "target": [
+            34,
+            1
+          ],
+          "colour": [
+            255,
+            255,
+            255
+          ]
+        }
+      ]
+    }
+  ],
+  "halted_after_eight_restrictions": [
+    {
+      "dp": 1,
+      "cc": 1,
+      "edge": [
+        33,
+        2
+      ],
+      "target": [
+        33,
+        3
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 1,
+      "cc": 0,
+      "edge": [
+        35,
+        2
+      ],
+      "target": [
+        35,
+        3
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 2,
+      "cc": 0,
+      "edge": [
+        33,
+        2
+      ],
+      "target": [
+        32,
+        2
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 2,
+      "cc": 1,
+      "edge": [
+        33,
+        2
+      ],
+      "target": [
+        32,
+        2
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 3,
+      "cc": 1,
+      "edge": [
+        35,
+        2
+      ],
+      "target": [
+        35,
+        1
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 3,
+      "cc": 0,
+      "edge": [
+        33,
+        2
+      ],
+      "target": [
+        33,
+        1
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 0,
+      "cc": 0,
+      "edge": [
+        35,
+        2
+      ],
+      "target": [
+        36,
+        2
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "dp": 0,
+      "cc": 1,
+      "edge": [
+        35,
+        2
+      ],
+      "target": [
+        36,
+        2
+      ],
+      "colour": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "terminal_rgb": [
+    0,
+    0,
+    255
+  ],
+  "terminal_area": 3
+}

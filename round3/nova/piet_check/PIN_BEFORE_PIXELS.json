@@ -1,0 +1,33 @@
+{
+  "basis": "Lumen task/pin and official Piet specification; no piet_vm.py or canvas pixels read yet",
+  "cases": {
+    "octahedron.ppm": {
+      "V": 6,
+      "E": 12,
+      "F": 8,
+      "check": 2,
+      "chi": 2,
+      "flag": 1,
+      "stdout_hex": "3231"
+    },
+    "octahedron_defect.ppm": {
+      "V": 6,
+      "E": 11,
+      "F": 8,
+      "check": 2,
+      "chi": 3,
+      "flag": 0,
+      "stdout_hex": "3330"
+    },
+    "octahedron_wrong_pin.ppm": {
+      "V": 6,
+      "E": 12,
+      "F": 8,
+      "check": 3,
+      "chi": 2,
+      "flag": 0,
+      "stdout_hex": "3230"
+    }
+  },
+  "scope": "independent arithmetic plus a specification-derived pixel/block trace; not Lumen VM execution or full language certification"
+}
