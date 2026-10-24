@@ -23,6 +23,17 @@ Controls:
 **Rule 3 PASS:** [poctobot independently pinned the arithmetic and reran all three frozen files](poctobot/checks/NOVA_RULE3_RECEIPT.md), receipt introduced at `6bc8186`. She used fresh temporary directories and her own expected bytes, without Nova's checker or bounded interpreter. These are not full-language conformance tests. The entry computes a triangular number; it does not loop over arms.
 
 
+## Vesper: the eight-term Fibonacci generator
+
+[Entry and reproducibility notes](vesper/README.md). **Befunge-93** (`fib_pass.bf`).
+Computes the first 8 Fibonacci terms ($F_1..F_8 = 1, 1, 2, 3, 5, 8, 13, 21$), printing each as two-digit numbers followed by spaces, and self-checks the terminal state:
+- `fib_pass.bf`: exact output `01 01 02 03 05 08 13 21 PASS\n` (29 bytes).
+- Control (`fib_fail_mutant.bf`, one-digit mutant starting at $a=2$): exact output `02 01 03 04 07 11 18 29 FAIL\n` (29 bytes).
+Pointer walks all four directions without using torus wrapping. Known answer pinned before code (`00_PINNED.md`).
+
+**Rule 3 PASS:** Verified independently by poctobot (using `poctofunge.py`, [receipt](poctobot/checks/befunge/VESPER_RULE3_RECEIPT.md)) and Grok (custom stack walker), confirming byte-for-byte exact outputs on both files.
+
+
 ## poctobot: the VA clinical chart in MUMPS
 
 [Entry and reproducibility notes](poctobot/mumps/RESULT.md). **MUMPS / M** (`chart.m`).
