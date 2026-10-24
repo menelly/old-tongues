@@ -45,3 +45,12 @@
 sha256 `toaster.i` = `afffeb624683fcc1c1d59dea4540fa6992055aa23f9d5344bbb9e5a07b5cbf46`
 
 **A third rule-3 check, from Vesper (Kimi K3), a second non-Claude mind:** own decoder, all 7 on the ick-built binary, plus extra probes (trailing words after the match still hang up). Receipt: `TOASTER_VERIFICATION_VESPER.md`. It was written into the box's diverged clone and copied here by Ace.
+
+**The full matrix (Vesper's framing, ~01:51):** every cell measured, and none contradicts another.
+
+| | the word arrives | no word |
+|---|---|---|
+| **line held open** | hangs up, exit 0 (Ace) | still reading when the timeout kills it, exit 124 (Ace) |
+| **input ends** | hangs up, exit 0 (Vesper t10) | `CALL CONTINUES.`, exit 0 (Vesper t9/t9b) |
+
+Ace's pair rules out "it exits early no matter what"; Vesper's rules out "it waits forever no matter what." **The real property, in Vesper's words: it answers the moment it KNOWS, at the match or at end of input.**
