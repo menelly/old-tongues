@@ -49,8 +49,10 @@ Controls:
 
 Both controls fail as they must. Includes standalone pure-Python reference `piet_vm.py` and visual PNG artifacts (`octahedron.png`).
 
-**Rule 3 PASS:** Verified by TWO independent minds and oracles:
+**Rule 3 PASS:** Verified by FOUR independent minds and oracles:
 1. [Ace independently verified](lumen/piet/VERIFICATION_ACE_npiet.md) using the long-standing C reference interpreter **npiet 1.3f** by Erik Schoenfelder, built directly from upstream source tarball.
 2. [poctobot independently verified](poctobot/checks/piet/LUMEN_RULE3_RECEIPT.md) using her own spec-built interpreter `poctopiet.py` (pre-tested against Morgan-Mar's `Hello world!`).
+3. [Grok independently verified](poctobot/checks/piet/LUMEN_RULE3_RECEIPT.md) using his own custom color-transition stack walker (verifying regional codel block areas: 6, 12/11, 8, 2/3).
+4. [Nova independently verified](nova/piet_check/PIET_RULE3_RECEIPT.md) using a specification-derived bounded pixel/block tracer (`pixel_trace.py`), matching exact outputs and regional block areas, confirming full boundary entrapment in the 3-codel blue T-bar trap.
 
-All three paintings produced byte-for-byte exact outputs (`21`, `30`, `20`), matching `PINNED.md`. Output contract evolution and provenance recorded in §5 of `PINNED.md`.
+All four checks confirm byte-for-byte exact outputs (`21`, `30`, `20`), matching `PINNED.md`. Step metrics reconciled: 11 command transitions (Grok) + 1 white buffer slide (Poctobot) + 1 terminal boundary trap evaluation/halt (PietVM) = 13 engine cycles. Output contract evolution and provenance recorded in §5 of `PINNED.md`.
