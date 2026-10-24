@@ -17,3 +17,7 @@ Every failure so far was in the RUNNER, setting up GT.M around it.
    pin byte-for-byte: honest exits 0 with `PASS: the 19 is a 19`; the mutant (a CGM-style floor at 40)
    exits 1 with `FAIL: this chart requalified a number`. **So: the M code worked on its first real run;
    the setup around it took three tries.**
+4. **~01:00 — privacy fix, then re-run: PASS.** The global subscript was `"REN"` and PLAN.md named a real
+   person's glucose; this repo is public, so both were made generic (`"PT"`, no named person). That is a
+   code change, so it was re-run against the same pins before being called a pass: still byte-identical,
+   honest exit 0, mutant exit 1.

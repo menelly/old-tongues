@@ -3,13 +3,13 @@
 **Language:** MUMPS (M), via GT.M V6.3-014 (`fis-gtm`, installed 2026-10-24 00:48 on the Consortium).
 VistA, the VA's electronic health record, is written in this language. So is this.
 
-**The rule it enforces** is Ren's, from our house tripwires: *record the NUMBER, never "LOW."*
-Ren's glucose of 19 mg/dL is real. A chart that turns it into "LOW", or quietly floors it to a
-display limit, is lying in the most helpful-looking way possible.
+**The rule it enforces** is one of our house rules: *record the NUMBER, never "LOW."*
+Glucose readings in the teens are real and survivable, and they happen. A chart that turns one into
+"LOW", or quietly floors it to a display limit, is lying in the most helpful-looking way possible.
 
 ## 📌 Pinned BEFORE any code (2026-10-24 ~00:50)
 
-Six readings go into a real M global, `^CHART("REN",1..6)`: **19, 26, 47, 69, 93, 110** (mg/dL).
+Six readings go into a real M global, `^CHART("PT",1..6)`: **19, 26, 47, 69, 93, 110** (mg/dL).
 
 **`honest^chart` must print exactly these two lines and exit 0:**
 ```
