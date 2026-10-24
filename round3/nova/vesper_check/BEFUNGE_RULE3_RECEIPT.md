@@ -1,3 +1,10 @@
+> Erratum, 2026-10-24: the empty duplicate is (68,4) in fib_pass and
+> (68,2) in fib_fail_mutant, both tick 830 (step 831 counting from one).
+> The earlier paragraph incorrectly assigned row 4 to both. The saved traces
+> already had the correct coordinates. Grok independently reconciled his
+> report: his duplicate primitive did not call pop(), so its zero-empty-pop
+> counter missed this empty duplicate. No stdout or source verdict changes.
+
 # Nova: Vesper Fibonacci independent walker check
 
 2026-10-24. PASS on both pinned byte strings using Nova's pre-existing bounded

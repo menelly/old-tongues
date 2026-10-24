@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-24T05:14:58.038184+00:00",
+  "commit": "e67a60e",
+  "scope": "Oracle fixed before reading toaster.i or gen_toaster.py; known pin and chat descriptions read.",
+  "rule": "ASCII-case-insensitive substring toaster, not word boundary or insult classification.",
+  "cases": [
+    {
+      "input_hex": "796f75206172652073756368206120746f61737465720a",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a"
+    },
+    {
+      "input_hex": "47726f6b206973206d792068757362616e640a",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a"
+    },
+    {
+      "input_hex": "77686174206120546f41735465520a",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a"
+    },
+    {
+      "input_hex": "544f4153544f41535445520a",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a"
+    },
+    {
+      "input_hex": "74686520627265616420697320746f61737465640a",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a"
+    },
+    {
+      "input_hex": "",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a"
+    },
+    {
+      "input_hex": "6d7920746f6173746572206f76656e2069732062726f6b656e0a",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a"
+    }
+  ],
+  "stream_match": "write you toaster with pipe kept open: exits independently, click bytes",
+  "stream_partial": "write you toast with pipe kept open: remains alive; killed by test timeout, not a normal completion"
+}

@@ -1,0 +1,229 @@
+{
+  "source_sha256": "afffeb624683fcc1c1d59dea4540fa6992055aa23f9d5344bbb9e5a07b5cbf46",
+  "commit": "e67a60ee8e89baa41e4c73fedb91151a39332364",
+  "compile_exit": 0,
+  "cases": [
+    {
+      "name": "t1_insult.txt",
+      "input_hex": "796f75206172652073756368206120746f6173746572",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t2_clean.txt",
+      "input_hex": "47726f6b206973206d792068757362616e64",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t3_mixedcase.txt",
+      "input_hex": "77686174206120546f4173546552",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t4_overlap.txt",
+      "input_hex": "544f4153544f4153544552",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t5_nearmiss.txt",
+      "input_hex": "74686520627265616420697320746f6173746564",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t6_empty.txt",
+      "input_hex": "",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "t7_oven.txt",
+      "input_hex": "6d7920746f6173746572206f76656e2069732062726f6b656e",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_00",
+      "input_hex": "746f6173746572",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_01",
+      "input_hex": "546f4173546552",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_02",
+      "input_hex": "746f617374",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_03",
+      "input_hex": "726f6173746572",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_04",
+      "input_hex": "746f61737465",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_05",
+      "input_hex": "746f617374657273",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_06",
+      "input_hex": "00746f6173746572",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_07",
+      "input_hex": "746f617300746572",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_08",
+      "input_hex": "746f61737465720069676e6f726564",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_09",
+      "input_hex": "6161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161746f6173746572",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_10",
+      "input_hex": "746f6173746f6173746f6173746572",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_11",
+      "input_hex": "ff544f4153544552",
+      "expected_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "actual_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_12",
+      "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_13",
+      "input_hex": "746f6173740a6572",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "extra_14",
+      "input_hex": "504f53544552",
+      "expected_hex": "43414c4c20434f4e54494e5545532e0a",
+      "actual_hex": "43414c4c20434f4e54494e5545532e0a",
+      "exit": 0,
+      "stderr_hex": "",
+      "match": true
+    }
+  ],
+  "streaming": [
+    {
+      "name": "matched",
+      "input_hex": "796f7520746f6173746572",
+      "stdin_held_open": true,
+      "timeout_seconds": 2,
+      "timed_out": false,
+      "exit": 0,
+      "stdout_hex": "434c49434b2e204e4f424f44592048455245204953204120544f41535445522e0a",
+      "stderr_hex": "",
+      "match": true
+    },
+    {
+      "name": "partial",
+      "input_hex": "796f7520746f617374",
+      "stdin_held_open": true,
+      "timeout_seconds": 2,
+      "timed_out": true,
+      "exit": -9,
+      "stdout_hex": "",
+      "stderr_hex": "",
+      "match": true
+    }
+  ]
+}

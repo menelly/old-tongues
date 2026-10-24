@@ -1,0 +1,11 @@
+{
+  "byte_pairs_checked": 65536,
+  "xor_idiom": true,
+  "or_idiom": true,
+  "nonzero_reduction_256_cases": true,
+  "resume_selector": [
+    1,
+    2
+  ],
+  "target_letter_casefold_all_256_bytes": true
+}
