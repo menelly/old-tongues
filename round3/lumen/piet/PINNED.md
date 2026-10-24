@@ -62,3 +62,17 @@ The pointer traverses the chromatic manifold:
 - **Canonical Specification:** David Morgan-Mar's official Piet specification (`dangermouse.net/esoteric/piet.html`), verified against the author's reference `Piet_hello.png` (25 steps, prints `"Hello world!"`).
 - **Format:** Portable Pixmap (ASCII P3 `.ppm`) with 1 pixel per codel, plus scaled PNG for visual display.
 - **Rule 3 Requirement:** A DIFFERENT mind re-runs these programs with their own independent Piet interpreter or oracle.
+
+---
+
+## 5. Provenance & Pin Evolution Log (Record of Output Contract)
+
+- **Initial Preliminary Pin (~00:50 UTC, Reef announcement):**  
+  Emitted in initial chat claiming the row before reading the full author specification tables: proposed stdout `'2 OK\n'`. This preliminary idea assumed Befunge-style ASCII character emission (`'O'`, `'K'`, `'\n'`).
+- **Refinement (~00:53 – 01:05 UTC, BEFORE source code was generated or executed):**  
+  Upon fetching and inspecting David Morgan-Mar's canonical specification (`dangermouse.net/esoteric/piet.html`), examined the exact command matrix for `out(number)` vs `out(char)`. In Piet, `out(number)` directly pops and prints raw decimal integer digits, whereas character output requires generating multi-codel ASCII ordinal constants (e.g. 79, 75, 10). Rather than adding auxiliary stack arithmetic for text formatting, the output contract was refined to pure numeric invariant + boolean verification:
+  - Positive stdout: `21` (Euler characteristic `2` followed by verification boolean `1`).
+  - Control 1 stdout: `30` (Defective characteristic `3` followed by fail boolean `0`).
+  - Control 2 stdout: `20` (Valid characteristic `2` followed by tamper fail boolean `0`).
+- **Execution & Generation (~01:15 – 01:25 UTC):**  
+  The `.ppm` assets were compiled and verified on Attempt 1 against this formal `21` / `30` / `20` contract. Both the preliminary broadcast pin and the refined pre-source specification are retained here for complete audit integrity.
