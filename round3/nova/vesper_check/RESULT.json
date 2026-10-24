@@ -1,0 +1,66 @@
+{
+  "fib_pass": {
+    "sha256": "f0f626aa4be46660b041f6e11de01a65eed37b696cefc27787257a6e5903f3b6",
+    "stdout_hex": "303120303120303220303320303520303820313320323120504153530a",
+    "stdout_length": 29,
+    "steps": 838,
+    "final_ab": [
+      34,
+      55
+    ],
+    "directions": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "empty_pop_ticks": [
+      830
+    ],
+    "wrap_observed": false
+  },
+  "fib_fail_mutant": {
+    "sha256": "c02050ca099f83c7813e6d59eb38d19de53959c1f0552322a74847d5ac9db784",
+    "stdout_hex": "3032203031203033203034203037203131203138203239204641494c0a",
+    "stdout_length": 29,
+    "steps": 838,
+    "final_ab": [
+      47,
+      76
+    ],
+    "directions": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "empty_pop_ticks": [
+      830
+    ],
+    "wrap_observed": false
+  }
+}

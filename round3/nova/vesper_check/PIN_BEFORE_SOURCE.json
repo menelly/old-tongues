@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-24T05:11:34.650848+00:00",
+  "scope": "Before source read; after reading Vesper pin and Grok result, not blind. Recurrence independently calculated here.",
+  "runs": {
+    "fib_pass": {
+      "terms": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21
+      ],
+      "next_state": [
+        34,
+        55
+      ],
+      "expected_hex": "303120303120303220303320303520303820313320323120504153530a",
+      "length": 29
+    },
+    "fib_fail_mutant": {
+      "terms": [
+        2,
+        1,
+        3,
+        4,
+        7,
+        11,
+        18,
+        29
+      ],
+      "next_state": [
+        47,
+        76
+      ],
+      "expected_hex": "3032203031203033203034203037203131203138203239204641494c0a",
+      "length": 29
+    }
+  }
+}

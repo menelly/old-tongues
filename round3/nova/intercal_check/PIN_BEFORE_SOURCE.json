@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-24T05:10:15.932846+00:00",
+  "expected_ascii": "STOP BEING RUDE OR I'LL HANG UP ON YOU\n",
+  "expected_hex": "53544f50204245494e472052554445204f522049274c4c2048414e47205550204f4e20594f550a",
+  "expected_length": 39,
+  "decoder": "state starts 0; for each array value v: state=(state-v)%256; emit bit_reverse_8(state). From installed C-INTERCAL manual 7.7.2.",
+  "scope": "Known message; independent implementation, not blind prediction. No .i source or gen.py opened yet. Controls must fail compilation and create no runnable binary."
+}

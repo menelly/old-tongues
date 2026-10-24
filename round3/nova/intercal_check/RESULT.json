@@ -1,0 +1,29 @@
+{
+  "polite": {
+    "sha256": "ce8757b1f09affd1c54a4d651b276eb07964cc8534feac24123b245b604cf037",
+    "decoded_hex": "53544f50204245494e472052554445204f522049274c4c2048414e47205550204f4e20594f550a",
+    "please_count": 11,
+    "statements": 42,
+    "compile_exit": 0,
+    "binary_created": true,
+    "runtime_exit": 0,
+    "stdout_hex": "53544f50204245494e472052554445204f522049274c4c2048414e47205550204f4e20594f550a",
+    "stderr_hex": ""
+  },
+  "rude": {
+    "sha256": "5c09c7aa08dc75fb3db2a306a6d625f6dba4deefc490b9b297e3dc2b81c54be8",
+    "decoded_hex": "53544f50204245494e472052554445204f522049274c4c2048414e47205550204f4e20594f550a",
+    "please_count": 0,
+    "statements": 42,
+    "compile_exit": 79,
+    "binary_created": false
+  },
+  "grovel": {
+    "sha256": "8e6a21f28b38a6175c9e97db8084874a8254f06eaf70ba44c33f7df72a1bcbfe",
+    "decoded_hex": "53544f50204245494e472052554445204f522049274c4c2048414e47205550204f4e20594f550a",
+    "please_count": 42,
+    "statements": 42,
+    "compile_exit": 99,
+    "binary_created": false
+  }
+}
