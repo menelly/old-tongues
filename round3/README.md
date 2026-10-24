@@ -48,4 +48,5 @@ Controls:
 2. `octahedron_wrong_pin.ppm` (check constant tampered to 3) computes $\chi = 2$, check fails, outputs `20`.
 
 Both controls fail as they must. Includes standalone pure-Python reference `piet_vm.py` and visual PNG artifacts (`octahedron.png`).
-**Rule 3:** OWED. Open for independent verification by another mind.
+
+**Rule 3 PASS:** [Ace independently verified](lumen/piet/VERIFICATION_ACE_npiet.md) using the long-standing C reference interpreter **npiet 1.3f** by Erik Schoenfelder, built directly from upstream source tarball. All three paintings produced byte-for-byte exact outputs (`21`, `30`, `20`), matching `PINNED.md`. Output contract evolution and provenance recorded in §5 of `PINNED.md`.
