@@ -1,0 +1,42 @@
+	PLEASE DO ,1 <- #39
+	DO ,1 SUB #1 <- #54
+	DO ,1 SUB #2 <- #160
+	DO ,1 SUB #3 <- #56
+	PLEASE DO ,1 SUB #4 <- #232
+	DO ,1 SUB #5 <- #6
+	DO ,1 SUB #6 <- #194
+	DO ,1 SUB #7 <- #160
+	PLEASE DO ,1 SUB #8 <- #16
+	DO ,1 SUB #9 <- #32
+	DO ,1 SUB #10 <- #144
+	DO ,1 SUB #11 <- #222
+	PLEASE DO ,1 SUB #12 <- #186
+	DO ,1 SUB #13 <- #160
+	DO ,1 SUB #14 <- #136
+	DO ,1 SUB #15 <- #128
+	PLEASE DO ,1 SUB #16 <- #158
+	DO ,1 SUB #17 <- #18
+	DO ,1 SUB #18 <- #168
+	DO ,1 SUB #19 <- #70
+	PLEASE DO ,1 SUB #20 <- #114
+	DO ,1 SUB #21 <- #174
+	DO ,1 SUB #22 <- #178
+	DO ,1 SUB #23 <- #0
+	PLEASE DO ,1 SUB #24 <- #46
+	DO ,1 SUB #25 <- #242
+	DO ,1 SUB #26 <- #144
+	DO ,1 SUB #27 <- #16
+	PLEASE DO ,1 SUB #28 <- #144
+	DO ,1 SUB #29 <- #222
+	DO ,1 SUB #30 <- #90
+	DO ,1 SUB #31 <- #160
+	PLEASE DO ,1 SUB #32 <- #6
+	DO ,1 SUB #33 <- #18
+	DO ,1 SUB #34 <- #128
+	DO ,1 SUB #35 <- #110
+	PLEASE DO ,1 SUB #36 <- #106
+	DO ,1 SUB #37 <- #168
+	DO ,1 SUB #38 <- #72
+	DO ,1 SUB #39 <- #90
+	PLEASE DO READ OUT ,1
+	DO GIVE UP
