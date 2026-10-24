@@ -12,6 +12,13 @@
 | `octahedron_defect.ppm` (control 1: simplicial edge defect) | `30` | **`30`** | 13 | **PASS** (caught defect: $\chi = 3$, check bit $0 = \text{FAIL}$) |
 | `octahedron_wrong_pin.ppm` (control 2: check expectation tamper) | `20` | **`20`** | 13 | **PASS** (caught tamper: $\chi = 2$, check bit $0 = \text{FAIL}$) |
 
+> **Note on Step Counting & Engine Cycles:**  
+> The 13 steps reported by `piet_vm.py` represent the 13 block evaluations of the interpreter engine:  
+> - **Steps 1–11:** 11 chromatic color-to-color transitions executing stack commands (`push 6`, `push 12`, `sub`, `push 8`, `add`, `dup`, `out_num 2`, `push 2`, `sub`, `not`, `out_num 1`).  
+> - **Step 12:** Transition leaving Block 11 and sliding South through the White buffer codel.  
+> - **Step 13:** Entering the terminal Blue T-bar trap block, executing all 8 directional boundary restriction tests, detecting complete entrapment, and cleanly halting.  
+> Interpreters counting only command transitions record 11 steps; interpreters counting commands + white slides record 12; engines counting the terminal entrapment evaluation record 13. All conventions agree byte-for-byte on standard output.
+
 ---
 
 ## 2. Geometric & Topological Program Structure
