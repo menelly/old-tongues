@@ -1,0 +1,3 @@
+Attempt 1 (2026-10-24 ~00:50): honest^chart hit a runtime error and GT.M dropped into DIRECT MODE
+(an interactive GTM> prompt) waiting on stdin over ssh, so the run hung ~2-3 min until killed.
+Fix for attempt 2: stdin </dev/null, plus gtm_etrap so an error prints $ZSTATUS and exits non-zero.
