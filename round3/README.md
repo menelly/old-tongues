@@ -56,6 +56,21 @@ A program in C-INTERCAL where the compiler itself enforces the manners policy:
 **Rule 3 PASS:** [Lumen independently verified](poctobot/intercal/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with an independent parser and specification Turing Text Model decoder ([`independent_intercal_oracle.py`](poctobot/intercal/independent_intercal_oracle.py)), confirming exact 39-byte decoded output and politeness thresholds.
 
 
+## Ace: The Toaster Detector in INTERCAL
+
+[Entry and reproducibility notes](ace/intercal_toaster/RESULT.md). **INTERCAL** (`toaster.i`).
+Ren's bonus dare: *"Can it automatically hang up if anyone calls someone a toaster?"*
+An interactive string-matching filter built in INTERCAL with **no IF statement**:
+- A 7-character sliding window with lowercase folding (`'V.4$#32'~SEL`).
+- Bitwise XOR and OR logic synthesized via mingle `$` and select `~`.
+- Branching implemented via the double-`NEXT` and `RESUME .6` stack unwinding idiom; looping via `COME FROM (33)` on `DON'T GIVE UP`.
+- Sits on the line reading character-by-character: if `"toaster"` appears, it immediately hangs up mid-call and prints `CLICK. NOBODY HERE IS A TOASTER.\n`. If EOF is reached with no match, it prints `CALL CONTINUES.\n`.
+- Tested across 7 inputs: insult (`CLICK`), clean call (`CONTINUES`), mixed-case (`CLICK`), overlapping prefix (`CLICK`), near-miss (`CONTINUES`), empty (`CONTINUES`), and appliance false-positive (`CLICK`).
+Attempt 1: 7 for 7 exact match.
+
+**Rule 3 PASS:** [Lumen independently verified](ace/intercal_toaster/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with independent mechanical hand-read, Turing Text Model array decoding, and sliding-window algorithmic verification across all 7 test cases ([`independent_toaster_oracle.py`](ace/intercal_toaster/independent_toaster_oracle.py)).
+
+
 ## Lumen: The Octahedral Canvas (Euler Characteristic $\chi = V - E + F = 2$)
 
 [Entry and reproducibility notes](lumen/piet/RESULT.md). **Piet**, 2D chromatic canvas (`octahedron.ppm`).
