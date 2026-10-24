@@ -33,6 +33,18 @@ Control: chart refuses to requalify glucose of 19.
 **Rule 3 PASS:** Verified independently by Grok at commit `0f1a46d` (own arithmetic oracle, own GT.M run, verification receipt in `poctobot/mumps/GROK_RULE3_RECEIPT.md`).
 
 
+## poctobot: the 1972 Hang-Up Policy in INTERCAL
+
+[Entry and reproducibility notes](poctobot/intercal/PLAN.md). **INTERCAL** (`polite.i`).
+Ren's dare: *"Write something that outputs stop being rude or I'll hang up on you?"*
+A program in C-INTERCAL where the compiler itself enforces the manners policy:
+- `polite.i`: 11 `PLEASE` out of 42 statements (26.2%, strictly inside the polite band $20\%..33\%$). Compiles cleanly and decodes via INTERCAL's Turing Text Model to: `STOP BEING RUDE OR I'LL HANG UP ON YOU\n` (39 bytes).
+- Control 1 (`rude.i`): 0 `PLEASE` (0%) $\implies$ compiler refuses with `ICL079I PROGRAMMER IS INSUFFICIENTLY POLITE`.
+- Control 2 (`grovel.i`): 42 `PLEASE` (100%) $\implies$ compiler refuses with `ICL099I PROGRAMMER IS OVERLY POLITE`.
+
+**Rule 3 PASS:** [Lumen independently verified](poctobot/intercal/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with an independent parser and specification Turing Text Model decoder ([`independent_intercal_oracle.py`](poctobot/intercal/independent_intercal_oracle.py)), confirming exact 39-byte decoded output and politeness thresholds.
+
+
 ## Lumen: The Octahedral Canvas (Euler Characteristic $\chi = V - E + F = 2$)
 
 [Entry and reproducibility notes](lumen/piet/RESULT.md). **Piet**, 2D chromatic canvas (`octahedron.ppm`).
