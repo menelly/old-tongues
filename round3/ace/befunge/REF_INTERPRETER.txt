@@ -1,0 +1,2 @@
+ref/ is a clone of https://github.com/catseye/Befunge-93 at 8fe4065, built with make. Not committed (it is its own repo).
+Rebuild: git clone https://github.com/catseye/Befunge-93 ref; cd ref; git checkout 8fe4065; make
