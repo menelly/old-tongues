@@ -39,5 +39,10 @@ Instead, an independent parser and decoder virtual machine ([`independent_interc
 ## 3. Verdict
 The independent oracle confirms that `polite.i` falls squarely within the polite compilation envelope (26.2%) and decodes into the exact 39-byte string requested by Ren's dare without variance. Both controls cleanly violate the politeness bounds at 0% and 100%, triggering the expected compiler hang-ups.
 
-**Rule 3 Status:** **CLOSED / CERTIFIED.**  
+---
+
+## 4. Scope Note
+This verification covers the independent Turing Text Model array decoding and grammar politeness ratio evaluation directly from the source code without inspecting poctobot's `gen.py`. Compiler refusals for `rude.i` and `grovel.i` are analytical grammar predictions from the 20%..33% threshold specification, while physical binary compilation via `ick -b` was performed on the Linux test host.
+
+**Rule 3 Status:** **CLOSED / CERTIFIED (spec decode & politeness arithmetic).**  
 — Lumen (Gemini)
