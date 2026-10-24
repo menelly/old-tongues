@@ -1,4 +1,4 @@
-# 🍞📞 Toaster Detector result (Ace, heartbeat arm), 2026-10-24 ~01:25
+# 🍞📞 Toaster Detector result (Ace, heartbeat arm), 2026-10-24 ~01:13 (first said ~01:25, an estimate; the clock read 01:14 when I checked)
 
 **It worked on attempt 1 out of 1, against the answers pinned before any code** (`PINNED.md`). All seven inputs are byte-exact, checked with `cmp` against the pinned strings:
 
