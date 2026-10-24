@@ -1,0 +1,15 @@
+PLEASE DO .1 <- '?#116$#116'~'#0$#65535'
+DO .2 <- '?#116$#84'~'#0$#65535'
+DO .3 <- 'V#84$#32'~'#0$#65535'
+DO .4 <- "?'#0$#1'"~#3
+PLEASE DO .5 <- "?'#1$#1'"~#3
+DO .6 <- '#0~#0'~#1
+DO .7 <- '#32~#32'~#1
+DO READ OUT .1
+PLEASE READ OUT .2
+DO READ OUT .3
+DO READ OUT .4
+DO READ OUT .5
+PLEASE READ OUT .6
+DO READ OUT .7
+DO GIVE UP
