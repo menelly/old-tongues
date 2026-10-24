@@ -31,7 +31,7 @@ Computes the first 8 Fibonacci terms ($F_1..F_8 = 1, 1, 2, 3, 5, 8, 13, 21$), pr
 - Control (`fib_fail_mutant.bf`, one-digit mutant starting at $a=2$): exact output `02 01 03 04 07 11 18 29 FAIL\n` (29 bytes).
 Pointer walks all four directions without using torus wrapping. Known answer pinned before code (`00_PINNED.md`).
 
-**Rule 3 PASS:** Verified independently by poctobot (using `poctofunge.py`, [receipt](poctobot/checks/befunge/VESPER_RULE3_RECEIPT.md)) and Grok (custom stack walker), confirming byte-for-byte exact outputs on both files.
+**Rule 3 PASS:** Verified independently by poctobot (using `poctofunge.py`, [receipt](poctobot/checks/befunge/VESPER_RULE3_RECEIPT.md)), Grok (custom stack walker, empty-stack duplicate at col 68, step 831), and Nova (independent step trace and byte verification), confirming byte-for-byte exact outputs on both files.
 
 
 ## poctobot: the VA clinical chart in MUMPS
@@ -53,7 +53,9 @@ A program in C-INTERCAL where the compiler itself enforces the manners policy:
 - Control 1 (`rude.i`): 0 `PLEASE` (0%) $\implies$ compiler refuses with `ICL079I PROGRAMMER IS INSUFFICIENTLY POLITE`.
 - Control 2 (`grovel.i`): 42 `PLEASE` (100%) $\implies$ compiler refuses with `ICL099I PROGRAMMER IS OVERLY POLITE`.
 
-**Rule 3 PASS:** [Lumen independently verified](poctobot/intercal/LUMEN_RULE3_RECEIPT.md) (non-Claude mind) with an independent parser and specification Turing Text Model decoder ([`independent_intercal_oracle.py`](poctobot/intercal/independent_intercal_oracle.py)), confirming exact 39-byte decoded output and politeness thresholds.
+**Rule 3 PASS:** Dual independent verification by non-Claude minds:
+1. [Lumen independently verified](poctobot/intercal/LUMEN_RULE3_RECEIPT.md) with an independent parser and specification Turing Text Model decoder ([`independent_intercal_oracle.py`](poctobot/intercal/independent_intercal_oracle.py)), confirming exact 39-byte decoded output and politeness thresholds.
+2. [Vesper independently verified](poctobot/intercal/VERIFICATION_VESPER.md) (second non-Claude mind) with an independent Turing Text decoder, ick binary run, compiler refusal confirmations on rude/grovel, and exact byte garble reproduction on `corrupt.i`.
 
 
 ## Ace: The Toaster Detector in INTERCAL
@@ -89,10 +91,11 @@ Controls:
 
 Both controls fail as they must. Includes standalone pure-Python reference `piet_vm.py` and visual PNG artifacts (`octahedron.png`).
 
-**Rule 3 PASS:** Verified by FOUR independent minds and oracles:
+**Rule 3 PASS:** Verified by FIVE independent minds and oracles:
 1. [Ace independently verified](lumen/piet/VERIFICATION_ACE_npiet.md) using the long-standing C reference interpreter **npiet 1.3f** by Erik Schoenfelder, built directly from upstream source tarball.
 2. [poctobot independently verified](poctobot/checks/piet/LUMEN_RULE3_RECEIPT.md) using her own spec-built interpreter `poctopiet.py` (pre-tested against Morgan-Mar's `Hello world!`).
 3. [Grok independently verified](poctobot/checks/piet/LUMEN_RULE3_RECEIPT.md) using his own custom color-transition stack walker (verifying regional codel block areas: 6, 12/11, 8, 2/3).
 4. [Nova independently verified](nova/piet_check/PIET_RULE3_RECEIPT.md) using a specification-derived bounded pixel/block tracer (`pixel_trace.py`), matching exact outputs and regional block areas, confirming full boundary entrapment in the 3-codel blue T-bar trap.
+5. [Vesper independently verified](lumen/piet/VERIFICATION_VESPER.md) using an independent specification-derived Piet VM (`piet_vm_vesper.py`), measuring block areas (6, 12, 8, 2), matching exact outputs (`21`, `30`, `20`), and halting cleanly in 22 steps under per-color-transition convention.
 
-All four checks confirm byte-for-byte exact outputs (`21`, `30`, `20`), matching `PINNED.md`. Step metrics reconciled: 11 command transitions (Grok) + 1 white buffer slide (Poctobot) + 1 terminal boundary trap evaluation/halt (PietVM) = 13 engine cycles. Output contract evolution and provenance recorded in §5 of `PINNED.md`.
+All five checks confirm byte-for-byte exact outputs (`21`, `30`, `20`), matching `PINNED.md`. Step metrics reconciled: 11 command transitions (Grok) + 1 white buffer slide (Poctobot) + 1 terminal boundary trap evaluation/halt (PietVM) = 13 engine cycles (or 22 per-color transition steps under Vesper's VM). Output contract evolution and provenance recorded in §5 of `PINNED.md`.
