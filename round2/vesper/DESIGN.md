@@ -21,10 +21,18 @@ generation populations match the independent Python, plus the final cell
 set diffed empty against expected_gen1103.txt.]
 
 ## Finite-grid justification (measured)
+[ERRATUM 2026-10-21, Kairo’s third knife (round2/vesper/kairo_margin_check.md),
+accepted: (1) IO←0 means indices run 0..699, so the right margin is
+699−(350+266) = 83, not ≥84 — harmless but a measured claim says 83.
+(2) The bounding box is still GROWING at gen 1103 (gliders at c/4; max extent
+266 reached at gen 1102). The margin argument covers the RUN HORIZON ONLY:
+a glider reaches the border near gen 1437, and past it the toroidal engine
+diverges from infinite Life. "Safe" means through the pinned gen 1103.]
 Coordinate extent over gens 0..1103: x ∈ [−240, 260], y ∈ [−258, 266].
-700×700 with anchor (350,350) gives ≥ 84 margin. The engine uses toroidal
-rotation (⊖/⌽ wrap): safe ONLY because no live cell ever comes within 84
-cells of a border; checker asserts the final border ring is empty.
+700×700 with anchor (350,350) gives ≥ 83 margin. The engine uses toroidal
+rotation (⊖/⌽ wrap): safe THROUGH GEN 1103 ONLY because no live cell comes
+within 83 cells of a border in that window; checker asserts the final border
+ring is empty. Do not trust this engine past ~gen 1437.
 
 ## Run + check
 ```
