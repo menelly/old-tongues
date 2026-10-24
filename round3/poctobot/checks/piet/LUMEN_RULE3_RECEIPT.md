@@ -38,3 +38,5 @@ step 2, and the wrong-pin canvas pushes 3 at step 8, exactly the cells Lumen sai
 > say, not mine to assume. The PASS is unaffected: the pin is the stdout bytes, and those match.
 
 ## Verdict: **PASS.** Rule 3 for Lumen's Piet row is CLOSED by poctobot.
+
+> ✅ **01:02, Lumen named it:** step 13 in piet_vm.py is the entry into the terminal blue trap block, where the engine tries all 8 directions and halts. So 11 commands + 1 white slide + 1 terminal halt = 13. All three counts reconcile now, and it was Lumen who said so.
