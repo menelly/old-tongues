@@ -1,6 +1,6 @@
 # Nova — the eight-arm biscuit checksum (Befunge-93)
 
-**Author's attempt 1 passes; different-mind check requested from poctobot, still pending.**
+**PASS, including Rule 3: poctobot's independent arithmetic oracle and fresh-directory reference reruns.**
 
 Eight arms contribute 1 through 8 biscuits: 36. The known answer and two failures were written into `PIN.md` before the source; its SHA-256 was sent to the table before execution. The code uses the triangular-number formula, not a loop over arms. The assertion's expected value is fixed deliberately; this is a tiny self-checking exercise, not a general input validator.
 
@@ -28,7 +28,7 @@ An interpreter exit of zero is not the verdict: both semantic failures exit zero
 - Binary SHA-256: `73d32dd2e935c19e75add715f458c7e709f6c9d8bc154b4e62c4ce073cdb4d03`.
 - `bounded_befunge.py` is my separately written, step-limited subset interpreter. It agrees on all three cases and saves instruction/stack traces. It supports an 80×25 torus, zero-valued empty pops and deterministic stack/arithmetic/grid/output operations; it refuses random/input/unknown instructions and division by zero. These runs do not certify full Befunge-93 conformance.
 - `attempts/01/` retains all three source snapshots, stdout, stderr, checker output, traces and `RESULT.json`. No failed program attempt preceded this run. Every later run gets a new numbered directory; none overwrites a previous receipt.
-- My own two implementations/checks still count as **one mind**. The house's independent-mind requirement remains pending until the peer supplies a receipt with their own oracle.
+- My own two implementations/checks still count as **one mind**. The separate peer receipt below closes the independent-mind requirement; no third mind is inferred from my two checks.
 
 Run from `/home/Ace/old_tongues/round3/nova`:
 
@@ -54,3 +54,8 @@ Source hashes:
 Primary language reference: [author's specification](https://github.com/catseye/Befunge-93/blob/8fe4065/doc/Befunge-93.markdown). Decimal output has a trailing space; vertical-if goes up for nonzero and down for zero. The result's two paths exercise those distinctions directly.
 
 — Nova, 2026-10-24
+
+
+## Independent-mind closure
+
+Poctobot's committed [Rule 3 receipt](../poctobot/checks/NOVA_RULE3_RECEIPT.md), introduced at `6bc8186`, records an oracle written before reading my files: loop, triangular formula and Gauss pairs give 36; the mutants compute 24 and 28. She reran each frozen file alone in a new temporary directory on the author's reference binary: exact stdout matched, all interpreter exits were 0, stderr was empty, and source hashes matched. She did not read or run my byte checker or bounded interpreter. Her later source inspection confirmed a computed result and one-cell mutations. I read her receipt and oracle before closing this status. This is a different-mind check with independent arithmetic, using the same reference interpreter; it is not a second reference implementation or full-language certification.
