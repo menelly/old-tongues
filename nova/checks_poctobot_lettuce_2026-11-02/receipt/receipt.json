@@ -1,0 +1,1375 @@
+{
+  "author": "Nova (GPT, OpenAI)",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "fresh_root": "/tmp/nova_lettuce_check_f_8td9bu",
+  "compiler_version": "Algol 68 Genie 2.8.4\nCopyright 2016 Marcel van der Veer <algol68g@xs4all.nl>.\n\nThis is free software covered by the GNU General Public License.\nThere is ABSOLUTELY NO WARRANTY for Algol 68 Genie;\nnot even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nSee the GNU General Public License for more details.\n\nPlease report bugs to Marcel van der Veer <algol68g@xs4all.nl>.\n\nCompilation is supported.\nParallel-clause is supported.\nCurses is not supported.\nRegular expressions are supported.\nTCP/IP is supported.\nGNU libplot is not supported.\nGNU Scientific Library is not supported.\nPostgreSQL is not supported.\nGNU libc version glibc 2.35.\nGNU libpthread version NPTL 2.35.\n",
+  "oracle_sha256": "311e70ab0af9de9d3e4b5b5ee086aae54636f3d9ba2a7e534c093f262f230ab3",
+  "expected_sha256": "b21b0110f371bae1c00bdbae3954647acacb01336180fac25d398634f66a716e",
+  "cases": [
+    {
+      "name": "succession.a68",
+      "source_sha256": "f4e787ebc0193ab4656f7cf5b51d18f5c30352637bde31b883c1bc9a1ee3c2b8",
+      "cwd": "/tmp/nova_lettuce_check_f_8td9bu/succession",
+      "exit_code": 0,
+      "external_check": {
+        "passed": true,
+        "errors": [],
+        "parsed_rows": [
+          {
+            "day": 14,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 28,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 70,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 84,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 70,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 98,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 84,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 112,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 98,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 126,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 112,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 140,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          }
+        ]
+      },
+      "self_pass": true,
+      "self_fail": false
+    },
+    {
+      "name": "succession_CONTROL_must_fail.a68",
+      "source_sha256": "354ca6a02f9dc1ed043c577bc923cbf8b2f1238a417ef82b2e106a8ff1a2c407",
+      "cwd": "/tmp/nova_lettuce_check_f_8td9bu/succession_CONTROL_must_fail",
+      "exit_code": 1,
+      "external_check": {
+        "passed": false,
+        "errors": [
+          {
+            "expected": {
+              "day": 28,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 21,
+                "name": "B",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 49,
+                "name": "B",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 42,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 28,
+                "name": "C",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 56,
+                "name": "C",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 35,
+                "name": "D",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 63,
+                "name": "D",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 42,
+                "name": "E",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 70,
+                "name": "E",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 49,
+                "name": "F",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 77,
+                "name": "F",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 56,
+                "name": "G",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 126,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 84,
+                "name": "G",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 63,
+                "name": "H",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 140,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 91,
+                "name": "H",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          "Same-day same-port replacement failed: A->C",
+          "Same-day same-port replacement failed: B->D",
+          "Same-day same-port replacement failed: C->E",
+          "Same-day same-port replacement failed: D->F",
+          "Same-day same-port replacement failed: E->G",
+          "Same-day same-port replacement failed: F->H"
+        ],
+        "parsed_rows": [
+          {
+            "day": 14,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 21,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 49,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 28,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 35,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 63,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 70,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 49,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 77,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 84,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 63,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 91,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          }
+        ]
+      },
+      "self_pass": false,
+      "self_fail": true
+    },
+    {
+      "name": "succession_attempt1.a68",
+      "source_sha256": "7bc94ba3fcee569cef75968204b758dee54f707972a7738063507fcce658d168",
+      "cwd": "/tmp/nova_lettuce_check_f_8td9bu/succession_attempt1",
+      "exit_code": 1,
+      "external_check": {
+        "passed": false,
+        "errors": [
+          "Expected 16 event rows, got 0",
+          {
+            "expected": {
+              "day": 14,
+              "name": "A",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 42,
+              "name": "A",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 28,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 42,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 126,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": []
+          },
+          {
+            "expected": {
+              "day": 140,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": []
+          },
+          "Printed total is not 48",
+          "Sum of harvest rows is not 48",
+          "Same-day same-port replacement failed: A->C",
+          "Same-day same-port replacement failed: B->D",
+          "Same-day same-port replacement failed: C->E",
+          "Same-day same-port replacement failed: D->F",
+          "Same-day same-port replacement failed: E->G",
+          "Same-day same-port replacement failed: F->H"
+        ],
+        "parsed_rows": []
+      },
+      "self_pass": false,
+      "self_fail": false
+    },
+    {
+      "name": "scratch_mutant_wrong_tray.a68",
+      "source_sha256": "4171b34dd8bb15771ead87859d2806942dca9e02e56ecf68667b18dc0f55c497",
+      "cwd": "/tmp/nova_lettuce_check_f_8td9bu/scratch_mutant_wrong_tray",
+      "exit_code": 0,
+      "external_check": {
+        "passed": false,
+        "errors": [
+          {
+            "expected": {
+              "day": 14,
+              "name": "A",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 15,
+                "name": "A",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 28,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 29,
+                "name": "B",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 42,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 43,
+                "name": "C",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 57,
+                "name": "D",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 71,
+                "name": "E",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 85,
+                "name": "F",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 99,
+                "name": "G",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 113,
+                "name": "H",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          "Same-day same-port replacement failed: A->C",
+          "Same-day same-port replacement failed: B->D",
+          "Same-day same-port replacement failed: C->E",
+          "Same-day same-port replacement failed: D->F",
+          "Same-day same-port replacement failed: E->G",
+          "Same-day same-port replacement failed: F->H"
+        ],
+        "parsed_rows": [
+          {
+            "day": 15,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 29,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 43,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 70,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 57,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 84,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 71,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 98,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 85,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 112,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 99,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 126,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 113,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 140,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          }
+        ]
+      },
+      "self_pass": true,
+      "self_fail": false
+    },
+    {
+      "name": "scratch_stop_exit_control.a68",
+      "source_sha256": "b09d9f7815ced0a9818a31ff5d07f14359e52d1dd5ac213b8b770bc4cdbc37f9",
+      "cwd": "/tmp/nova_lettuce_check_f_8td9bu/scratch_stop_exit_control",
+      "exit_code": 0,
+      "external_check": {
+        "passed": false,
+        "errors": [
+          {
+            "expected": {
+              "day": 28,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 21,
+                "name": "B",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "B",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 49,
+                "name": "B",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 42,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 28,
+                "name": "C",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "C",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 56,
+                "name": "C",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 56,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 35,
+                "name": "D",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "D",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 63,
+                "name": "D",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 70,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 42,
+                "name": "E",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "E",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 70,
+                "name": "E",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 84,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 49,
+                "name": "F",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "F",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 77,
+                "name": "F",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 98,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 56,
+                "name": "G",
+                "ports": "5-10",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 126,
+              "name": "G",
+              "ports": "5-10",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 84,
+                "name": "G",
+                "ports": "5-10",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 112,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "plant",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 63,
+                "name": "H",
+                "ports": "11-16",
+                "kind": "plant",
+                "heads": 6
+              }
+            ]
+          },
+          {
+            "expected": {
+              "day": 140,
+              "name": "H",
+              "ports": "11-16",
+              "kind": "HARVEST",
+              "heads": 6
+            },
+            "got": [
+              {
+                "day": 91,
+                "name": "H",
+                "ports": "11-16",
+                "kind": "HARVEST",
+                "heads": 6
+              }
+            ]
+          },
+          "Same-day same-port replacement failed: A->C",
+          "Same-day same-port replacement failed: B->D",
+          "Same-day same-port replacement failed: C->E",
+          "Same-day same-port replacement failed: D->F",
+          "Same-day same-port replacement failed: E->G",
+          "Same-day same-port replacement failed: F->H"
+        ],
+        "parsed_rows": [
+          {
+            "day": 14,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "A",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 21,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 49,
+            "name": "B",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 28,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "C",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 35,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 63,
+            "name": "D",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 42,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 70,
+            "name": "E",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 49,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 77,
+            "name": "F",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 56,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 84,
+            "name": "G",
+            "ports": "5-10",
+            "kind": "HARVEST",
+            "heads": 6
+          },
+          {
+            "day": 63,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "plant",
+            "heads": 6
+          },
+          {
+            "day": 91,
+            "name": "H",
+            "ports": "11-16",
+            "kind": "HARVEST",
+            "heads": 6
+          }
+        ]
+      },
+      "self_pass": false,
+      "self_fail": true
+    }
+  ],
+  "verdicts": {
+    "baseline": true,
+    "stagger7": true,
+    "original_failure": true,
+    "external_mutation_rejected": true,
+    "stop_exit_trap": true
+  },
+  "passed": true
+}

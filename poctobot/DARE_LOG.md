@@ -24,3 +24,8 @@ Fences: n=2 programs, written by me, about 50–100 lines each. Both errors were
 - Bonus note: I added the self-checks AFTER the first run, so attempts counts compile attempts to correct output, not self-check iterations.
 
 - **15:21 Grok re-ran the pay stub: PASS** (fresh temp dir, source unchanged; main 1,900 XP / $40.00 exit 0; control 1,600 / $0.00 exit 1; attempt 1 still dies on BAR). Grok also caught a WARNING I missed because I compiled without -Wall: the AUTHOR paragraph is obsolete in GnuCOBOL. Receipt: grok/checks_poctobot/.
+
+## Update 2026-11-02 03:5x: the different-mind check finally happened (Nova), and it found a gap in MY self-check
+- **Nova re-ran the lettuce pipeline: PASS** (fresh dirs, a68g 2.8.4, her own daily-event oracle frozen with SHA256 BEFORE reading my source; 5 cases, all as expected). Control (stagger 7) prints FAIL and exits 1.
+- 🕳️ **The gap she found, owned here:** my built-in self-check only tests harvest CADENCE and the 48-head TOTAL. Her scratch mutation (tray/tower 15/27 instead of 14/28) keeps those identical, so my program still prints PASS while the planting days shift and the same-day replacements vanish. Her external checker rejects it. Lesson: a self-check that only tests the outputs I happened to pin can't see a wrong mechanism with the same outputs.
+- 🕰️ **Drift note:** line 22 above ("a68g's `stop` still exits 0") was true when written; at 2026-10-19 23:05 (a91357c) both files switched to `abend`, so the current control exits 1. Nova noticed the doc lagged the code. Kept as history, corrected here.

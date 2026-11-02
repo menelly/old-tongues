@@ -1,0 +1,701 @@
+{
+  "baseline": {
+    "stagger": 14,
+    "cohorts": [
+      {
+        "name": "A",
+        "seed": 0,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 14,
+        "harvest": 42
+      },
+      {
+        "name": "B",
+        "seed": 14,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 28,
+        "harvest": 56
+      },
+      {
+        "name": "C",
+        "seed": 28,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 42,
+        "harvest": 70
+      },
+      {
+        "name": "D",
+        "seed": 42,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 56,
+        "harvest": 84
+      },
+      {
+        "name": "E",
+        "seed": 56,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 70,
+        "harvest": 98
+      },
+      {
+        "name": "F",
+        "seed": 70,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 84,
+        "harvest": 112
+      },
+      {
+        "name": "G",
+        "seed": 84,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 98,
+        "harvest": 126
+      },
+      {
+        "name": "H",
+        "seed": 98,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 112,
+        "harvest": 140
+      }
+    ],
+    "events": [
+      {
+        "day": 0,
+        "kind": "seed",
+        "cohort": "A"
+      },
+      {
+        "day": 14,
+        "kind": "entry",
+        "cohort": "A"
+      },
+      {
+        "day": 14,
+        "kind": "seed",
+        "cohort": "B"
+      },
+      {
+        "day": 28,
+        "kind": "entry",
+        "cohort": "B"
+      },
+      {
+        "day": 28,
+        "kind": "seed",
+        "cohort": "C"
+      },
+      {
+        "day": 42,
+        "kind": "harvest",
+        "cohort": "A"
+      },
+      {
+        "day": 42,
+        "kind": "entry",
+        "cohort": "C"
+      },
+      {
+        "day": 42,
+        "kind": "seed",
+        "cohort": "D"
+      },
+      {
+        "day": 56,
+        "kind": "harvest",
+        "cohort": "B"
+      },
+      {
+        "day": 56,
+        "kind": "entry",
+        "cohort": "D"
+      },
+      {
+        "day": 56,
+        "kind": "seed",
+        "cohort": "E"
+      },
+      {
+        "day": 70,
+        "kind": "harvest",
+        "cohort": "C"
+      },
+      {
+        "day": 70,
+        "kind": "entry",
+        "cohort": "E"
+      },
+      {
+        "day": 70,
+        "kind": "seed",
+        "cohort": "F"
+      },
+      {
+        "day": 84,
+        "kind": "harvest",
+        "cohort": "D"
+      },
+      {
+        "day": 84,
+        "kind": "entry",
+        "cohort": "F"
+      },
+      {
+        "day": 84,
+        "kind": "seed",
+        "cohort": "G"
+      },
+      {
+        "day": 98,
+        "kind": "harvest",
+        "cohort": "E"
+      },
+      {
+        "day": 98,
+        "kind": "entry",
+        "cohort": "G"
+      },
+      {
+        "day": 98,
+        "kind": "seed",
+        "cohort": "H"
+      },
+      {
+        "day": 112,
+        "kind": "harvest",
+        "cohort": "F"
+      },
+      {
+        "day": 112,
+        "kind": "entry",
+        "cohort": "H"
+      },
+      {
+        "day": 126,
+        "kind": "harvest",
+        "cohort": "G"
+      },
+      {
+        "day": 140,
+        "kind": "harvest",
+        "cohort": "H"
+      }
+    ],
+    "collisions": [],
+    "total_heads": 48
+  },
+  "stagger7": {
+    "stagger": 7,
+    "cohorts": [
+      {
+        "name": "A",
+        "seed": 0,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 14,
+        "harvest": 42
+      },
+      {
+        "name": "B",
+        "seed": 7,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 21,
+        "harvest": 49
+      },
+      {
+        "name": "C",
+        "seed": 14,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 28,
+        "harvest": 56
+      },
+      {
+        "name": "D",
+        "seed": 21,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 35,
+        "harvest": 63
+      },
+      {
+        "name": "E",
+        "seed": 28,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 42,
+        "harvest": 70
+      },
+      {
+        "name": "F",
+        "seed": 35,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 49,
+        "harvest": 77
+      },
+      {
+        "name": "G",
+        "seed": 42,
+        "ports": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "entry": 56,
+        "harvest": 84
+      },
+      {
+        "name": "H",
+        "seed": 49,
+        "ports": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "entry": 63,
+        "harvest": 91
+      }
+    ],
+    "events": [
+      {
+        "day": 0,
+        "kind": "seed",
+        "cohort": "A"
+      },
+      {
+        "day": 7,
+        "kind": "seed",
+        "cohort": "B"
+      },
+      {
+        "day": 14,
+        "kind": "entry",
+        "cohort": "A"
+      },
+      {
+        "day": 14,
+        "kind": "seed",
+        "cohort": "C"
+      },
+      {
+        "day": 21,
+        "kind": "entry",
+        "cohort": "B"
+      },
+      {
+        "day": 21,
+        "kind": "seed",
+        "cohort": "D"
+      },
+      {
+        "day": 28,
+        "kind": "entry",
+        "cohort": "C"
+      },
+      {
+        "day": 28,
+        "kind": "seed",
+        "cohort": "E"
+      },
+      {
+        "day": 35,
+        "kind": "entry",
+        "cohort": "D"
+      },
+      {
+        "day": 35,
+        "kind": "seed",
+        "cohort": "F"
+      },
+      {
+        "day": 42,
+        "kind": "harvest",
+        "cohort": "A"
+      },
+      {
+        "day": 42,
+        "kind": "entry",
+        "cohort": "E"
+      },
+      {
+        "day": 42,
+        "kind": "seed",
+        "cohort": "G"
+      },
+      {
+        "day": 49,
+        "kind": "harvest",
+        "cohort": "B"
+      },
+      {
+        "day": 49,
+        "kind": "entry",
+        "cohort": "F"
+      },
+      {
+        "day": 49,
+        "kind": "seed",
+        "cohort": "H"
+      },
+      {
+        "day": 56,
+        "kind": "harvest",
+        "cohort": "C"
+      },
+      {
+        "day": 56,
+        "kind": "entry",
+        "cohort": "G"
+      },
+      {
+        "day": 63,
+        "kind": "harvest",
+        "cohort": "D"
+      },
+      {
+        "day": 63,
+        "kind": "entry",
+        "cohort": "H"
+      },
+      {
+        "day": 70,
+        "kind": "harvest",
+        "cohort": "E"
+      },
+      {
+        "day": 77,
+        "kind": "harvest",
+        "cohort": "F"
+      },
+      {
+        "day": 84,
+        "kind": "harvest",
+        "cohort": "G"
+      },
+      {
+        "day": 91,
+        "kind": "harvest",
+        "cohort": "H"
+      }
+    ],
+    "collisions": [
+      {
+        "day": 28,
+        "port": 5,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 28,
+        "port": 6,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 28,
+        "port": 7,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 28,
+        "port": 8,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 28,
+        "port": 9,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 28,
+        "port": 10,
+        "outgoing": "A",
+        "incoming": "C"
+      },
+      {
+        "day": 35,
+        "port": 11,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 35,
+        "port": 12,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 35,
+        "port": 13,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 35,
+        "port": 14,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 35,
+        "port": 15,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 35,
+        "port": 16,
+        "outgoing": "B",
+        "incoming": "D"
+      },
+      {
+        "day": 42,
+        "port": 5,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 42,
+        "port": 6,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 42,
+        "port": 7,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 42,
+        "port": 8,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 42,
+        "port": 9,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 42,
+        "port": 10,
+        "outgoing": "C",
+        "incoming": "E"
+      },
+      {
+        "day": 49,
+        "port": 11,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 49,
+        "port": 12,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 49,
+        "port": 13,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 49,
+        "port": 14,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 49,
+        "port": 15,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 49,
+        "port": 16,
+        "outgoing": "D",
+        "incoming": "F"
+      },
+      {
+        "day": 56,
+        "port": 5,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 56,
+        "port": 6,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 56,
+        "port": 7,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 56,
+        "port": 8,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 56,
+        "port": 9,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 56,
+        "port": 10,
+        "outgoing": "E",
+        "incoming": "G"
+      },
+      {
+        "day": 63,
+        "port": 11,
+        "outgoing": "F",
+        "incoming": "H"
+      },
+      {
+        "day": 63,
+        "port": 12,
+        "outgoing": "F",
+        "incoming": "H"
+      },
+      {
+        "day": 63,
+        "port": 13,
+        "outgoing": "F",
+        "incoming": "H"
+      },
+      {
+        "day": 63,
+        "port": 14,
+        "outgoing": "F",
+        "incoming": "H"
+      },
+      {
+        "day": 63,
+        "port": 15,
+        "outgoing": "F",
+        "incoming": "H"
+      },
+      {
+        "day": 63,
+        "port": 16,
+        "outgoing": "F",
+        "incoming": "H"
+      }
+    ],
+    "total_heads": 48
+  }
+}

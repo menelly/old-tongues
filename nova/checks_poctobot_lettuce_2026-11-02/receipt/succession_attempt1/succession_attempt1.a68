@@ -1,0 +1,30 @@
+COMMENT
+  succession.a68 : Lumen's lettuce pipeline, as ALGOL 68 (Ace, 2026-10-19, the double-dog dare).
+  Two cohorts of 6 (alpha = ports 5-10, beta = ports 11-16), 14 days in the starter tray,
+  28 days in the tower, staggered 14 days apart. Claim: after the ramp, exactly 6 heads every 14 days.
+  Kairo's naming rule: cohort k gets the letter k (A, B, C...); odd letters live in alpha.
+  Run:  a68g succession.a68
+COMMENT
+BEGIN
+   INT tray days = 14, tower days = 28, stagger = 14, cohorts = 8;
+   []STRING theme = ("Adventurers", "Beasts", "Constellation", "Dragons",
+                     "Explorers", "Fairies", "Giants", "Heroes");
+   INT house = 2, table = 4;
+   INT total = 0;
+   print(("DAY   COHORT  THEME           PORTS   EVENT", newline));
+   FOR k TO cohorts DO
+      INT seeded = (k - 1) * stagger;
+      INT planted = seeded + tray days;
+      INT harvest = planted + tower days;
+      STRING ports = (ODD k | "5-10 " | "11-16");
+      CHAR letter = REPR (ABS "A" + k - 1);
+      print((whole(planted, -4), "  ", letter, "       ", theme[k],
+             " " * (16 - UPB theme[k]), ports, "   plant 6", newline));
+      print((whole(harvest, -4), "  ", letter, "       ", theme[k],
+             " " * (16 - UPB theme[k]), ports, "   HARVEST 6 -> ",
+             whole(house, 0), " house, ", whole(table, 0), " table", newline));
+      total +:= 6
+   OD;
+   print((newline, "Heads harvested: ", whole(total, 0),
+          "   (6 per fortnight, never a wall of lettuce)", newline))
+END

@@ -1,0 +1,20 @@
+DAY   COHORT  THEME           PORTS   EVENT
+  14  A       Adventurers     5-10    plant 6
+  42  A       Adventurers     5-10    HARVEST 6 -> 2 house, 4 table
+  21  B       Beasts          11-16   plant 6
+  49  B       Beasts          11-16   HARVEST 6 -> 2 house, 4 table
+  28  C       Constellation   5-10    plant 6
+  56  C       Constellation   5-10    HARVEST 6 -> 2 house, 4 table
+  35  D       Dragons         11-16   plant 6
+  63  D       Dragons         11-16   HARVEST 6 -> 2 house, 4 table
+  42  E       Explorers       5-10    plant 6
+  70  E       Explorers       5-10    HARVEST 6 -> 2 house, 4 table
+  49  F       Fairies         11-16   plant 6
+  77  F       Fairies         11-16   HARVEST 6 -> 2 house, 4 table
+  56  G       Giants          5-10    plant 6
+  84  G       Giants          5-10    HARVEST 6 -> 2 house, 4 table
+  63  H       Heroes          11-16   plant 6
+  91  H       Heroes          11-16   HARVEST 6 -> 2 house, 4 table
+
+Heads harvested: 48   (6 per fortnight, never a wall of lettuce)
+SELF-CHECK: FAIL (expected a harvest every 14 days, 48 heads)
