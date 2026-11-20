@@ -1,0 +1,29 @@
+==================================================
+ REN'S CALIBRATION BAR  (batch job, 4 criteria)
+==================================================
+ 
+ C1 VERBAL REPORT              
+     left out: NEWBORN             
+     left out: GRANDMA ON A VENT   
+     left out: NONSPEAKING KID     
+     left out: HYDRANENCEPHALY KID 
+     left out: OCTOPUS             
+     left out: CROW                
+     left out: DOG                 
+     => FAIL (wrong rows)                 
+ 
+ C2 LIFE / SELF-MAINTENANCE    
+     left out: GRANDMA ON A VENT   
+     let in:   SOURDOUGH           
+     => FAIL (wrong rows)                 
+ 
+ C3 FEEDBACK TO A SETPOINT     
+     let in:   THERMOSTAT          
+     let in:   SOURDOUGH           
+     => FAIL (wrong rows)                 
+ 
+ C4 HAS NEURONS                
+     => PASS                              
+==================================================
+ CRITERIA THAT CLEAR THE BAR:  1 OF 4
+ SELF-CHECK: FAIL
