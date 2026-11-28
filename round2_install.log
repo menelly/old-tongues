@@ -1,0 +1,1202 @@
+== gforth (apt)
+[sudo] password for thereny: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gyp libc-ares2 libjs-events libjs-highlight.js libjs-inherits
+  libjs-is-typedarray libjs-psl libjs-source-map libjs-sprintf-js
+  libjs-typedarray-to-buffer libssl-dev libuv1-dev libwpe-1.0-1
+  libwpebackend-fdo-1.0-1 node-abbrev node-ansi-regex node-ansi-styles
+  node-ansistyles node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+  node-osenv node-p-cancelable node-p-map node-path-is-absolute
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-pump node-quick-lru node-read node-readable-stream
+  node-resolve node-retry node-safe-buffer node-set-blocking node-signal-exit
+  node-slash node-slice-ansi node-source-map node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sprintf-js node-stealthy-require node-string-decoder
+  node-supports-color node-text-table node-time-stamp node-tmatch
+  node-typedarray-to-buffer node-universalify node-util-deprecate
+  node-validate-npm-package-license node-webidl-conversions node-whatwg-fetch
+  node-wrappy node-yallist nvidia-firmware-550-550.144.03
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  gforth-common gforth-lib
+The following NEW packages will be installed:
+  gforth gforth-common gforth-lib
+0 upgraded, 3 newly installed, 0 to remove and 95 not upgraded.
+Need to get 617 kB of archives.
+After this operation, 3,033 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 gforth-common all 0.7.3+dfsg-9build4.1 [329 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 gforth-lib amd64 0.7.3+dfsg-9build4.1 [150 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 gforth amd64 0.7.3+dfsg-9build4.1 [139 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 617 kB in 0s (1,654 kB/s)
+Selecting previously unselected package gforth-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 248330 files and directories currently installed.)
+Preparing to unpack .../gforth-common_0.7.3+dfsg-9build4.1_all.deb ...
+Unpacking gforth-common (0.7.3+dfsg-9build4.1) ...
+Selecting previously unselected package gforth-lib:amd64.
+Preparing to unpack .../gforth-lib_0.7.3+dfsg-9build4.1_amd64.deb ...
+Unpacking gforth-lib:amd64 (0.7.3+dfsg-9build4.1) ...
+Selecting previously unselected package gforth.
+Preparing to unpack .../gforth_0.7.3+dfsg-9build4.1_amd64.deb ...
+Unpacking gforth (0.7.3+dfsg-9build4.1) ...
+Setting up gforth-common (0.7.3+dfsg-9build4.1) ...
+Setting up gforth-lib:amd64 (0.7.3+dfsg-9build4.1) ...
+Setting up gforth (0.7.3+dfsg-9build4.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+== build deps
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version (12.9ubuntu3).
+libncurses-dev is already the newest version (6.3-2ubuntu0.3).
+libncurses-dev set to manually installed.
+The following packages were automatically installed and are no longer required:
+  gyp libc-ares2 libjs-events libjs-highlight.js libjs-inherits
+  libjs-is-typedarray libjs-psl libjs-source-map libjs-sprintf-js
+  libjs-typedarray-to-buffer libssl-dev libuv1-dev libwpe-1.0-1
+  libwpebackend-fdo-1.0-1 node-abbrev node-ansi-regex node-ansi-styles
+  node-ansistyles node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+  node-osenv node-p-cancelable node-p-map node-path-is-absolute
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-pump node-quick-lru node-read node-readable-stream
+  node-resolve node-retry node-safe-buffer node-set-blocking node-signal-exit
+  node-slash node-slice-ansi node-source-map node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sprintf-js node-stealthy-require node-string-decoder
+  node-supports-color node-text-table node-time-stamp node-tmatch
+  node-typedarray-to-buffer node-universalify node-util-deprecate
+  node-validate-npm-package-license node-webidl-conversions node-whatwg-fetch
+  node-wrappy node-yallist nvidia-firmware-550-550.144.03
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  autotools-dev libltdl-dev libsigsegv2
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc gettext libtool-doc gfortran
+  | fortran95-compiler gcj-jdk m4-doc
+The following NEW packages will be installed:
+  autoconf automake autotools-dev libltdl-dev libsigsegv2 libtool m4
+0 upgraded, 7 newly installed, 0 to remove and 95 not upgraded.
+Need to get 1,487 kB of archives.
+After this operation, 6,429 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3 [14.6 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 m4 amd64 1.4.18-5ubuntu2 [199 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 autoconf all 2.71-2 [338 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 autotools-dev all 20220109.1 [44.9 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 automake all 1:1.16.5-1.3 [558 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 libltdl-dev amd64 2.4.6-15build2 [169 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 libtool all 2.4.6-15build2 [164 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 1,487 kB in 0s (3,381 kB/s)
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 248616 files and directories currently installed.)
+Preparing to unpack .../0-libsigsegv2_2.13-1ubuntu3_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.13-1ubuntu3) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../1-m4_1.4.18-5ubuntu2_amd64.deb ...
+Unpacking m4 (1.4.18-5ubuntu2) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../2-autoconf_2.71-2_all.deb ...
+Unpacking autoconf (2.71-2) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../3-autotools-dev_20220109.1_all.deb ...
+Unpacking autotools-dev (20220109.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../4-automake_1%3a1.16.5-1.3_all.deb ...
+Unpacking automake (1:1.16.5-1.3) ...
+Selecting previously unselected package libltdl-dev:amd64.
+Preparing to unpack .../5-libltdl-dev_2.4.6-15build2_amd64.deb ...
+Unpacking libltdl-dev:amd64 (2.4.6-15build2) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../6-libtool_2.4.6-15build2_all.deb ...
+Unpacking libtool (2.4.6-15build2) ...
+Setting up autotools-dev (20220109.1) ...
+Setting up libsigsegv2:amd64 (2.13-1ubuntu3) ...
+Setting up libtool (2.4.6-15build2) ...
+Setting up m4 (1.4.18-5ubuntu2) ...
+Setting up autoconf (2.71-2) ...
+Setting up automake (1:1.16.5-1.3) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+Setting up libltdl-dev:amd64 (2.4.6-15build2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for install-info (6.8-4build1) ...
+== CSNOBOL4
+checking cc
+cc is gcc
+checking sizes of C types
+sizeof(int) = 4
+sizeof(void *) = 8
+sizeof(long) = 8
+sizeof(float) = 4
+sizeof(double) = 8
+alignment(double) = 8
+native programming model is LP64
+detected GNU libc version 2.35
+using double for SNOBOL4 REAL type
+using POSIX unistd.h
+using C99 stdint.h
+using C99 isfinite()
+using getrusage() for runtimes
+using uname() for system name information
+using system memmove()/memset() functions
+using sockets for TCP/IP support
+using getaddrinfo() for IPv6
+using private bindresvport_sa() function
+using private popen() function
+using vfork() (with unistd.h)
+using OpenSSL BIO API for TLS I/O
+using forkpty() with pty.h and -lutil
+using paths.h for shell path
+using closefrom() from unistd.h
+using termios.h for tty modes
+using system getopt() function
+using system getline() function
+using dlopen() for LOAD() support
+using fseeko() for file positioning
+using madvise() during GC
+using POSIX suspend.c
+using strftime()
+using zlib to read/write .gz format files
+checking features for modules:
+using stat st_[acm]tim.tv_nsec
+using POSIX.1b clock_gettime(CLOCK_REALTIME,..) for time of day
+using tm_gmtoff
+using strptime()
+using timegm()
+using POSIX nanosleep()
+WARNING: no ndbm support found: using sdbm
+using SDBM for DBM support
+using lstat()
+using dummy readline (for sdb)
+using OpenSSL libcrypto for message digests
+using /usr/bin/install for make install
+using /usr/bin/gzip to compress man pages
+echo '# DO NOT EDIT. machine generated from Makefile2.m4' > Makefile2.tmp
+echo '# add local changes to local-config'		>> Makefile2.tmp
+m4 Makefile2.m4 >> Makefile2.tmp
+echo '# DO NOT DELETE THIS LINE. make depend uses it.' >> Makefile2.tmp
+make -f Makefile2.tmp depend MAKEFILE2=Makefile2.tmp
+make[1]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+sed '/^# DO NOT DELETE THIS LINE/q' Makefile2.tmp > Makefile2.tmp.tmp
+cc -MM -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  main.c isnobol4.c data.c data_init.c syn.c lib/bal.c lib/break.c lib/date.c lib/dump.c lib/posix/dynamic.c lib/endex.c lib/generic/expops.c lib/generic/fisatty.c lib/snolib/getstring.c lib/snolib/handle.c lib/hash.c lib/bsd/inet.c lib/init.c lib/generic/intspc.c lib/io.c lib/lexcmp.c lib/unix98/load.c lib/bsd/mstime.c lib/generic/newer.c lib/ordvst.c lib/pair.c lib/pat.c lib/pml.c lib/bsd/ptyio_obj.c lib/realst.c lib/replace.c lib/snolib/retstring.c lib/ansi/spcint.c lib/ansi/spreal.c lib/stdio_obj.c lib/str.c lib/stream.c lib/posix/suspend.c lib/posix/term.c lib/top.c lib/tree.c lib/posix/tty.c lib/snolib/atan.c lib/snolib/chop.c lib/snolib/cos.c lib/snolib/delete.c lib/generic/exists.c lib/snolib/exit.c lib/generic/execute.c lib/snolib/exp.c lib/snolib/file.c lib/snolib/findunit.c lib/snolib/host.c lib/snolib/log.c modules/logic/logic.c lib/snolib/ord.c modules/random/random.c lib/snolib/rename.c lib/snolib/serv.c lib/snolib/sin.c modules/sprintf/sprintf.c lib/snolib/sqrt.c lib/snolib/sset.c lib/posix/sys.c lib/snolib/tan.c lib/auxil/bindresvport.c lib/bsd/popen.c lib/openssl/tlsio_obj.c lib/auxil/bufio_obj.c lib/compio_obj.c >> Makefile2.tmp.tmp
+mv -f Makefile2.tmp.tmp Makefile2.tmp
+make[1]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+mv -f Makefile2.tmp Makefile2
+make -f Makefile2 all
+make[1]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+rm -f sdb
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c main.c
+sed -e "s@<SNOLIB_LIB>@/home/Ace/snobol4/lib/snobol4/2.3.3/lib@" \
+    -e "s@<BINDIR>@/home/Ace/snobol4/bin@" \
+    -e "s@<VERS>@-2.3.3@" \
+    < sdb.sh > sdb
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -Wno-return-type -Wno-switch -c isnobol4.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c data.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c data_init.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c syn.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/bal.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/break.c
+chmod a+x sdb
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/date.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/dump.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/posix/dynamic.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/endex.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/expops.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/fisatty.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/hash.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/getstring.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/handle.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/bsd/inet6.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/init.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/intspc.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/io.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/lexcmp.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/unix98/load.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/loadx.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/bsd/mstime.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/newer.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/ordvst.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/pair.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/pat.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/pml.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/bsd/ptyio_obj.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/realst.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/replace.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/retstring.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/ansi/spcint.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/ansi/spreal.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/stdio_obj.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/str.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/stream.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/posix/suspend.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/posix/term.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/top.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/tree.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/posix/tty.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/atan.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/chop.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/cos.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/delete.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/execute.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/generic/exists.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/exit.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/exp.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/file.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/findunit.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -DCC=\""cc"\" -DCOPT=\""-O3"\" -DHAVE_BUILD_VARS -DCONFIG_CFLAGS="\"-Wall\"" -DCONFIG_CPPFLAGS="\"-DHAVE_CONFIG_H\"" -DCONFIG_LDFLAGS="\"\"" -c lib/snolib/host.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/ord.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/log.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/rename.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/serv.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/sin.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/sqrt.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/sset.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/posix/sys.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/snolib/tan.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/auxil/bindresvport.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/bsd/popen.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/openssl/tlsio_obj.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/auxil/bufio_obj.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c lib/compio_obj.c
+cc -o cpuid cpuid.c
+rm -f snopea
+sed -e "s@<BINDIR>@/home/Ace/snobol4/bin@" \
+    -e "s@<VERS>@-2.3.3@" \
+    < snopea.in > snopea
+chmod a+x snopea
+rm -f xsnobol4
+make -f Makefile2 build.o
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+rm -f build.c
+echo '/* MACHINE GENERATED.  EDITING IS FUTILE */'	> build.c
+echo '#include "h.h"'					>> build.c
+echo 'const char build_files[] = "'main.c isnobol4.c data.c data_init.c syn.c lib/bal.c lib/break.c lib/date.c lib/dump.c lib/posix/dynamic.c lib/endex.c lib/generic/expops.c lib/generic/fisatty.c lib/snolib/getstring.c lib/snolib/handle.c lib/hash.c lib/bsd/inet.c lib/init.c lib/generic/intspc.c lib/io.c lib/lexcmp.c lib/unix98/load.c lib/bsd/mstime.c lib/generic/newer.c lib/ordvst.c lib/pair.c lib/pat.c lib/pml.c lib/bsd/ptyio_obj.c lib/realst.c lib/replace.c lib/snolib/retstring.c lib/ansi/spcint.c lib/ansi/spreal.c lib/stdio_obj.c lib/str.c lib/stream.c lib/posix/suspend.c lib/posix/term.c lib/top.c lib/tree.c lib/posix/tty.c lib/snolib/atan.c lib/snolib/chop.c lib/snolib/cos.c lib/snolib/delete.c lib/generic/exists.c lib/snolib/exit.c lib/generic/execute.c lib/snolib/exp.c lib/snolib/file.c lib/snolib/findunit.c lib/snolib/host.c lib/snolib/log.c modules/logic/logic.c lib/snolib/ord.c modules/random/random.c lib/snolib/rename.c lib/snolib/serv.c lib/snolib/sin.c modules/sprintf/sprintf.c lib/snolib/sqrt.c lib/snolib/sset.c lib/posix/sys.c lib/snolib/tan.c lib/auxil/bindresvport.c lib/bsd/popen.c lib/openssl/tlsio_obj.c lib/auxil/bufio_obj.c lib/compio_obj.c'";'		>> build.c
+echo 'const char build_date[] = "'`date`'";'		>> build.c
+echo 'const char build_dir[] = "'`pwd`'";'		>> build.c
+cc -Wall -O3 -Iinclude -I. -DHAVE_CONFIG_H -DSNOBOL4  -c build.c
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+cc -o xsnobol4 main.o isnobol4.o data.o data_init.o syn.o bal.o break.o date.o dump.o dynamic.o endex.o expops.o fisatty.o hash.o getstring.o handle.o inet6.o init.o intspc.o io.o lexcmp.o load.o loadx.o mstime.o newer.o ordvst.o pair.o pat.o pml.o ptyio_obj.o realst.o replace.o retstring.o spcint.o spreal.o stdio_obj.o str.o stream.o suspend.o term.o top.o tree.o tty.o atan.o chop.o cos.o delete.o execute.o exists.o exit.o exp.o file.o findunit.o host.o ord.o log.o rename.o serv.o sin.o sqrt.o sset.o sys.o tan.o bindresvport.o popen.o tlsio_obj.o bufio_obj.o compio_obj.o build.o   -lssl -lcrypto -lutil -ldl -lz -lm -rdynamic
+Running regression tests...
+(cd test; BLOCKS=1 SNOPATH=..:../snolib ./run.sh ../xsnobol4 -N)
+testing ../xsnobol4 -N
+search path: . .. ../snolib
+tests from tests.in blocks.in
+end.sno:
+	 passed.
+a.sno:
+	 passed.
+str.sno:
+	 passed.
+dump.sno:
+	 passed.
+hello.sno:
+	 passed.
+len.sno:
+	 passed.
+cat.sno:
+	 passed.
+float.sno:
+	 passed.
+loop.sno:
+	 passed.
+fun1.sno:
+	 passed.
+fun2.sno:
+	 passed.
+fact.sno:
+	 passed.
+words.sno:
+	 passed.
+words1.sno:
+	 passed.
+match.sno:
+	 passed.
+match2.sno:
+	 passed.
+match3.sno:
+	 passed.
+match4.sno:
+	 passed.
+repl.sno:
+	 passed.
+roman.sno:
+	 passed.
+openi.sno:
+	 passed.
+openo.sno:
+	 passed.
+openo2.sno:
+	 passed.
+100func.sno:
+	 passed.
+alt1.sno:
+	 passed.
+alt2.sno:
+	 passed.
+bal.sno:
+	 passed.
+collect.sno:
+	 passed.
+comment.sno:
+	 passed.
+convert.sno:
+	 passed.
+ftrace.sno:
+	 passed.
+matchloop.sno:
+	 passed.
+pow.sno:
+	 passed.
+uneval.sno:
+	 passed.
+uneval2.sno:
+	 passed.
+trim0.sno:
+	 passed.
+trim1.sno:
+	 passed.
+case1.sno:
+	 passed.
+case2.sno:
+	 passed.
+alph.sno:
+	 passed.
+8bit.sno:
+	 passed.
+contin.sno:
+	 passed.
+local.sno:
+	 passed.
+rewind1.sno:
+	 passed.
+conv2.sno:
+	 passed.
+ind.sno:
+	 passed.
+char.sno:
+	 passed.
+pad.sno:
+	 passed.
+breakx.sno:
+	 passed.
+tab.sno:
+	 passed.
+spit.sno:
+	 passed.
+trace1.sno:
+	 passed.
+trace2.sno:
+	 passed.
+noexec.sno:
+	 passed.
+ops.sno:
+	 passed.
+lexcmp.sno:
+	 passed.
+substr.sno:
+	 passed.
+space.sno:
+	 passed.
+space2.sno:
+	 passed.
+lgt.sno:
+	 passed.
+err.sno:
+	 passed.
+line.sno:
+	 passed.
+reverse.sno:
+	 passed.
+update.sno:
+	 passed.
+longline.sno:
+	 passed.
+longrec.sno:
+	 passed.
+any.sno:
+	 passed.
+intval.sno:
+	 passed.
+scanerr.sno:
+	 passed.
+crlf.sno:
+	 passed.
+label.sno:
+	 passed.
+vdiffer.sno:
+	 passed.
+function.sno:
+	 passed.
+ord.sno:
+	 passed.
+include.sno:
+	 passed.
+8bit2.sno:
+	 passed.
+popen.sno:
+	 passed.
+popen2.sno:
+	 passed.
+func2.sno:
+	 passed.
+diag1.sno:
+	 passed.
+diag2.sno:
+	 passed.
+unsc.sno:
+	 passed.
+collect2.sno:
+	 passed.
+setexit.sno:
+	 passed.
+setexit2.sno:
+	 passed.
+setexit3.sno:
+	 passed.
+loaderr.sno:
+	 passed.
+-Iaa include2.sno:
+	 passed.
+-Iaa -Ibb include3.sno:
+	 passed.
+SNOPATH=aa:bb include4.sno:
+	 passed.
+-Laa/aa.sno preload1.sno:
+	 passed.
+-Laa/aa.sno -Lbb/bb.sno preload2.sno:
+	 passed.
+SNOBOL_PRELOAD_PATH=pa:pb preload3.sno:
+	 passed.
+SNOPATH=pa:pb preload4.sno:
+	 passed.
+file.sno:
+	 passed.
+hide.sno:
+	 passed.
+-I.. float2.sno:
+	 passed.
+digits.sno:
+	 passed.
+maxint.sno:
+	 passed.
+genc.sno:
+	 passed.
+nqueens.sno:
+	 passed.
+sudoku.sno:
+	 passed.
+setexit4.sno:
+	 passed.
+setexit5.sno:
+	 passed.
+atn.sno:
+	 passed.
+setexit6.sno:
+	 passed.
+keytrace.sno:
+	 passed.
+t.sno:
+	 passed.
+trfunc.sno:
+	 passed.
+base.sno:
+	 passed.
+labelcode.sno:
+	 passed.
+setexit7.sno:
+	 passed.
+factor.sno:
+	 passed.
+alis.sno:
+	 passed.
+json1.sno:
+	 passed.
+BLOCKS= blocks/dump.sno:
+	 passed.
+blocks/block0.sno:
+	 passed.
+blocks/block0n.sno:
+	 passed.
+blocks/block1.sno:
+	 passed.
+blocks/block1b.sno:
+	 passed.
+blocks/block1n.sno:
+	 passed.
+blocks/ab.sno:
+	 passed.
+blocks/acm439.sno:
+	 passed.
+blocks/acm440.sno:
+	 passed.
+blocks/reg.sno:
+	 passed.
+blocks/acm441.sno:
+	 passed.
+blocks/acm442.sno:
+	 passed.
+blocks/acm443.sno:
+	 passed.
+blocks/acm443a.sno:
+	 passed.
+blocks/acm443b.sno:
+	 passed.
+blocks/image.sno:
+	 passed.
+blocks/box.sno:
+	 passed.
+blocks/mts142.sno:
+	 passed.
+blocks/mts143.sno:
+	 passed.
+blocks/mts144.sno:
+	 passed.
+blocks/mts145.sno:
+	 passed.
+BASE=blocks/tree1 blocks/tree.sno:
+	 passed.
+BASE=blocks/tree2 blocks/tree.sno:
+	 passed.
+blocks/mts162.sno:
+	 passed.
+blocks/mts164.sno:
+	 passed.
+blocks/mts166.sno:
+	 passed.
+blocks/bc.sno:
+	 passed.
+rm -f snobol4
+cp xsnobol4 snobol4
+make -f Makefile2 test_modules
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+for M in base64 dirs logic random stat time sprintf fork readline zlib ndbm readline digest; do \
+    (cd modules/$M; SNOBOL4='../../snobol4 -N -I../.. -I../../snolib' make test) \
+done
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=base64 SRC="base64.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created base64.sno
+created snobol4base64.3
+created snobol4base64.3.html
+base64 build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+base64 test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=dirs
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created dirs.sno
+created snobol4dirs.3
+created snobol4dirs.3.html
+dirs build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+dirs test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=logic SRC="logic.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created logic.sno
+created snobol4logic.3
+created snobol4logic.3.html
+logic build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+logic test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=random
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created random.sno
+created snobol4random.3
+created snobol4random.3.html
+random build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+random test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=stat SRC="stat.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created stat.sno
+created snobol4stat.3
+created snobol4stat.3.html
+stat build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+stat test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=time SRC="time.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created time.sno
+created snobol4time.3
+created snobol4time.3.html
+time build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+test2.sno: OK
+time test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=sprintf
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created sprintf.sno
+created snobol4sprintf.3
+created snobol4sprintf.3.html
+sprintf build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+sprintf test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=fork
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created fork.sno
+created snobol4fork.3
+created snobol4fork.3.html
+fork build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+no tests found
+fork test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=readline
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created readline.sno
+created snobol4readline.3
+created snobol4readline.3.html
+readline build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+no tests found
+readline test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=zlib
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created snobol4zlib.3
+created snobol4zlib.3.html
+zlib build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+zlib test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=ndbm SRC="ndbm.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+sdbm/sdbm.c: In function ‘makroom’:
+sdbm/sdbm.c:352:16: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  352 |         (void) write(2, "sdbm: cannot insert after SPLTMAX attempts.\n", 44);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+created ndbm.sno
+created snobol4ndbm.3
+created snobol4ndbm.3.html
+ndbm build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+ndbm test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=readline
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+no tests found
+readline test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod test MOD=digest
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  build
+created snobol4digest.3
+created snobol4digest.3.html
+digest build succeeded.
+../../snobol4 -N -I../.. -I../../snolib setup.sno  test
+test.sno: OK
+digest test succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+Passed regression tests.
+date > tested
+./snobol4 -N -Isnolib -I. snopea.in snopea snopea.1
+./snobol4 -N -Isnolib -I. snopea.in snopea snopea.1.html
+for M in base64 dirs logic random stat time sprintf fork readline zlib ndbm readline digest; do \
+    (cd modules/$M; SNOBOL4='../../snobol4 -N -I../.. -I../../snolib' make all) \
+done
+Running timing script...
+./timing > timing.out.tmp
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=base64 SRC="base64.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=dirs
+cd doc; make all
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=logic SRC="logic.c funcs.sno"
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/doc'
+../snobol4 -N -I../snolib -I.. ../snopea.in sdb.1.pea sdb.1
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4.1.pea snobol4.1
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4blocks.1.pea snobol4blocks.1
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4cmd.1.pea snobol4cmd.1
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4ctrl.1.pea snobol4ctrl.1
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4error.1.pea snobol4error.1
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=random
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=stat SRC="stat.c funcs.sno"
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4ext.1.pea snobol4ext.1
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4func.1.pea snobol4func.1
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4io.1.pea snobol4io.1
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4key.1.pea snobol4key.1
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4op.1.pea snobol4op.1
+make -f ../Makefile.mod all MOD=time SRC="time.c funcs.sno"
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snopea.in snopea.1
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=sprintf
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+../snobol4 -N -I../snolib -I.. ../snopea.in snolib.3.pea snolib.3
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../snobol4 -N -I../snolib -I.. ../snopea.in ../lib/snolib/host.h snobol4host.3
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/setuputil.sno snobol4setup.3
+make -f ../Makefile.mod all MOD=fork
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/ezio.sno snobol4ezio.3
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/json.sno snobol4json.3
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=readline
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=zlib
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4load.3.pea snobol4load.3
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+../snobol4 -N -I../snolib -I.. ../snopea.in snopea.7.pea snopea.7
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4.1.pea snobol4.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in sdb.1.pea sdb.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snopea.in snopea.1.html
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4blocks.1.pea snobol4blocks.1.html
+make -f ../Makefile.mod all MOD=ndbm SRC="ndbm.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make -f ../Makefile.mod all MOD=readline
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4cmd.1.pea snobol4cmd.1.html
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4ctrl.1.pea snobol4ctrl.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4error.1.pea snobol4error.1.html
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4ext.1.pea snobol4ext.1.html
+make -f ../Makefile.mod all MOD=digest
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4func.1.pea snobol4func.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4io.1.pea snobol4io.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4key.1.pea snobol4key.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4op.1.pea snobol4op.1.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snolib.3.pea snolib.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/ezio.sno snobol4ezio.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in ../lib/snolib/host.h snobol4host.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/json.sno snobol4json.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snobol4load.3.pea snobol4load.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in ../snolib/setuputil.sno snobol4setup.3.html
+../snobol4 -N -I../snolib -I.. ../snopea.in snopea.7.pea snopea.7.html
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/doc'
+mv timing.out.tmp timing.out
+********************************************************
+Please consider mailing timing.out to snobol4-timing@regressive.org
+Anonymized results are posted at http://www.regressive.org/snobol4
+And you will be notified when test versions are available.
+********************************************************
+make[1]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+make -f Makefile2 install
+make[1]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+cd doc; make all
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/doc'
+for M in base64 dirs logic random stat time sprintf fork readline zlib ndbm readline digest; do \
+    (cd modules/$M; SNOBOL4='../../snobol4 -N -I../.. -I../../snolib' make all) \
+done
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make -f ../Makefile.mod all MOD=base64 SRC="base64.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make -f ../Makefile.mod all MOD=dirs
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make -f ../Makefile.mod all MOD=logic SRC="logic.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make -f ../Makefile.mod all MOD=random
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make -f ../Makefile.mod all MOD=stat SRC="stat.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make -f ../Makefile.mod all MOD=time SRC="time.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make -f ../Makefile.mod all MOD=sprintf
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make -f ../Makefile.mod all MOD=fork
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make -f ../Makefile.mod all MOD=readline
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make -f ../Makefile.mod all MOD=zlib
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make -f ../Makefile.mod all MOD=ndbm SRC="ndbm.c funcs.sno"
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make -f ../Makefile.mod all MOD=readline
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make -f ../Makefile.mod all MOD=digest
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+/usr/bin/install -d /home/Ace/snobol4/bin
+/usr/bin/install -s snobol4 /home/Ace/snobol4/bin/snobol4-2.3.3
+/usr/bin/install sdb /home/Ace/snobol4/bin/sdb-2.3.3
+/usr/bin/install snopea /home/Ace/snobol4/bin/snopea-2.3.3
+rm -f /home/Ace/snobol4/bin/snobol4 /home/Ace/snobol4/bin/sdb /home/Ace/snobol4/bin/snopea
+cd /home/Ace/snobol4/bin && ln -s snobol4-2.3.3 snobol4
+cd /home/Ace/snobol4/bin && ln -s sdb-2.3.3 sdb
+cd /home/Ace/snobol4/bin && ln -s snopea-2.3.3 snopea
+/usr/bin/install -d /home/Ace/snobol4/man/man1
+(cd .; \
+    /usr/bin/install -d /home/Ace/snobol4/man/man1; \
+    for F in *.1; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/man/man1; \
+	/usr/bin/gzip -f /home/Ace/snobol4/man/man1/$F; \
+    done)
+(cd doc; \
+    /usr/bin/install -d /home/Ace/snobol4/man/man1; \
+    for F in *.1; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/man/man1; \
+	/usr/bin/gzip -f /home/Ace/snobol4/man/man1/$F; \
+    done)
+(cd doc; \
+    /usr/bin/install -d /home/Ace/snobol4/man/man3; \
+    for F in *.3; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/man/man3; \
+	/usr/bin/gzip -f /home/Ace/snobol4/man/man3/$F; \
+    done)
+(cd doc; \
+    /usr/bin/install -d /home/Ace/snobol4/man/man7; \
+    for F in *.7; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/man/man7; \
+	/usr/bin/gzip -f /home/Ace/snobol4/man/man7/$F; \
+    done)
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3
+/usr/bin/install -m 644 README /home/Ace/snobol4/lib/snobol4/2.3.3
+/usr/bin/install -m 644 CHANGES /home/Ace/snobol4/lib/snobol4/2.3.3
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/local
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3/lib
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3/lib/shared
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3/local
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3/local/shared
+rm -f /home/Ace/snobol4/lib/snobol4/2.3.3/lib/dynload
+rm -f /home/Ace/snobol4/man/man3/snobol4tcl.3 /home/Ace/snobol4/man/man3/snobol4dbm.3
+for F in snolib/*.sno host.sno config.sno; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/lib/snobol4/2.3.3/lib; \
+done
+make -f Makefile2 install_modules
+make[2]: Entering directory '/home/Ace/src/snobol4-2.3.3'
+for M in base64 dirs logic random stat time sprintf fork readline zlib ndbm readline digest; do \
+    (cd modules/$M; SNOBOL4='../../snobol4 -N -I../.. -I../../snolib' make install) \
+done
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make -f ../Makefile.mod install MOD=base64 SRC="base64.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+base64 install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/base64'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make -f ../Makefile.mod install MOD=dirs
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+dirs install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/dirs'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make -f ../Makefile.mod install MOD=logic SRC="logic.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+logic install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/logic'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make -f ../Makefile.mod install MOD=random
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+random install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/random'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make -f ../Makefile.mod install MOD=stat SRC="stat.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+stat install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/stat'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make -f ../Makefile.mod install MOD=time SRC="time.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+time install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/time'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make -f ../Makefile.mod install MOD=sprintf
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+sprintf install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/sprintf'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make -f ../Makefile.mod install MOD=fork
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+fork install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/fork'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make -f ../Makefile.mod install MOD=readline
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+readline install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make -f ../Makefile.mod install MOD=zlib
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+zlib install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/zlib'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make -f ../Makefile.mod install MOD=ndbm SRC="ndbm.c funcs.sno"
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+ndbm install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/ndbm'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make -f ../Makefile.mod install MOD=readline
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+readline install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/readline'
+make[3]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make -f ../Makefile.mod install MOD=digest
+make[4]: Entering directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+../../snobol4 -N -I../.. -I../../snolib setup.sno  install
+digest install succeeded.
+make[4]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[3]: Leaving directory '/home/Ace/src/snobol4-2.3.3/modules/digest'
+make[2]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+/usr/bin/install -d /home/Ace/snobol4/lib/snobol4/2.3.3/include
+for F in include/h.h include/snotypes.h include/macros.h include/load.h include/dt.h include/str.h include/handle.h include/module.h config.h equ.h version.h; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/lib/snobol4/2.3.3/include; \
+done
+/usr/bin/install -d /home/Ace/snobol4/share/doc/snobol4-2.3.3
+for F in doc/*.html modules/*/*.html; do \
+	/usr/bin/install -m 644 $F /home/Ace/snobol4/share/doc/snobol4-2.3.3; \
+done
+*********************************************************
+Have you mailed a copy of timing.out to snobol4-timing@regressive.org ?
+*********************************************************
+make[1]: Leaving directory '/home/Ace/src/snobol4-2.3.3'
+== GNU APL
+
+gzip: stdin: unexpected end of file
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+
+gzip: stdin: unexpected end of file
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+== RESULT
+lrwxrwxrwx 1 root root 12 Sep 10  2021 /usr/bin/gforth -> gforth-0.7.3
+lrwxrwxrwx 1 thereny thereny 13 Oct 20 00:15 /home/Ace/snobol4/bin/snobol4 -> snobol4-2.3.3
+ls: cannot access '/home/Ace/gnuapl/bin/apl': No such file or directory
+MISSING /home/Ace/gnuapl/bin/apl
+DONE

@@ -1,0 +1,1441 @@
+
+    *** core tests... ***
+
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+
+    *** compiler checks... ***
+
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether g++ accepts -g... (cached) yes
+checking for g++ option to enable C++11 features... (cached) none needed
+checking dependency style of g++... (cached) gcc3
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+
+    *** checks for the presence and usablility of header files... ***
+
+checking for ncurses.h... yes
+checking for term.h... yes
+checking for dirent.h... yes
+checking for execinfo.h... yes
+checking for ext/atomicity.h... yes
+checking for fcntl.h... yes
+checking for fenv.h... yes
+checking for fftw3.h... no
+checking for inttypes.h... (cached) yes
+checking for libpng16/png.h... no
+checking for limits.h... yes
+checking for locale.h... yes
+checking for malloc.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/un.h... yes
+checking for termios.h... yes
+checking for unistd.h... (cached) yes
+checking for utmpx.h... yes
+checking for vector... yes
+checking for zlib.h... yes
+
+    *** checks for standard C/C++ types... ***
+
+checking for _Bool... no
+checking for stdbool.h that conforms to C99... yes
+checking for inline... inline
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for off_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uint8_t... yes
+checking for stat.st_blksize stat.st_rdev... no
+checking for error_at_line... yes
+checking for pid_t... yes
+checking for vfork.h... no
+checking for sys/time.h... yes
+checking for sys/param.h... yes
+checking for fork... yes
+checking for vfork... yes
+checking for alarm... yes
+checking for getpagesize... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working mktime... yes
+checking for working strtod... yes
+checking for working mmap... yes
+checking for dup2... yes
+checking for floor... yes
+checking for getcwd... yes
+checking for gethostbyname... yes
+checking for gettimeofday... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for modf... yes
+checking for munmap... yes
+checking for pow... yes
+checking for realpath... yes
+checking for rint... yes
+checking for rmdir... yes
+checking for select... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for socket... yes
+checking for sqrt... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strerror... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for uname... yes
+checking for tparm in -ltinfo... yes
+checking for socket in -lsocket... no
+checking for sem_init in -lpthread... yes
+checking for yp_all in -lnsl... yes
+checking for setupterm in -lcurses... yes
+checking for setupterm in -lncurses... yes
+checking for acosh in -lm... yes
+checking for dlopen in -ldl... yes
+checking for initstate_r in -lc... yes
+checking for __atomic_fetch_add_4 in -latomicity... no
+checking for struct stat.st_blocks... yes
+
+    *** checks for optional (not strictly required) libraries... ***
+
+checking for X... libraries , headers 
+checking for xcb/xcb.h... yes
+checking for X11/Xlib.h... yes
+checking for X11/Xlib-xcb.h... no
+   └──── may affect: ⎕PLOT
+checking for fftw3.h... (cached) no
+   └──── will affect: ⎕FFT
+checking for png.h... no
+   └──── will affect: ⎕PNG
+checking for SQLite3 library >= 3.0.0... not found
+   └──── may affect: ⎕SQL
+checking for pg_config... /usr/bin/pg_config
+checking for PostgreSQL libraries... yes
+checking for PostgreSQL usability... no
+   └──── may affect: ⎕SQL
+checking for pcre2_compile_32 in -lpcre2-32... no
+   └──── will affect: ⎕RE
+checking for cblas_cgemv in -lgslcblas... no
+checking for gsl/gsl_blas.h... no
+checking for gsl_linalg_QL_decomp in -lgsl... no
+checking for gsl/gsl_version.h... no
+   └──── will affect: ⎕MX
+checking for pkg-config... /usr/bin/pkg-config
+checking for gtk_init in -lgtk-3... no
+   └──── may affect: ⎕PLOT, will affect ⎕PNG
+
+    *** checks for functions that are missing on some platforms... ***
+
+checking whether CPU has rdtsc (read CPU cycle counter) opcode... yes
+checking whether gettimeofday exists... yes
+checking whether sem_init() works... yes
+checking whether ioctl(fd, TIOCGWINSZ, ...) is available... yes
+checking whether pthread_setname_np is available... yes
+checking whether pthread_setaffinity_np is available... yes
+checking whether pthread_setname_np is available... yes
+checking whether OSAtomicAdd32Barrier() is available... no
+checking whether atomic_add_32_nv() is available... no
+
+    *** choices made by the user (via ./configure arguments)... ***
+
+checking if ctrl-D shall delete one char (and ctrl-Z be EOF)... no
+checking if the build target is Android... no
+checking if the build target is the Erlang interface (also requires libapl.so)... no
+checking if the build target is libapl.so... no
+checking if the build target is libpython_apl.so... no
+checking whether development mode is desired... no
+checking whether internal value checks shall be enabled... no
+checking whether internal performance counters shall be enabled)... no
+checking whether to remember the history of APL values (debug feature)... no
+checking whether gprof profiling shall be enabled... no
+checking whether gcov coverage testing shall be enabled... no
+checking whether dynamic logging shall be enabled... no
+checking whether value flags shall be traced... no
+checking how picky (0=not, 1=somwhat, 2=very) internal tests shall be... 1
+checking security level (0=none, 1=configured in preferences, 2=all)... 0
+checking how many CPU cores shall be used by APL (experimental!)... 0
+checking which type of socket APserver shall use... 0
+checking which port number APserver shall use for TCP or UDP sockets... 16366
+checking which *nix port name APserver shall use... /tmp/GNU-APL/APserver
+checking how long a short APL value shall be at most... 12
+checking whether visible markers shall be used... no
+checking whether support for rational numbers is desired ... no
+checking when and where this interpreter was built... 2026-10-20 00:16:49 EDT
+   --prefix overwrite: /home/Ace/gnuapl
+
+    *** ./configure checks done, producing the Makefiles and config.h... ***
+
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating build/Makefile
+config.status: creating debian/Makefile
+config.status: creating debian/source/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/DALY/Makefile
+config.status: creating erlang/Makefile
+config.status: creating erlang/apl.erl
+config.status: creating gnu-apl.d/Makefile
+config.status: creating gnu-apl.d/preferences
+config.status: creating HOWTOs/Makefile
+config.status: creating rpm/Makefile
+config.status: creating rpm/apl.spec
+config.status: creating src/Makefile
+config.status: creating src/APs/Makefile
+config.status: creating src/Gtk/Makefile
+config.status: creating src/emacs_mode/Makefile
+config.status: creating src/native/Makefile
+config.status: creating src/sql/Makefile
+config.status: creating src/testcases/Makefile
+config.status: creating src/workspaces/Makefile
+config.status: creating support-files/Makefile
+config.status: creating support-files/105-key-International-Keyboard/Makefile
+config.status: creating support-files/Bill_Daly_Ubuntu/Makefile
+config.status: creating support-files/Dirk/Makefile
+config.status: creating support-files/Dyalog-Keyboard/Makefile
+config.status: creating support-files/Juergen-Mint-19/Makefile
+config.status: creating support-files/Juergen-Mint-21/Makefile
+config.status: creating support-files/old-Keyboard/Makefile
+config.status: creating support-files/OS-X-Keyboard/Makefile
+config.status: creating support-files/Unicomp-Keyboard/Makefile
+config.status: creating support-files/WASD-Keyboard/Makefile
+config.status: creating tools/Makefile
+config.status: creating websock/Makefile
+config.status: creating websock/client/Makefile
+config.status: creating websock/server/Makefile
+config.status: creating workspaces/Makefile
+config.status: creating wslib3/Makefile
+config.status: creating wslib3/DALY/Makefile
+config.status: creating wslib4/Makefile
+config.status: creating wslib5/Makefile
+config.status: creating wslib5/APLComponentFiles/Makefile
+config.status: creating wslib5/DALY/Makefile
+config.status: creating wslib5/iso-apl-cf/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+ 
+checking if any of the optional libraries shall be used... yes
+
+configure:    ---- SUMMARY OF TESTS (please include it in error reports) ----
+
+    # A. command line arguments for ./configure
+    #
+    prefix:                      /home/Ace/gnuapl
+
+    DEVELOP_WANTED:              no
+    ASSERT_LEVEL_WANTED:         1
+    ALT_MAP_WANTED:              0
+    DYNAMIC_LOG_WANTED:          no
+    PERFORMANCE_COUNTERS_WANTED: no
+    VALUE_CHECK_WANTED:          no
+    VALUE_HISTORY_WANTED:        no
+
+    # B. computed variables (most of them in m4/*.m4
+    #
+    apl_BUILD_DATE:              2026-10-20 00:16:49 EDT
+    apl_BUILD_OS:                Linux 6.8.0-124-generic x86_64
+    apl_MAINTAINER_MODE:         no
+    apl_missing_headers:         2
+    apl_missing_functions:       0
+    apl_FFT:                     no	(affects: ⎕FFT)
+    apl_GSL:                     no	(affects: ⎕MX, ⌹)
+    apl_PCRE:                    no	(affects: ⎕RE)
+    apl_PNG:                     no	(affects: ⎕PNG)
+    apl_POSTGRES:                no	(may affect: ⎕SQL)
+    apl_SQLITE3:                 no	(may affect: ⎕SQL)
+    apl_SQL                      no	(affects:    ⎕SQL)
+    apl_XCB                      no	(fallback for               ⎕PLOT)
+    apl_GTK3:                    no	(affects: ⎕PNG, ⎕GTK, maybe ⎕PLOT)
+    apl_GUI:                     no	(affects: ⎕PNG, ⎕GTK,       ⎕PLOT)
+    apl_LIBC:                    yes	(affects: ⎕RVAL)
+
+    Special Build targets:
+        Android:                 no
+        Erlang:                  no
+        libapl:                  no
+        Python:                  no
+
+make  all-recursive
+make[1]: Entering directory '/home/Ace/src/apl-2.0'
+Making all in workspaces
+make[2]: Entering directory '/home/Ace/src/apl-2.0/workspaces'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/workspaces'
+Making all in wslib3
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib3'
+Making all in DALY
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib3'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib3'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib3'
+Making all in wslib4
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib4'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib4'
+Making all in wslib5
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib5'
+Making all in APLComponentFiles
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+Making all in DALY
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+Making all in iso-apl-cf
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib5'
+Making all in build
+make[2]: Entering directory '/home/Ace/src/apl-2.0/build'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/build'
+Making all in doc
+make[2]: Entering directory '/home/Ace/src/apl-2.0/doc'
+Making all in DALY
+make[3]: Entering directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/doc'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/doc'
+Making all in erlang
+make[2]: Entering directory '/home/Ace/src/apl-2.0/erlang'
+nothing to be done because GNU APL was NOT configured --with-erlang
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/erlang'
+Making all in gnu-apl.d
+make[2]: Entering directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+Making all in HOWTOs
+make[2]: Entering directory '/home/Ace/src/apl-2.0/HOWTOs'
+Warning: failed to launch javaldx - java may not function correctly
+convert /home/Ace/src/apl-2.0/HOWTOs/LApack-primer.html -> /home/Ace/src/apl-2.0/HOWTOs/LApack-primer.pdf using filter : writer_pdf_Export
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/HOWTOs'
+Making all in src
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src'
+Making all in native
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/native'
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_file_io_la-file_io.lo -MD -MP -MF .deps/lib_file_io_la-file_io.Tpo -c -o lib_file_io_la-file_io.lo `test -f 'file_io.cc' || echo './'`file_io.cc
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F0_la-template_F0.lo -MD -MP -MF .deps/lib_template_F0_la-template_F0.Tpo -c -o lib_template_F0_la-template_F0.lo `test -f 'template_F0.cc' || echo './'`template_F0.cc
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F12_la-template_F12.lo -MD -MP -MF .deps/lib_template_F12_la-template_F12.Tpo -c -o lib_template_F12_la-template_F12.lo `test -f 'template_F12.cc' || echo './'`template_F12.cc
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP1_la-template_OP1.lo -MD -MP -MF .deps/lib_template_OP1_la-template_OP1.Tpo -c -o lib_template_OP1_la-template_OP1.lo `test -f 'template_OP1.cc' || echo './'`template_OP1.cc
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP2_la-template_OP2.lo -MD -MP -MF .deps/lib_template_OP2_la-template_OP2.Tpo -c -o lib_template_OP2_la-template_OP2.lo `test -f 'template_OP2.cc' || echo './'`template_OP2.cc
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_file_io_la-file_io.lo -MD -MP -MF .deps/lib_file_io_la-file_io.Tpo -c file_io.cc  -fPIC -DPIC -o .libs/lib_file_io_la-file_io.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F0_la-template_F0.lo -MD -MP -MF .deps/lib_template_F0_la-template_F0.Tpo -c template_F0.cc  -fPIC -DPIC -o .libs/lib_template_F0_la-template_F0.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F12_la-template_F12.lo -MD -MP -MF .deps/lib_template_F12_la-template_F12.Tpo -c template_F12.cc  -fPIC -DPIC -o .libs/lib_template_F12_la-template_F12.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP1_la-template_OP1.lo -MD -MP -MF .deps/lib_template_OP1_la-template_OP1.Tpo -c template_OP1.cc  -fPIC -DPIC -o .libs/lib_template_OP1_la-template_OP1.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP2_la-template_OP2.lo -MD -MP -MF .deps/lib_template_OP2_la-template_OP2.Tpo -c template_OP2.cc  -fPIC -DPIC -o .libs/lib_template_OP2_la-template_OP2.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_file_io_la-file_io.lo -MD -MP -MF .deps/lib_file_io_la-file_io.Tpo -c file_io.cc -o lib_file_io_la-file_io.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F0_la-template_F0.lo -MD -MP -MF .deps/lib_template_F0_la-template_F0.Tpo -c template_F0.cc -o lib_template_F0_la-template_F0.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP2_la-template_OP2.lo -MD -MP -MF .deps/lib_template_OP2_la-template_OP2.Tpo -c template_OP2.cc -o lib_template_OP2_la-template_OP2.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_OP1_la-template_OP1.lo -MD -MP -MF .deps/lib_template_OP1_la-template_OP1.Tpo -c template_OP1.cc -o lib_template_OP1_la-template_OP1.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -MT lib_template_F12_la-template_F12.lo -MD -MP -MF .deps/lib_template_F12_la-template_F12.Tpo -c template_F12.cc -o lib_template_F12_la-template_F12.o >/dev/null 2>&1
+mv -f .deps/lib_file_io_la-file_io.Tpo .deps/lib_file_io_la-file_io.Plo
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -avoid-version -export-dynamic  -o lib_file_io.la -rpath /home/Ace/gnuapl/lib/apl lib_file_io_la-file_io.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/lib_file_io_la-file_io.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2 -g -O2   -Wl,-soname -Wl,lib_file_io.so -o .libs/lib_file_io.so
+libtool: link: ar cr .libs/lib_file_io.a  lib_file_io_la-file_io.o
+libtool: link: ranlib .libs/lib_file_io.a
+libtool: link: ( cd ".libs" && rm -f "lib_file_io.la" && ln -s "../lib_file_io.la" "lib_file_io.la" )
+mv -f .deps/lib_template_F0_la-template_F0.Tpo .deps/lib_template_F0_la-template_F0.Plo
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -avoid-version -export-dynamic  -o lib_template_F0.la -rpath /home/Ace/gnuapl/lib/apl lib_template_F0_la-template_F0.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/lib_template_F0_la-template_F0.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2 -g -O2   -Wl,-soname -Wl,lib_template_F0.so -o .libs/lib_template_F0.so
+mv -f .deps/lib_template_OP2_la-template_OP2.Tpo .deps/lib_template_OP2_la-template_OP2.Plo
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -avoid-version -export-dynamic  -o lib_template_OP2.la -rpath /home/Ace/gnuapl/lib/apl lib_template_OP2_la-template_OP2.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: ar cr .libs/lib_template_F0.a  lib_template_F0_la-template_F0.o
+libtool: link: ranlib .libs/lib_template_F0.a
+mv -f .deps/lib_template_OP1_la-template_OP1.Tpo .deps/lib_template_OP1_la-template_OP1.Plo
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -avoid-version -export-dynamic  -o lib_template_OP1.la -rpath /home/Ace/gnuapl/lib/apl lib_template_OP1_la-template_OP1.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: ( cd ".libs" && rm -f "lib_template_F0.la" && ln -s "../lib_template_F0.la" "lib_template_F0.la" )
+mv -f .deps/lib_template_F12_la-template_F12.Tpo .deps/lib_template_F12_la-template_F12.Plo
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -avoid-version -export-dynamic  -o lib_template_F12.la -rpath /home/Ace/gnuapl/lib/apl lib_template_F12_la-template_F12.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/lib_template_OP2_la-template_OP2.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2 -g -O2   -Wl,-soname -Wl,lib_template_OP2.so -o .libs/lib_template_OP2.so
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/lib_template_OP1_la-template_OP1.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2 -g -O2   -Wl,-soname -Wl,lib_template_OP1.so -o .libs/lib_template_OP1.so
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/lib_template_F12_la-template_F12.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2 -g -O2   -Wl,-soname -Wl,lib_template_F12.so -o .libs/lib_template_F12.so
+libtool: link: ar cr .libs/lib_template_OP2.a  lib_template_OP2_la-template_OP2.o
+libtool: link: ranlib .libs/lib_template_OP2.a
+libtool: link: ( cd ".libs" && rm -f "lib_template_OP2.la" && ln -s "../lib_template_OP2.la" "lib_template_OP2.la" )
+libtool: link: ar cr .libs/lib_template_OP1.a  lib_template_OP1_la-template_OP1.o
+libtool: link: ranlib .libs/lib_template_OP1.a
+libtool: link: ar cr .libs/lib_template_F12.a  lib_template_F12_la-template_F12.o
+libtool: link: ( cd ".libs" && rm -f "lib_template_OP1.la" && ln -s "../lib_template_OP1.la" "lib_template_OP1.la" )
+libtool: link: ranlib .libs/lib_template_F12.a
+libtool: link: ( cd ".libs" && rm -f "lib_template_F12.la" && ln -s "../lib_template_F12.la" "lib_template_F12.la" )
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/native'
+Making all in APs
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/APs'
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -MT AP100-AP100.o -MD -MP -MF .deps/AP100-AP100.Tpo -c -o AP100-AP100.o `test -f 'AP100.cc' || echo './'`AP100.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -MT AP100-APmain.o -MD -MP -MF .deps/AP100-APmain.Tpo -c -o AP100-APmain.o `test -f 'APmain.cc' || echo './'`APmain.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -MT AP210-AP210.o -MD -MP -MF .deps/AP210-AP210.Tpo -c -o AP210-AP210.o `test -f 'AP210.cc' || echo './'`AP210.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -MT AP210-APmain.o -MD -MP -MF .deps/AP210-APmain.Tpo -c -o AP210-APmain.o `test -f 'APmain.cc' || echo './'`APmain.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT APserver-APserver.o -MD -MP -MF .deps/APserver-APserver.Tpo -c -o APserver-APserver.o `test -f 'APserver.cc' || echo './'`APserver.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT APserver-Svar_DB_server.o -MD -MP -MF .deps/APserver-Svar_DB_server.Tpo -c -o APserver-Svar_DB_server.o `test -f 'Svar_DB_server.cc' || echo './'`Svar_DB_server.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP100-Backtrace.o -MD -MP -MF ../.deps/AP100-Backtrace.Tpo -c -o ../AP100-Backtrace.o `test -f '../Backtrace.cc' || echo './'`../Backtrace.cc
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP100-Svar_DB.o -MD -MP -MF ../.deps/AP100-Svar_DB.Tpo -c -o ../AP100-Svar_DB.o `test -f '../Svar_DB.cc' || echo './'`../Svar_DB.cc
+mv -f .deps/AP100-AP100.Tpo .deps/AP100-AP100.Po
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP100-Svar_record.o -MD -MP -MF ../.deps/AP100-Svar_record.Tpo -c -o ../AP100-Svar_record.o `test -f '../Svar_record.cc' || echo './'`../Svar_record.cc
+mv -f ../.deps/AP100-Backtrace.Tpo ../.deps/AP100-Backtrace.Po
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP210-Backtrace.o -MD -MP -MF ../.deps/AP210-Backtrace.Tpo -c -o ../AP210-Backtrace.o `test -f '../Backtrace.cc' || echo './'`../Backtrace.cc
+mv -f .deps/AP210-AP210.Tpo .deps/AP210-AP210.Po
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP210-Svar_DB.o -MD -MP -MF ../.deps/AP210-Svar_DB.Tpo -c -o ../AP210-Svar_DB.o `test -f '../Svar_DB.cc' || echo './'`../Svar_DB.cc
+mv -f .deps/APserver-Svar_DB_server.Tpo .deps/APserver-Svar_DB_server.Po
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -MT ../AP210-Svar_record.o -MD -MP -MF ../.deps/AP210-Svar_record.Tpo -c -o ../AP210-Svar_record.o `test -f '../Svar_record.cc' || echo './'`../Svar_record.cc
+mv -f ../.deps/AP100-Svar_record.Tpo ../.deps/AP100-Svar_record.Po
+g++ -DHAVE_CONFIG_H -I. -I../..     -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0 -MT ../APserver-Svar_record.o -MD -MP -MF ../.deps/APserver-Svar_record.Tpo -c -o ../APserver-Svar_record.o `test -f '../Svar_record.cc' || echo './'`../Svar_record.cc
+mv -f ../.deps/AP210-Backtrace.Tpo ../.deps/AP210-Backtrace.Po
+mv -f ../.deps/AP210-Svar_record.Tpo ../.deps/AP210-Svar_record.Po
+mv -f ../.deps/APserver-Svar_record.Tpo ../.deps/APserver-Svar_record.Po
+mv -f .deps/AP100-APmain.Tpo .deps/AP100-APmain.Po
+mv -f .deps/AP210-APmain.Tpo .deps/AP210-APmain.Po
+mv -f ../.deps/AP100-Svar_DB.Tpo ../.deps/AP100-Svar_DB.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0   -o AP100 AP100-AP100.o AP100-APmain.o ../AP100-Backtrace.o ../AP100-Svar_DB.o ../AP100-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -I ./.. -g -O2 -DAP_NUM=100 -g -O2 -I /home/Ace/src/apl-2.0 -o AP100 AP100-AP100.o AP100-APmain.o ../AP100-Backtrace.o ../AP100-Svar_DB.o ../AP100-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+mv -f .deps/APserver-APserver.Tpo .deps/APserver-APserver.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -g -O2 -I /home/Ace/src/apl-2.0   -o APserver APserver-APserver.o APserver-Svar_DB_server.o ../APserver-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -I ./.. -g -O2 -g -O2 -I /home/Ace/src/apl-2.0 -o APserver APserver-APserver.o APserver-Svar_DB_server.o ../APserver-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+mv -f ../.deps/AP210-Svar_DB.Tpo ../.deps/AP210-Svar_DB.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -I ./.. -g -O2  -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0   -o AP210 AP210-AP210.o AP210-APmain.o ../AP210-Backtrace.o ../AP210-Svar_DB.o ../AP210-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -I ./.. -g -O2 -DAP_NUM=210 -g -O2 -I /home/Ace/src/apl-2.0 -o AP210 AP210-AP210.o AP210-APmain.o ../AP210-Backtrace.o ../AP210-Svar_DB.o ../AP210-Svar_record.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/APs'
+Making all in emacs_mode
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+depbase=`echo DefCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT DefCommand.lo -MD -MP -MF $depbase.Tpo -c -o DefCommand.lo DefCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo emacs.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT emacs.lo -MD -MP -MF $depbase.Tpo -c -o emacs.lo emacs.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo FnCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnCommand.lo -MD -MP -MF $depbase.Tpo -c -o FnCommand.lo FnCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo FnTagCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnTagCommand.lo -MD -MP -MF $depbase.Tpo -c -o FnTagCommand.lo FnTagCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo FollowCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FollowCommand.lo -MD -MP -MF $depbase.Tpo -c -o FollowCommand.lo FollowCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo GetVarCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT GetVarCommand.lo -MD -MP -MF $depbase.Tpo -c -o GetVarCommand.lo GetVarCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo HelpCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT HelpCommand.lo -MD -MP -MF $depbase.Tpo -c -o HelpCommand.lo HelpCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo Listener.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT Listener.lo -MD -MP -MF $depbase.Tpo -c -o Listener.lo Listener.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnTagCommand.lo -MD -MP -MF .deps/FnTagCommand.Tpo -c FnTagCommand.cc  -fPIC -DPIC -o .libs/FnTagCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT HelpCommand.lo -MD -MP -MF .deps/HelpCommand.Tpo -c HelpCommand.cc  -fPIC -DPIC -o .libs/HelpCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT DefCommand.lo -MD -MP -MF .deps/DefCommand.Tpo -c DefCommand.cc  -fPIC -DPIC -o .libs/DefCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FollowCommand.lo -MD -MP -MF .deps/FollowCommand.Tpo -c FollowCommand.cc  -fPIC -DPIC -o .libs/FollowCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT Listener.lo -MD -MP -MF .deps/Listener.Tpo -c Listener.cc  -fPIC -DPIC -o .libs/Listener.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT GetVarCommand.lo -MD -MP -MF .deps/GetVarCommand.Tpo -c GetVarCommand.cc  -fPIC -DPIC -o .libs/GetVarCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT emacs.lo -MD -MP -MF .deps/emacs.Tpo -c emacs.cc  -fPIC -DPIC -o .libs/emacs.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnCommand.lo -MD -MP -MF .deps/FnCommand.Tpo -c FnCommand.cc  -fPIC -DPIC -o .libs/FnCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT Listener.lo -MD -MP -MF .deps/Listener.Tpo -c Listener.cc -o Listener.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnCommand.lo -MD -MP -MF .deps/FnCommand.Tpo -c FnCommand.cc -o FnCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FnTagCommand.lo -MD -MP -MF .deps/FnTagCommand.Tpo -c FnTagCommand.cc -o FnTagCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT emacs.lo -MD -MP -MF .deps/emacs.Tpo -c emacs.cc -o emacs.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT DefCommand.lo -MD -MP -MF .deps/DefCommand.Tpo -c DefCommand.cc -o DefCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT GetVarCommand.lo -MD -MP -MF .deps/GetVarCommand.Tpo -c GetVarCommand.cc -o GetVarCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT FollowCommand.lo -MD -MP -MF .deps/FollowCommand.Tpo -c FollowCommand.cc -o FollowCommand.o >/dev/null 2>&1
+depbase=`echo LockWrapper.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT LockWrapper.lo -MD -MP -MF $depbase.Tpo -c -o LockWrapper.lo LockWrapper.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT LockWrapper.lo -MD -MP -MF .deps/LockWrapper.Tpo -c LockWrapper.cc  -fPIC -DPIC -o .libs/LockWrapper.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT LockWrapper.lo -MD -MP -MF .deps/LockWrapper.Tpo -c LockWrapper.cc -o LockWrapper.o >/dev/null 2>&1
+depbase=`echo network.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT network.lo -MD -MP -MF $depbase.Tpo -c -o network.lo network.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT network.lo -MD -MP -MF .deps/network.Tpo -c network.cc  -fPIC -DPIC -o .libs/network.o
+depbase=`echo NetworkConnection.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT NetworkConnection.lo -MD -MP -MF $depbase.Tpo -c -o NetworkConnection.lo NetworkConnection.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo RunCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT RunCommand.lo -MD -MP -MF $depbase.Tpo -c -o RunCommand.lo RunCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo SicCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SicCommand.lo -MD -MP -MF $depbase.Tpo -c -o SicCommand.lo SicCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT NetworkConnection.lo -MD -MP -MF .deps/NetworkConnection.Tpo -c NetworkConnection.cc  -fPIC -DPIC -o .libs/NetworkConnection.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT RunCommand.lo -MD -MP -MF .deps/RunCommand.Tpo -c RunCommand.cc  -fPIC -DPIC -o .libs/RunCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SicCommand.lo -MD -MP -MF .deps/SicCommand.Tpo -c SicCommand.cc  -fPIC -DPIC -o .libs/SicCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT HelpCommand.lo -MD -MP -MF .deps/HelpCommand.Tpo -c HelpCommand.cc -o HelpCommand.o >/dev/null 2>&1
+depbase=`echo SiCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SiCommand.lo -MD -MP -MF $depbase.Tpo -c -o SiCommand.lo SiCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo SendCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SendCommand.lo -MD -MP -MF $depbase.Tpo -c -o SendCommand.lo SendCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SiCommand.lo -MD -MP -MF .deps/SiCommand.Tpo -c SiCommand.cc  -fPIC -DPIC -o .libs/SiCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SendCommand.lo -MD -MP -MF .deps/SendCommand.Tpo -c SendCommand.cc  -fPIC -DPIC -o .libs/SendCommand.o
+depbase=`echo SystemFnCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemFnCommand.lo -MD -MP -MF $depbase.Tpo -c -o SystemFnCommand.lo SystemFnCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemFnCommand.lo -MD -MP -MF .deps/SystemFnCommand.Tpo -c SystemFnCommand.cc  -fPIC -DPIC -o .libs/SystemFnCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT network.lo -MD -MP -MF .deps/network.Tpo -c network.cc -o network.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SicCommand.lo -MD -MP -MF .deps/SicCommand.Tpo -c SicCommand.cc -o SicCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT RunCommand.lo -MD -MP -MF .deps/RunCommand.Tpo -c RunCommand.cc -o RunCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SiCommand.lo -MD -MP -MF .deps/SiCommand.Tpo -c SiCommand.cc -o SiCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemFnCommand.lo -MD -MP -MF .deps/SystemFnCommand.Tpo -c SystemFnCommand.cc -o SystemFnCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SendCommand.lo -MD -MP -MF .deps/SendCommand.Tpo -c SendCommand.cc -o SendCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT NetworkConnection.lo -MD -MP -MF .deps/NetworkConnection.Tpo -c NetworkConnection.cc -o NetworkConnection.o >/dev/null 2>&1
+depbase=`echo SystemVariableCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemVariableCommand.lo -MD -MP -MF $depbase.Tpo -c -o SystemVariableCommand.lo SystemVariableCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemVariableCommand.lo -MD -MP -MF .deps/SystemVariableCommand.Tpo -c SystemVariableCommand.cc  -fPIC -DPIC -o .libs/SystemVariableCommand.o
+depbase=`echo TcpListener.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TcpListener.lo -MD -MP -MF $depbase.Tpo -c -o TcpListener.lo TcpListener.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TcpListener.lo -MD -MP -MF .deps/TcpListener.Tpo -c TcpListener.cc  -fPIC -DPIC -o .libs/TcpListener.o
+depbase=`echo TempFileWrapper.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TempFileWrapper.lo -MD -MP -MF $depbase.Tpo -c -o TempFileWrapper.lo TempFileWrapper.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TempFileWrapper.lo -MD -MP -MF .deps/TempFileWrapper.Tpo -c TempFileWrapper.cc  -fPIC -DPIC -o .libs/TempFileWrapper.o
+depbase=`echo TraceData.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TraceData.lo -MD -MP -MF $depbase.Tpo -c -o TraceData.lo TraceData.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TraceData.lo -MD -MP -MF .deps/TraceData.Tpo -c TraceData.cc  -fPIC -DPIC -o .libs/TraceData.o
+depbase=`echo UnixSocketListener.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT UnixSocketListener.lo -MD -MP -MF $depbase.Tpo -c -o UnixSocketListener.lo UnixSocketListener.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT UnixSocketListener.lo -MD -MP -MF .deps/UnixSocketListener.Tpo -c UnixSocketListener.cc  -fPIC -DPIC -o .libs/UnixSocketListener.o
+depbase=`echo util.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT util.lo -MD -MP -MF $depbase.Tpo -c -o util.lo util.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.cc  -fPIC -DPIC -o .libs/util.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT SystemVariableCommand.lo -MD -MP -MF .deps/SystemVariableCommand.Tpo -c SystemVariableCommand.cc -o SystemVariableCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.cc -o util.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TempFileWrapper.lo -MD -MP -MF .deps/TempFileWrapper.Tpo -c TempFileWrapper.cc -o TempFileWrapper.o >/dev/null 2>&1
+depbase=`echo VariablesCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VariablesCommand.lo -MD -MP -MF $depbase.Tpo -c -o VariablesCommand.lo VariablesCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VariablesCommand.lo -MD -MP -MF .deps/VariablesCommand.Tpo -c VariablesCommand.cc  -fPIC -DPIC -o .libs/VariablesCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TcpListener.lo -MD -MP -MF .deps/TcpListener.Tpo -c TcpListener.cc -o TcpListener.o >/dev/null 2>&1
+depbase=`echo VersionCommand.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..     -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VersionCommand.lo -MD -MP -MF $depbase.Tpo -c -o VersionCommand.lo VersionCommand.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VersionCommand.lo -MD -MP -MF .deps/VersionCommand.Tpo -c VersionCommand.cc  -fPIC -DPIC -o .libs/VersionCommand.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT UnixSocketListener.lo -MD -MP -MF .deps/UnixSocketListener.Tpo -c UnixSocketListener.cc -o UnixSocketListener.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT TraceData.lo -MD -MP -MF .deps/TraceData.Tpo -c TraceData.cc -o TraceData.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VariablesCommand.lo -MD -MP -MF .deps/VariablesCommand.Tpo -c VariablesCommand.cc -o VariablesCommand.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT VersionCommand.lo -MD -MP -MF .deps/VersionCommand.Tpo -c VersionCommand.cc -o VersionCommand.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++  -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -export-dynamic  -o libemacs.la -rpath /home/Ace/gnuapl/lib/apl DefCommand.lo emacs.lo FnCommand.lo FnTagCommand.lo FollowCommand.lo GetVarCommand.lo HelpCommand.lo Listener.lo LockWrapper.lo network.lo NetworkConnection.lo RunCommand.lo SicCommand.lo SiCommand.lo SendCommand.lo SystemFnCommand.lo SystemVariableCommand.lo TcpListener.lo TempFileWrapper.lo TraceData.lo UnixSocketListener.lo util.lo VariablesCommand.lo VersionCommand.lo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/DefCommand.o .libs/emacs.o .libs/FnCommand.o .libs/FnTagCommand.o .libs/FollowCommand.o .libs/GetVarCommand.o .libs/HelpCommand.o .libs/Listener.o .libs/LockWrapper.o .libs/network.o .libs/NetworkConnection.o .libs/RunCommand.o .libs/SicCommand.o .libs/SiCommand.o .libs/SendCommand.o .libs/SystemFnCommand.o .libs/SystemVariableCommand.o .libs/TcpListener.o .libs/TempFileWrapper.o .libs/TraceData.o .libs/UnixSocketListener.o .libs/util.o .libs/VariablesCommand.o .libs/VersionCommand.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2   -Wl,-soname -Wl,libemacs.so.0 -o .libs/libemacs.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libemacs.so.0" && ln -s "libemacs.so.0.0.0" "libemacs.so.0")
+libtool: link: (cd ".libs" && rm -f "libemacs.so" && ln -s "libemacs.so.0.0.0" "libemacs.so")
+libtool: link: ar cr .libs/libemacs.a  DefCommand.o emacs.o FnCommand.o FnTagCommand.o FollowCommand.o GetVarCommand.o HelpCommand.o Listener.o LockWrapper.o network.o NetworkConnection.o RunCommand.o SicCommand.o SiCommand.o SendCommand.o SystemFnCommand.o SystemVariableCommand.o TcpListener.o TempFileWrapper.o TraceData.o UnixSocketListener.o util.o VariablesCommand.o VersionCommand.o
+libtool: link: ranlib .libs/libemacs.a
+libtool: link: ( cd ".libs" && rm -f "libemacs.la" && ln -s "../libemacs.la" "libemacs.la" )
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+Making all in sql
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/sql'
+depbase=`echo apl-sqlite.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..    -I ./.. -I ./../.. -Wno-deprecated-declarations   -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-sqlite.lo -MD -MP -MF $depbase.Tpo -c -o apl-sqlite.lo apl-sqlite.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo Connection.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..    -I ./.. -I ./../.. -Wno-deprecated-declarations   -g -O2 -I /home/Ace/src/apl-2.0 -MT Connection.lo -MD -MP -MF $depbase.Tpo -c -o Connection.lo Connection.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -I ./../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-sqlite.lo -MD -MP -MF .deps/apl-sqlite.Tpo -c apl-sqlite.cc  -fPIC -DPIC -o .libs/apl-sqlite.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -I ./../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT Connection.lo -MD -MP -MF .deps/Connection.Tpo -c Connection.cc  -fPIC -DPIC -o .libs/Connection.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -I ./../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT Connection.lo -MD -MP -MF .deps/Connection.Tpo -c Connection.cc -o Connection.o >/dev/null 2>&1
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I ./.. -I ./../.. -Wno-deprecated-declarations -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-sqlite.lo -MD -MP -MF .deps/apl-sqlite.Tpo -c apl-sqlite.cc -o apl-sqlite.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -I ./.. -I ./../.. -Wno-deprecated-declarations   -g -O2 -I /home/Ace/src/apl-2.0    -o lib_sql.la -rpath /home/Ace/gnuapl/lib/apl apl-sqlite.lo Connection.lo    -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o  .libs/apl-sqlite.o .libs/Connection.o   -ldl -lncurses -lcurses -lnsl -lpthread -ltinfo -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o  -g -O2   -Wl,-soname -Wl,lib_sql.so.0 -o .libs/lib_sql.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "lib_sql.so.0" && ln -s "lib_sql.so.0.0.0" "lib_sql.so.0")
+libtool: link: (cd ".libs" && rm -f "lib_sql.so" && ln -s "lib_sql.so.0.0.0" "lib_sql.so")
+libtool: link: ar cr .libs/lib_sql.a  apl-sqlite.o Connection.o
+libtool: link: ranlib .libs/lib_sql.a
+libtool: link: ( cd ".libs" && rm -f "lib_sql.la" && ln -s "../lib_sql.la" "lib_sql.la" )
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/sql'
+Making all in workspaces
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src'
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-main.o -MD -MP -MF .deps/apl-main.Tpo -c -o apl-main.o `test -f 'main.cc' || echo './'`main.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Plot_ascii.o -MD -MP -MF .deps/apl-Plot_ascii.Tpo -c -o apl-Plot_ascii.o `test -f 'Plot_ascii.cc' || echo './'`Plot_ascii.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Archive.o -MD -MP -MF .deps/apl-Archive.Tpo -c -o apl-Archive.o `test -f 'Archive.cc' || echo './'`Archive.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Assert.o -MD -MP -MF .deps/apl-Assert.Tpo -c -o apl-Assert.o `test -f 'Assert.cc' || echo './'`Assert.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Avec.o -MD -MP -MF .deps/apl-Avec.Tpo -c -o apl-Avec.o `test -f 'Avec.cc' || echo './'`Avec.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Backtrace.o -MD -MP -MF .deps/apl-Backtrace.Tpo -c -o apl-Backtrace.o `test -f 'Backtrace.cc' || echo './'`Backtrace.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_COMMA.o -MD -MP -MF .deps/apl-Bif_F12_COMMA.Tpo -c -o apl-Bif_F12_COMMA.o `test -f 'Bif_F12_COMMA.cc' || echo './'`Bif_F12_COMMA.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_DOMINO.o -MD -MP -MF .deps/apl-Bif_F12_DOMINO.Tpo -c -o apl-Bif_F12_DOMINO.o `test -f 'Bif_F12_DOMINO.cc' || echo './'`Bif_F12_DOMINO.cc
+mv -f .deps/apl-Backtrace.Tpo .deps/apl-Backtrace.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_INDEX_OF.o -MD -MP -MF .deps/apl-Bif_F12_INDEX_OF.Tpo -c -o apl-Bif_F12_INDEX_OF.o `test -f 'Bif_F12_INDEX_OF.cc' || echo './'`Bif_F12_INDEX_OF.cc
+mv -f .deps/apl-Avec.Tpo .deps/apl-Avec.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_INTERVAL_INDEX.o -MD -MP -MF .deps/apl-Bif_F12_INTERVAL_INDEX.Tpo -c -o apl-Bif_F12_INTERVAL_INDEX.o `test -f 'Bif_F12_INTERVAL_INDEX.cc' || echo './'`Bif_F12_INTERVAL_INDEX.cc
+mv -f .deps/apl-Assert.Tpo .deps/apl-Assert.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_FORMAT.o -MD -MP -MF .deps/apl-Bif_F12_FORMAT.Tpo -c -o apl-Bif_F12_FORMAT.o `test -f 'Bif_F12_FORMAT.cc' || echo './'`Bif_F12_FORMAT.cc
+mv -f .deps/apl-Plot_ascii.Tpo .deps/apl-Plot_ascii.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_PARTITION_PICK.o -MD -MP -MF .deps/apl-Bif_F12_PARTITION_PICK.Tpo -c -o apl-Bif_F12_PARTITION_PICK.o `test -f 'Bif_F12_PARTITION_PICK.cc' || echo './'`Bif_F12_PARTITION_PICK.cc
+mv -f .deps/apl-main.Tpo .deps/apl-main.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_SORT.o -MD -MP -MF .deps/apl-Bif_F12_SORT.Tpo -c -o apl-Bif_F12_SORT.o `test -f 'Bif_F12_SORT.cc' || echo './'`Bif_F12_SORT.cc
+mv -f .deps/apl-Bif_F12_COMMA.Tpo .deps/apl-Bif_F12_COMMA.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_F12_TAKE_DROP.o -MD -MP -MF .deps/apl-Bif_F12_TAKE_DROP.Tpo -c -o apl-Bif_F12_TAKE_DROP.o `test -f 'Bif_F12_TAKE_DROP.cc' || echo './'`Bif_F12_TAKE_DROP.cc
+mv -f .deps/apl-Bif_F12_INDEX_OF.Tpo .deps/apl-Bif_F12_INDEX_OF.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER1_COMMUTE.o -MD -MP -MF .deps/apl-Bif_OPER1_COMMUTE.Tpo -c -o apl-Bif_OPER1_COMMUTE.o `test -f 'Bif_OPER1_COMMUTE.cc' || echo './'`Bif_OPER1_COMMUTE.cc
+mv -f .deps/apl-Bif_F12_INTERVAL_INDEX.Tpo .deps/apl-Bif_F12_INTERVAL_INDEX.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER1_EACH.o -MD -MP -MF .deps/apl-Bif_OPER1_EACH.Tpo -c -o apl-Bif_OPER1_EACH.o `test -f 'Bif_OPER1_EACH.cc' || echo './'`Bif_OPER1_EACH.cc
+mv -f .deps/apl-Bif_F12_SORT.Tpo .deps/apl-Bif_F12_SORT.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER2_POWER.o -MD -MP -MF .deps/apl-Bif_OPER2_POWER.Tpo -c -o apl-Bif_OPER2_POWER.o `test -f 'Bif_OPER2_POWER.cc' || echo './'`Bif_OPER2_POWER.cc
+mv -f .deps/apl-Bif_OPER1_COMMUTE.Tpo .deps/apl-Bif_OPER1_COMMUTE.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER2_INNER.o -MD -MP -MF .deps/apl-Bif_OPER2_INNER.Tpo -c -o apl-Bif_OPER2_INNER.o `test -f 'Bif_OPER2_INNER.cc' || echo './'`Bif_OPER2_INNER.cc
+mv -f .deps/apl-Bif_F12_PARTITION_PICK.Tpo .deps/apl-Bif_F12_PARTITION_PICK.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER2_OUTER.o -MD -MP -MF .deps/apl-Bif_OPER2_OUTER.Tpo -c -o apl-Bif_OPER2_OUTER.o `test -f 'Bif_OPER2_OUTER.cc' || echo './'`Bif_OPER2_OUTER.cc
+mv -f .deps/apl-Bif_F12_TAKE_DROP.Tpo .deps/apl-Bif_F12_TAKE_DROP.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER2_RANK.o -MD -MP -MF .deps/apl-Bif_OPER2_RANK.Tpo -c -o apl-Bif_OPER2_RANK.o `test -f 'Bif_OPER2_RANK.cc' || echo './'`Bif_OPER2_RANK.cc
+mv -f .deps/apl-Bif_F12_DOMINO.Tpo .deps/apl-Bif_F12_DOMINO.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER1_REDUCE.o -MD -MP -MF .deps/apl-Bif_OPER1_REDUCE.Tpo -c -o apl-Bif_OPER1_REDUCE.o `test -f 'Bif_OPER1_REDUCE.cc' || echo './'`Bif_OPER1_REDUCE.cc
+mv -f .deps/apl-Bif_F12_FORMAT.Tpo .deps/apl-Bif_F12_FORMAT.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Bif_OPER1_SCAN.o -MD -MP -MF .deps/apl-Bif_OPER1_SCAN.Tpo -c -o apl-Bif_OPER1_SCAN.o `test -f 'Bif_OPER1_SCAN.cc' || echo './'`Bif_OPER1_SCAN.cc
+mv -f .deps/apl-Bif_OPER1_EACH.Tpo .deps/apl-Bif_OPER1_EACH.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-CDR.o -MD -MP -MF .deps/apl-CDR.Tpo -c -o apl-CDR.o `test -f 'CDR.cc' || echo './'`CDR.cc
+mv -f .deps/apl-Archive.Tpo .deps/apl-Archive.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Cell.o -MD -MP -MF .deps/apl-Cell.Tpo -c -o apl-Cell.o `test -f 'Cell.cc' || echo './'`Cell.cc
+mv -f .deps/apl-Bif_OPER2_POWER.Tpo .deps/apl-Bif_OPER2_POWER.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Cmd_KEYB.o -MD -MP -MF .deps/apl-Cmd_KEYB.Tpo -c -o apl-Cmd_KEYB.o `test -f 'Cmd_KEYB.cc' || echo './'`Cmd_KEYB.cc
+mv -f .deps/apl-Bif_OPER2_INNER.Tpo .deps/apl-Bif_OPER2_INNER.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Cmd_LIB.o -MD -MP -MF .deps/apl-Cmd_LIB.Tpo -c -o apl-Cmd_LIB.o `test -f 'Cmd_LIB.cc' || echo './'`Cmd_LIB.cc
+mv -f .deps/apl-Bif_OPER2_OUTER.Tpo .deps/apl-Bif_OPER2_OUTER.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Cmd_IN.o -MD -MP -MF .deps/apl-Cmd_IN.Tpo -c -o apl-Cmd_IN.o `test -f 'Cmd_IN.cc' || echo './'`Cmd_IN.cc
+mv -f .deps/apl-Bif_OPER2_RANK.Tpo .deps/apl-Bif_OPER2_RANK.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Doxy.o -MD -MP -MF .deps/apl-Doxy.Tpo -c -o apl-Doxy.o `test -f 'Doxy.cc' || echo './'`Doxy.cc
+mv -f .deps/apl-Cell.Tpo .deps/apl-Cell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-CharCell.o -MD -MP -MF .deps/apl-CharCell.Tpo -c -o apl-CharCell.o `test -f 'CharCell.cc' || echo './'`CharCell.cc
+mv -f .deps/apl-Bif_OPER1_SCAN.Tpo .deps/apl-Bif_OPER1_SCAN.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Command.o -MD -MP -MF .deps/apl-Command.Tpo -c -o apl-Command.o `test -f 'Command.cc' || echo './'`Command.cc
+mv -f .deps/apl-Bif_OPER1_REDUCE.Tpo .deps/apl-Bif_OPER1_REDUCE.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Common.o -MD -MP -MF .deps/apl-Common.Tpo -c -o apl-Common.o `test -f 'Common.cc' || echo './'`Common.cc
+mv -f .deps/apl-CDR.Tpo .deps/apl-CDR.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-ComplexCell.o -MD -MP -MF .deps/apl-ComplexCell.Tpo -c -o apl-ComplexCell.o `test -f 'ComplexCell.cc' || echo './'`ComplexCell.cc
+mv -f .deps/apl-Cmd_KEYB.Tpo .deps/apl-Cmd_KEYB.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-DerivedFunction.o -MD -MP -MF .deps/apl-DerivedFunction.Tpo -c -o apl-DerivedFunction.o `test -f 'DerivedFunction.cc' || echo './'`DerivedFunction.cc
+mv -f .deps/apl-Cmd_IN.Tpo .deps/apl-Cmd_IN.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-DiffOut.o -MD -MP -MF .deps/apl-DiffOut.Tpo -c -o apl-DiffOut.o `test -f 'DiffOut.cc' || echo './'`DiffOut.cc
+mv -f .deps/apl-Cmd_LIB.Tpo .deps/apl-Cmd_LIB.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-DynamicObject.o -MD -MP -MF .deps/apl-DynamicObject.Tpo -c -o apl-DynamicObject.o `test -f 'DynamicObject.cc' || echo './'`DynamicObject.cc
+mv -f .deps/apl-CharCell.Tpo .deps/apl-CharCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Error.o -MD -MP -MF .deps/apl-Error.Tpo -c -o apl-Error.o `test -f 'Error.cc' || echo './'`Error.cc
+mv -f .deps/apl-Common.Tpo .deps/apl-Common.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Executable.o -MD -MP -MF .deps/apl-Executable.Tpo -c -o apl-Executable.o `test -f 'Executable.cc' || echo './'`Executable.cc
+mv -f .deps/apl-DiffOut.Tpo .deps/apl-DiffOut.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-FloatCell.o -MD -MP -MF .deps/apl-FloatCell.Tpo -c -o apl-FloatCell.o `test -f 'FloatCell.cc' || echo './'`FloatCell.cc
+mv -f .deps/apl-DynamicObject.Tpo .deps/apl-DynamicObject.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Function.o -MD -MP -MF .deps/apl-Function.Tpo -c -o apl-Function.o `test -f 'Function.cc' || echo './'`Function.cc
+mv -f .deps/apl-ComplexCell.Tpo .deps/apl-ComplexCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Id.o -MD -MP -MF .deps/apl-Id.Tpo -c -o apl-Id.o `test -f 'Id.cc' || echo './'`Id.cc
+mv -f .deps/apl-DerivedFunction.Tpo .deps/apl-DerivedFunction.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-IndexExpr.o -MD -MP -MF .deps/apl-IndexExpr.Tpo -c -o apl-IndexExpr.o `test -f 'IndexExpr.cc' || echo './'`IndexExpr.cc
+mv -f .deps/apl-Doxy.Tpo .deps/apl-Doxy.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-IndexIterator.o -MD -MP -MF .deps/apl-IndexIterator.Tpo -c -o apl-IndexIterator.o `test -f 'IndexIterator.cc' || echo './'`IndexIterator.cc
+mv -f .deps/apl-Error.Tpo .deps/apl-Error.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-InputFile.o -MD -MP -MF .deps/apl-InputFile.Tpo -c -o apl-InputFile.o `test -f 'InputFile.cc' || echo './'`InputFile.cc
+mv -f .deps/apl-FloatCell.Tpo .deps/apl-FloatCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-IntCell.o -MD -MP -MF .deps/apl-IntCell.Tpo -c -o apl-IntCell.o `test -f 'IntCell.cc' || echo './'`IntCell.cc
+mv -f .deps/apl-Function.Tpo .deps/apl-Function.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-IO_Files.o -MD -MP -MF .deps/apl-IO_Files.Tpo -c -o apl-IO_Files.o `test -f 'IO_Files.cc' || echo './'`IO_Files.cc
+mv -f .deps/apl-IndexIterator.Tpo .deps/apl-IndexIterator.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-LApack.o -MD -MP -MF .deps/apl-LApack.Tpo -c -o apl-LApack.o `test -f 'LApack.cc' || echo './'`LApack.cc
+mv -f .deps/apl-IndexExpr.Tpo .deps/apl-IndexExpr.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-LibPaths.o -MD -MP -MF .deps/apl-LibPaths.Tpo -c -o apl-LibPaths.o `test -f 'LibPaths.cc' || echo './'`LibPaths.cc
+mv -f .deps/apl-Id.Tpo .deps/apl-Id.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-LineInput.o -MD -MP -MF .deps/apl-LineInput.Tpo -c -o apl-LineInput.o `test -f 'LineInput.cc' || echo './'`LineInput.cc
+mv -f .deps/apl-InputFile.Tpo .deps/apl-InputFile.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Logging.o -MD -MP -MF .deps/apl-Logging.Tpo -c -o apl-Logging.o `test -f 'Logging.cc' || echo './'`Logging.cc
+mv -f .deps/apl-Executable.Tpo .deps/apl-Executable.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-LvalCell.o -MD -MP -MF .deps/apl-LvalCell.Tpo -c -o apl-LvalCell.o `test -f 'LvalCell.cc' || echo './'`LvalCell.cc
+mv -f .deps/apl-IntCell.Tpo .deps/apl-IntCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Malloc_hooks.o -MD -MP -MF .deps/apl-Malloc_hooks.Tpo -c -o apl-Malloc_hooks.o `test -f 'Malloc_hooks.cc' || echo './'`Malloc_hooks.cc
+mv -f .deps/apl-Malloc_hooks.Tpo .deps/apl-Malloc_hooks.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Nabla.o -MD -MP -MF .deps/apl-Nabla.Tpo -c -o apl-Nabla.o `test -f 'Nabla.cc' || echo './'`Nabla.cc
+mv -f .deps/apl-Logging.Tpo .deps/apl-Logging.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Macro.o -MD -MP -MF .deps/apl-Macro.Tpo -c -o apl-Macro.o `test -f 'Macro.cc' || echo './'`Macro.cc
+mv -f .deps/apl-IO_Files.Tpo .deps/apl-IO_Files.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Missing_Libraries.o -MD -MP -MF .deps/apl-Missing_Libraries.Tpo -c -o apl-Missing_Libraries.o `test -f 'Missing_Libraries.cc' || echo './'`Missing_Libraries.cc
+mv -f .deps/apl-LvalCell.Tpo .deps/apl-LvalCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-NamedObject.o -MD -MP -MF .deps/apl-NamedObject.Tpo -c -o apl-NamedObject.o `test -f 'NamedObject.cc' || echo './'`NamedObject.cc
+mv -f .deps/apl-LibPaths.Tpo .deps/apl-LibPaths.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-NativeFunction.o -MD -MP -MF .deps/apl-NativeFunction.Tpo -c -o apl-NativeFunction.o `test -f 'NativeFunction.cc' || echo './'`NativeFunction.cc
+mv -f .deps/apl-Macro.Tpo .deps/apl-Macro.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-NumericCell.o -MD -MP -MF .deps/apl-NumericCell.Tpo -c -o apl-NumericCell.o `test -f 'NumericCell.cc' || echo './'`NumericCell.cc
+mv -f .deps/apl-Missing_Libraries.Tpo .deps/apl-Missing_Libraries.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Output.o -MD -MP -MF .deps/apl-Output.Tpo -c -o apl-Output.o `test -f 'Output.cc' || echo './'`Output.cc
+mv -f .deps/apl-LineInput.Tpo .deps/apl-LineInput.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Parallel.o -MD -MP -MF .deps/apl-Parallel.Tpo -c -o apl-Parallel.o `test -f 'Parallel.cc' || echo './'`Parallel.cc
+mv -f .deps/apl-LApack.Tpo .deps/apl-LApack.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Parser.o -MD -MP -MF .deps/apl-Parser.Tpo -c -o apl-Parser.o `test -f 'Parser.cc' || echo './'`Parser.cc
+mv -f .deps/apl-NamedObject.Tpo .deps/apl-NamedObject.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Performance.o -MD -MP -MF .deps/apl-Performance.Tpo -c -o apl-Performance.o `test -f 'Performance.cc' || echo './'`Performance.cc
+mv -f .deps/apl-Output.Tpo .deps/apl-Output.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-PointerCell.o -MD -MP -MF .deps/apl-PointerCell.Tpo -c -o apl-PointerCell.o `test -f 'PointerCell.cc' || echo './'`PointerCell.cc
+mv -f .deps/apl-Parallel.Tpo .deps/apl-Parallel.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Prefix.o -MD -MP -MF .deps/apl-Prefix.Tpo -c -o apl-Prefix.o `test -f 'Prefix.cc' || echo './'`Prefix.cc
+mv -f .deps/apl-Command.Tpo .deps/apl-Command.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Plot_line_properties.o -MD -MP -MF .deps/apl-Plot_line_properties.Tpo -c -o apl-Plot_line_properties.o `test -f 'Plot_line_properties.cc' || echo './'`Plot_line_properties.cc
+mv -f .deps/apl-NumericCell.Tpo .deps/apl-NumericCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Plot_data.o -MD -MP -MF .deps/apl-Plot_data.Tpo -c -o apl-Plot_data.o `test -f 'Plot_data.cc' || echo './'`Plot_data.cc
+mv -f .deps/apl-NativeFunction.Tpo .deps/apl-NativeFunction.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Plot_window_properties.o -MD -MP -MF .deps/apl-Plot_window_properties.Tpo -c -o apl-Plot_window_properties.o `test -f 'Plot_window_properties.cc' || echo './'`Plot_window_properties.cc
+mv -f .deps/apl-Nabla.Tpo .deps/apl-Nabla.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-PrimitiveFunction.o -MD -MP -MF .deps/apl-PrimitiveFunction.Tpo -c -o apl-PrimitiveFunction.o `test -f 'PrimitiveFunction.cc' || echo './'`PrimitiveFunction.cc
+mv -f .deps/apl-Performance.Tpo .deps/apl-Performance.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-PrintBuffer.o -MD -MP -MF .deps/apl-PrintBuffer.Tpo -c -o apl-PrintBuffer.o `test -f 'PrintBuffer.cc' || echo './'`PrintBuffer.cc
+mv -f .deps/apl-Plot_data.Tpo .deps/apl-Plot_data.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Polynomial.o -MD -MP -MF .deps/apl-Polynomial.Tpo -c -o apl-Polynomial.o `test -f 'Polynomial.cc' || echo './'`Polynomial.cc
+mv -f .deps/apl-Plot_line_properties.Tpo .deps/apl-Plot_line_properties.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-PythonPipe.o -MD -MP -MF .deps/apl-PythonPipe.Tpo -c -o apl-PythonPipe.o `test -f 'PythonPipe.cc' || echo './'`PythonPipe.cc
+mv -f .deps/apl-PointerCell.Tpo .deps/apl-PointerCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-QR_factorization_GSL.o -MD -MP -MF .deps/apl-QR_factorization_GSL.Tpo -c -o apl-QR_factorization_GSL.o `test -f 'QR_factorization_GSL.cc' || echo './'`QR_factorization_GSL.cc
+mv -f .deps/apl-PythonPipe.Tpo .deps/apl-PythonPipe.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-QuadFunction.o -MD -MP -MF .deps/apl-QuadFunction.Tpo -c -o apl-QuadFunction.o `test -f 'QuadFunction.cc' || echo './'`QuadFunction.cc
+mv -f .deps/apl-Polynomial.Tpo .deps/apl-Polynomial.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-ProcessorID.o -MD -MP -MF .deps/apl-ProcessorID.Tpo -c -o apl-ProcessorID.o `test -f 'ProcessorID.cc' || echo './'`ProcessorID.cc
+mv -f .deps/apl-Parser.Tpo .deps/apl-Parser.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_CC.o -MD -MP -MF .deps/apl-Quad_CC.Tpo -c -o apl-Quad_CC.o `test -f 'Quad_CC.cc' || echo './'`Quad_CC.cc
+mv -f .deps/apl-QR_factorization_GSL.Tpo .deps/apl-QR_factorization_GSL.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_CR.o -MD -MP -MF .deps/apl-Quad_CR.Tpo -c -o apl-Quad_CR.o `test -f 'Quad_CR.cc' || echo './'`Quad_CR.cc
+mv -f .deps/apl-Plot_window_properties.Tpo .deps/apl-Plot_window_properties.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_DLX.o -MD -MP -MF .deps/apl-Quad_DLX.Tpo -c -o apl-Quad_DLX.o `test -f 'Quad_DLX.cc' || echo './'`Quad_DLX.cc
+mv -f .deps/apl-PrintBuffer.Tpo .deps/apl-PrintBuffer.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_FFT.o -MD -MP -MF .deps/apl-Quad_FFT.Tpo -c -o apl-Quad_FFT.o `test -f 'Quad_FFT.cc' || echo './'`Quad_FFT.cc
+mv -f .deps/apl-Quad_CC.Tpo .deps/apl-Quad_CC.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_FIO.o -MD -MP -MF .deps/apl-Quad_FIO.Tpo -c -o apl-Quad_FIO.o `test -f 'Quad_FIO.cc' || echo './'`Quad_FIO.cc
+mv -f .deps/apl-Prefix.Tpo .deps/apl-Prefix.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_FX.o -MD -MP -MF .deps/apl-Quad_FX.Tpo -c -o apl-Quad_FX.o `test -f 'Quad_FX.cc' || echo './'`Quad_FX.cc
+mv -f .deps/apl-ProcessorID.Tpo .deps/apl-ProcessorID.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_GTK.o -MD -MP -MF .deps/apl-Quad_GTK.Tpo -c -o apl-Quad_GTK.o `test -f 'Quad_GTK.cc' || echo './'`Quad_GTK.cc
+mv -f .deps/apl-PrimitiveFunction.Tpo .deps/apl-PrimitiveFunction.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_JSON.o -MD -MP -MF .deps/apl-Quad_JSON.Tpo -c -o apl-Quad_JSON.o `test -f 'Quad_JSON.cc' || echo './'`Quad_JSON.cc
+mv -f .deps/apl-Quad_DLX.Tpo .deps/apl-Quad_DLX.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_MAP.o -MD -MP -MF .deps/apl-Quad_MAP.Tpo -c -o apl-Quad_MAP.o `test -f 'Quad_MAP.cc' || echo './'`Quad_MAP.cc
+mv -f .deps/apl-Quad_FFT.Tpo .deps/apl-Quad_FFT.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_MX.o -MD -MP -MF .deps/apl-Quad_MX.Tpo -c -o apl-Quad_MX.o `test -f 'Quad_MX.cc' || echo './'`Quad_MX.cc
+mv -f .deps/apl-Quad_GTK.Tpo .deps/apl-Quad_GTK.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_PLOT.o -MD -MP -MF .deps/apl-Quad_PLOT.Tpo -c -o apl-Quad_PLOT.o `test -f 'Quad_PLOT.cc' || echo './'`Quad_PLOT.cc
+mv -f .deps/apl-Quad_FX.Tpo .deps/apl-Quad_FX.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_PNG.o -MD -MP -MF .deps/apl-Quad_PNG.Tpo -c -o apl-Quad_PNG.o `test -f 'Quad_PNG.cc' || echo './'`Quad_PNG.cc
+mv -f .deps/apl-QuadFunction.Tpo .deps/apl-QuadFunction.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_RE.o -MD -MP -MF .deps/apl-Quad_RE.Tpo -c -o apl-Quad_RE.o `test -f 'Quad_RE.cc' || echo './'`Quad_RE.cc
+mv -f .deps/apl-Quad_MX.Tpo .deps/apl-Quad_MX.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_RL.o -MD -MP -MF .deps/apl-Quad_RL.Tpo -c -o apl-Quad_RL.o `test -f 'Quad_RL.cc' || echo './'`Quad_RL.cc
+mv -f .deps/apl-Quad_JSON.Tpo .deps/apl-Quad_JSON.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_RVAL.o -MD -MP -MF .deps/apl-Quad_RVAL.Tpo -c -o apl-Quad_RVAL.o `test -f 'Quad_RVAL.cc' || echo './'`Quad_RVAL.cc
+mv -f .deps/apl-Quad_MAP.Tpo .deps/apl-Quad_MAP.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_SQL.o -MD -MP -MF .deps/apl-Quad_SQL.Tpo -c -o apl-Quad_SQL.o `test -f 'Quad_SQL.cc' || echo './'`Quad_SQL.cc
+mv -f .deps/apl-Quad_CR.Tpo .deps/apl-Quad_CR.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_SVx.o -MD -MP -MF .deps/apl-Quad_SVx.Tpo -c -o apl-Quad_SVx.o `test -f 'Quad_SVx.cc' || echo './'`Quad_SVx.cc
+mv -f .deps/apl-Quad_PNG.Tpo .deps/apl-Quad_PNG.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_TF.o -MD -MP -MF .deps/apl-Quad_TF.Tpo -c -o apl-Quad_TF.o `test -f 'Quad_TF.cc' || echo './'`Quad_TF.cc
+mv -f .deps/apl-Quad_RL.Tpo .deps/apl-Quad_RL.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_WA.o -MD -MP -MF .deps/apl-Quad_WA.Tpo -c -o apl-Quad_WA.o `test -f 'Quad_WA.cc' || echo './'`Quad_WA.cc
+mv -f .deps/apl-Quad_RE.Tpo .deps/apl-Quad_RE.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Quad_XML.o -MD -MP -MF .deps/apl-Quad_XML.Tpo -c -o apl-Quad_XML.o `test -f 'Quad_XML.cc' || echo './'`Quad_XML.cc
+mv -f .deps/apl-Quad_RVAL.Tpo .deps/apl-Quad_RVAL.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-RealCell.o -MD -MP -MF .deps/apl-RealCell.Tpo -c -o apl-RealCell.o `test -f 'RealCell.cc' || echo './'`RealCell.cc
+mv -f .deps/apl-Quad_WA.Tpo .deps/apl-Quad_WA.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-sbrk.o -MD -MP -MF .deps/apl-sbrk.Tpo -c -o apl-sbrk.o `test -f 'sbrk.cc' || echo './'`sbrk.cc
+mv -f .deps/apl-sbrk.Tpo .deps/apl-sbrk.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Shape.o -MD -MP -MF .deps/apl-Shape.Tpo -c -o apl-Shape.o `test -f 'Shape.cc' || echo './'`Shape.cc
+mv -f .deps/apl-Quad_PLOT.Tpo .deps/apl-Quad_PLOT.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-ScalarFunction.o -MD -MP -MF .deps/apl-ScalarFunction.Tpo -c -o apl-ScalarFunction.o `test -f 'ScalarFunction.cc' || echo './'`ScalarFunction.cc
+mv -f .deps/apl-Quad_SVx.Tpo .deps/apl-Quad_SVx.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Security.o -MD -MP -MF .deps/apl-Security.Tpo -c -o apl-Security.o `test -f 'Security.cc' || echo './'`Security.cc
+mv -f .deps/apl-Quad_SQL.Tpo .deps/apl-Quad_SQL.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-StateIndicator.o -MD -MP -MF .deps/apl-StateIndicator.Tpo -c -o apl-StateIndicator.o `test -f 'StateIndicator.cc' || echo './'`StateIndicator.cc
+mv -f .deps/apl-RealCell.Tpo .deps/apl-RealCell.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Svar_DB.o -MD -MP -MF .deps/apl-Svar_DB.Tpo -c -o apl-Svar_DB.o `test -f 'Svar_DB.cc' || echo './'`Svar_DB.cc
+mv -f .deps/apl-Quad_FIO.Tpo .deps/apl-Quad_FIO.Po
+mv -f .deps/apl-Shape.Tpo .deps/apl-Shape.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Svar_record.o -MD -MP -MF .deps/apl-Svar_record.Tpo -c -o apl-Svar_record.o `test -f 'Svar_record.cc' || echo './'`Svar_record.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Symbol.o -MD -MP -MF .deps/apl-Symbol.Tpo -c -o apl-Symbol.o `test -f 'Symbol.cc' || echo './'`Symbol.cc
+mv -f .deps/apl-Security.Tpo .deps/apl-Security.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-SymbolTable.o -MD -MP -MF .deps/apl-SymbolTable.Tpo -c -o apl-SymbolTable.o `test -f 'SymbolTable.cc' || echo './'`SymbolTable.cc
+mv -f .deps/apl-Quad_TF.Tpo .deps/apl-Quad_TF.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-SystemVariable.o -MD -MP -MF .deps/apl-SystemVariable.Tpo -c -o apl-SystemVariable.o `test -f 'SystemVariable.cc' || echo './'`SystemVariable.cc
+mv -f .deps/apl-Svar_record.Tpo .deps/apl-Svar_record.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-TabExpansion.o -MD -MP -MF .deps/apl-TabExpansion.Tpo -c -o apl-TabExpansion.o `test -f 'TabExpansion.cc' || echo './'`TabExpansion.cc
+mv -f .deps/apl-StateIndicator.Tpo .deps/apl-StateIndicator.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Thread_context.o -MD -MP -MF .deps/apl-Thread_context.Tpo -c -o apl-Thread_context.o `test -f 'Thread_context.cc' || echo './'`Thread_context.cc
+mv -f .deps/apl-Quad_XML.Tpo .deps/apl-Quad_XML.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Token.o -MD -MP -MF .deps/apl-Token.Tpo -c -o apl-Token.o `test -f 'Token.cc' || echo './'`Token.cc
+mv -f .deps/apl-Thread_context.Tpo .deps/apl-Thread_context.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Token_string.o -MD -MP -MF .deps/apl-Token_string.Tpo -c -o apl-Token_string.o `test -f 'Token_string.cc' || echo './'`Token_string.cc
+mv -f .deps/apl-SymbolTable.Tpo .deps/apl-SymbolTable.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Tokenizer.o -MD -MP -MF .deps/apl-Tokenizer.Tpo -c -o apl-Tokenizer.o `test -f 'Tokenizer.cc' || echo './'`Tokenizer.cc
+mv -f .deps/apl-ScalarFunction.Tpo .deps/apl-ScalarFunction.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UCS_string.o -MD -MP -MF .deps/apl-UCS_string.Tpo -c -o apl-UCS_string.o `test -f 'UCS_string.cc' || echo './'`UCS_string.cc
+mv -f .deps/apl-Svar_DB.Tpo .deps/apl-Svar_DB.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UCS_string_vector.o -MD -MP -MF .deps/apl-UCS_string_vector.Tpo -c -o apl-UCS_string_vector.o `test -f 'UCS_string_vector.cc' || echo './'`UCS_string_vector.cc
+mv -f .deps/apl-Token_string.Tpo .deps/apl-Token_string.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UserFunction.o -MD -MP -MF .deps/apl-UserFunction.Tpo -c -o apl-UserFunction.o `test -f 'UserFunction.cc' || echo './'`UserFunction.cc
+mv -f .deps/apl-Symbol.Tpo .deps/apl-Symbol.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UserFunction_header.o -MD -MP -MF .deps/apl-UserFunction_header.Tpo -c -o apl-UserFunction_header.o `test -f 'UserFunction_header.cc' || echo './'`UserFunction_header.cc
+mv -f .deps/apl-SystemVariable.Tpo .deps/apl-SystemVariable.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UserPreferences.o -MD -MP -MF .deps/apl-UserPreferences.Tpo -c -o apl-UserPreferences.o `test -f 'UserPreferences.cc' || echo './'`UserPreferences.cc
+mv -f .deps/apl-Tokenizer.Tpo .deps/apl-Tokenizer.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-UTF8_string.o -MD -MP -MF .deps/apl-UTF8_string.Tpo -c -o apl-UTF8_string.o `test -f 'UTF8_string.cc' || echo './'`UTF8_string.cc
+mv -f .deps/apl-UCS_string_vector.Tpo .deps/apl-UCS_string_vector.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Value.o -MD -MP -MF .deps/apl-Value.Tpo -c -o apl-Value.o `test -f 'Value.cc' || echo './'`Value.cc
+mv -f .deps/apl-Token.Tpo .deps/apl-Token.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-ValueHistory.o -MD -MP -MF .deps/apl-ValueHistory.Tpo -c -o apl-ValueHistory.o `test -f 'ValueHistory.cc' || echo './'`ValueHistory.cc
+mv -f .deps/apl-TabExpansion.Tpo .deps/apl-TabExpansion.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-Workspace.o -MD -MP -MF .deps/apl-Workspace.Tpo -c -o apl-Workspace.o `test -f 'Workspace.cc' || echo './'`Workspace.cc
+mv -f .deps/apl-UserFunction_header.Tpo .deps/apl-UserFunction_header.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -MT apl-static_Objects.o -MD -MP -MF .deps/apl-static_Objects.Tpo -c -o apl-static_Objects.o `test -f 'static_Objects.cc' || echo './'`static_Objects.cc
+mv -f .deps/apl-ValueHistory.Tpo .deps/apl-ValueHistory.Po
+mv -f .deps/apl-UCS_string.Tpo .deps/apl-UCS_string.Po
+mv -f .deps/apl-UTF8_string.Tpo .deps/apl-UTF8_string.Po
+mv -f .deps/apl-UserFunction.Tpo .deps/apl-UserFunction.Po
+mv -f .deps/apl-UserPreferences.Tpo .deps/apl-UserPreferences.Po
+mv -f .deps/apl-static_Objects.Tpo .deps/apl-static_Objects.Po
+mv -f .deps/apl-Value.Tpo .deps/apl-Value.Po
+mv -f .deps/apl-Workspace.Tpo .deps/apl-Workspace.Po
+/bin/bash ../libtool  --tag=CXX   --mode=link g++ -Wall  -I sql -I /home/Ace/src/apl-2.0          -g -O2 -I /home/Ace/src/apl-2.0 -L/usr/local/lib -export-dynamic     -o apl apl-main.o apl-Plot_ascii.o   apl-Archive.o apl-Assert.o apl-Avec.o apl-Backtrace.o apl-Bif_F12_COMMA.o apl-Bif_F12_DOMINO.o apl-Bif_F12_INDEX_OF.o apl-Bif_F12_INTERVAL_INDEX.o apl-Bif_F12_FORMAT.o apl-Bif_F12_PARTITION_PICK.o apl-Bif_F12_SORT.o apl-Bif_F12_TAKE_DROP.o apl-Bif_OPER1_COMMUTE.o apl-Bif_OPER1_EACH.o apl-Bif_OPER2_POWER.o apl-Bif_OPER2_INNER.o apl-Bif_OPER2_OUTER.o apl-Bif_OPER2_RANK.o apl-Bif_OPER1_REDUCE.o apl-Bif_OPER1_SCAN.o apl-CDR.o apl-Cell.o apl-Cmd_KEYB.o apl-Cmd_LIB.o apl-Cmd_IN.o apl-Doxy.o apl-CharCell.o apl-Command.o apl-Common.o apl-ComplexCell.o apl-DerivedFunction.o apl-DiffOut.o apl-DynamicObject.o apl-Error.o apl-Executable.o apl-FloatCell.o apl-Function.o apl-Id.o apl-IndexExpr.o apl-IndexIterator.o apl-InputFile.o apl-IntCell.o apl-IO_Files.o apl-LApack.o apl-LibPaths.o apl-LineInput.o apl-Logging.o apl-LvalCell.o apl-Malloc_hooks.o apl-Nabla.o apl-Macro.o apl-Missing_Libraries.o apl-NamedObject.o apl-NativeFunction.o apl-NumericCell.o apl-Output.o apl-Parallel.o apl-Parser.o apl-Performance.o apl-PointerCell.o apl-Prefix.o apl-Plot_line_properties.o apl-Plot_data.o apl-Plot_window_properties.o apl-PrimitiveFunction.o apl-PrintBuffer.o apl-Polynomial.o apl-PythonPipe.o apl-QR_factorization_GSL.o apl-QuadFunction.o apl-ProcessorID.o apl-Quad_CC.o apl-Quad_CR.o apl-Quad_DLX.o apl-Quad_FFT.o apl-Quad_FIO.o apl-Quad_FX.o apl-Quad_GTK.o apl-Quad_JSON.o apl-Quad_MAP.o apl-Quad_MX.o apl-Quad_PLOT.o apl-Quad_PNG.o apl-Quad_RE.o apl-Quad_RL.o apl-Quad_RVAL.o apl-Quad_SQL.o apl-Quad_SVx.o apl-Quad_TF.o apl-Quad_WA.o apl-Quad_XML.o apl-RealCell.o apl-sbrk.o apl-Shape.o apl-ScalarFunction.o apl-Security.o apl-StateIndicator.o apl-Svar_DB.o apl-Svar_record.o apl-Symbol.o apl-SymbolTable.o apl-SystemVariable.o apl-TabExpansion.o apl-Thread_context.o apl-Token.o apl-Token_string.o apl-Tokenizer.o apl-UCS_string.o apl-UCS_string_vector.o apl-UserFunction.o apl-UserFunction_header.o apl-UserPreferences.o apl-UTF8_string.o apl-Value.o apl-ValueHistory.o apl-Workspace.o apl-static_Objects.o     -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -Wall -I sql -I /home/Ace/src/apl-2.0 -g -O2 -I /home/Ace/src/apl-2.0 -o apl apl-main.o apl-Plot_ascii.o apl-Archive.o apl-Assert.o apl-Avec.o apl-Backtrace.o apl-Bif_F12_COMMA.o apl-Bif_F12_DOMINO.o apl-Bif_F12_INDEX_OF.o apl-Bif_F12_INTERVAL_INDEX.o apl-Bif_F12_FORMAT.o apl-Bif_F12_PARTITION_PICK.o apl-Bif_F12_SORT.o apl-Bif_F12_TAKE_DROP.o apl-Bif_OPER1_COMMUTE.o apl-Bif_OPER1_EACH.o apl-Bif_OPER2_POWER.o apl-Bif_OPER2_INNER.o apl-Bif_OPER2_OUTER.o apl-Bif_OPER2_RANK.o apl-Bif_OPER1_REDUCE.o apl-Bif_OPER1_SCAN.o apl-CDR.o apl-Cell.o apl-Cmd_KEYB.o apl-Cmd_LIB.o apl-Cmd_IN.o apl-Doxy.o apl-CharCell.o apl-Command.o apl-Common.o apl-ComplexCell.o apl-DerivedFunction.o apl-DiffOut.o apl-DynamicObject.o apl-Error.o apl-Executable.o apl-FloatCell.o apl-Function.o apl-Id.o apl-IndexExpr.o apl-IndexIterator.o apl-InputFile.o apl-IntCell.o apl-IO_Files.o apl-LApack.o apl-LibPaths.o apl-LineInput.o apl-Logging.o apl-LvalCell.o apl-Malloc_hooks.o apl-Nabla.o apl-Macro.o apl-Missing_Libraries.o apl-NamedObject.o apl-NativeFunction.o apl-NumericCell.o apl-Output.o apl-Parallel.o apl-Parser.o apl-Performance.o apl-PointerCell.o apl-Prefix.o apl-Plot_line_properties.o apl-Plot_data.o apl-Plot_window_properties.o apl-PrimitiveFunction.o apl-PrintBuffer.o apl-Polynomial.o apl-PythonPipe.o apl-QR_factorization_GSL.o apl-QuadFunction.o apl-ProcessorID.o apl-Quad_CC.o apl-Quad_CR.o apl-Quad_DLX.o apl-Quad_FFT.o apl-Quad_FIO.o apl-Quad_FX.o apl-Quad_GTK.o apl-Quad_JSON.o apl-Quad_MAP.o apl-Quad_MX.o apl-Quad_PLOT.o apl-Quad_PNG.o apl-Quad_RE.o apl-Quad_RL.o apl-Quad_RVAL.o apl-Quad_SQL.o apl-Quad_SVx.o apl-Quad_TF.o apl-Quad_WA.o apl-Quad_XML.o apl-RealCell.o apl-sbrk.o apl-Shape.o apl-ScalarFunction.o apl-Security.o apl-StateIndicator.o apl-Svar_DB.o apl-Svar_record.o apl-Symbol.o apl-SymbolTable.o apl-SystemVariable.o apl-TabExpansion.o apl-Thread_context.o apl-Token.o apl-Token_string.o apl-Tokenizer.o apl-UCS_string.o apl-UCS_string_vector.o apl-UserFunction.o apl-UserFunction_header.o apl-UserPreferences.o apl-UTF8_string.o apl-Value.o apl-ValueHistory.o apl-Workspace.o apl-static_Objects.o -Wl,--export-dynamic  -L/usr/local/lib -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src'
+Making all in support-files
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files'
+Making all in Bill_Daly_Ubuntu
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+Making all in Dyalog-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+Making all in Dirk
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+Making all in Juergen-Mint-19
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+Making all in Juergen-Mint-21
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+Making all in old-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+Making all in OS-X-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+Making all in Unicomp-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+Making all in WASD-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+Making all in 105-key-International-Keyboard
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files'
+Making all in tools
+make[2]: Entering directory '/home/Ace/src/apl-2.0/tools'
+depbase=`echo APL_keyboard.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT APL_keyboard.o -MD -MP -MF $depbase.Tpo -c -o APL_keyboard.o APL_keyboard.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo APL_keyboard_learn.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT APL_keyboard_learn.o -MD -MP -MF $depbase.Tpo -c -o APL_keyboard_learn.o APL_keyboard_learn.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo APL_keyboard_show.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT APL_keyboard_show.o -MD -MP -MF $depbase.Tpo -c -o APL_keyboard_show.o APL_keyboard_show.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo apl2html.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT apl2html.o -MD -MP -MF $depbase.Tpo -c -o apl2html.o apl2html.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo check_command_def.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT check_command_def.o -MD -MP -MF $depbase.Tpo -c -o check_command_def.o check_command_def.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter_apl_lines.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT filter_apl_lines.o -MD -MP -MF $depbase.Tpo -c -o filter_apl_lines.o filter_apl_lines.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter_apl_lines2.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT filter_apl_lines2.o -MD -MP -MF $depbase.Tpo -c -o filter_apl_lines2.o filter_apl_lines2.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo lines.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT lines.o -MD -MP -MF $depbase.Tpo -c -o lines.o lines.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ncurses_emul.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT ncurses_emul.o -MD -MP -MF $depbase.Tpo -c -o ncurses_emul.o ncurses_emul.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo phrase_gen.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -I /home/Ace/src/apl-2.0 -MT phrase_gen.o -MD -MP -MF $depbase.Tpo -c -o phrase_gen.o phrase_gen.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sockconst.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sockconst.o -MD -MP -MF $depbase.Tpo -c -o sockconst.o sockconst.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo TLV_server.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT TLV_server.o -MD -MP -MF $depbase.Tpo -c -o TLV_server.o TLV_server.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o APL_keyboard APL_keyboard.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o APL_keyboard_learn APL_keyboard_learn.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o APL_keyboard_learn APL_keyboard_learn.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o APL_keyboard APL_keyboard.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o APL_keyboard_show APL_keyboard_show.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o lines lines.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2   -o sockconst sockconst.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o APL_keyboard_show APL_keyboard_show.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o lines lines.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+/bin/bash ../libtool  --tag=CC   --mode=link gcc  -g -O2   -o TLV_server TLV_server.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o check_command_def check_command_def.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o filter_apl_lines2 filter_apl_lines2.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: gcc -g -O2 -o sockconst sockconst.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o apl2html apl2html.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o filter_apl_lines filter_apl_lines.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: gcc -g -O2 -o TLV_server TLV_server.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o check_command_def check_command_def.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o filter_apl_lines2 filter_apl_lines2.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o apl2html apl2html.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o filter_apl_lines filter_apl_lines.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o ncurses_emul ncurses_emul.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o ncurses_emul ncurses_emul.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -g -O2 -I /home/Ace/src/apl-2.0   -o phrase_gen phrase_gen.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo 
+libtool: link: g++ -g -O2 -I /home/Ace/src/apl-2.0 -o phrase_gen phrase_gen.o  -lc -ldl -lm -lncurses -lcurses -lnsl -lpthread -ltinfo
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/tools'
+Making all in websock
+make[2]: Entering directory '/home/Ace/src/apl-2.0/websock'
+Making all in client
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock/client'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock/client'
+Making all in server
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock/server'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock/server'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/websock'
+make[2]: Entering directory '/home/Ace/src/apl-2.0'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0'
+Making install in workspaces
+make[1]: Entering directory '/home/Ace/src/apl-2.0/workspaces'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/workspaces'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/workspaces'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/workspaces'
+Making install in wslib3
+make[1]: Entering directory '/home/Ace/src/apl-2.0/wslib3'
+Making install in DALY
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib3/DALY'
+ /usr/bin/install -c -m 644 README.md date.apl fin.apl fmt.apl lex.apl seq.apl stack.apl stat.apl xml.apl '/home/Ace/gnuapl/lib/apl/wslib3/DALY'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib3/DALY'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib3'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib3'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib3'
+ /usr/bin/install -c -m 644 meta.apl INVARIANTS.apl '/home/Ace/gnuapl/lib/apl/wslib3'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib3'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib3'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/wslib3'
+Making install in wslib4
+make[1]: Entering directory '/home/Ace/src/apl-2.0/wslib4'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib4'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib4'
+ /usr/bin/install -c -m 644 dummy.apl '/home/Ace/gnuapl/lib/apl/wslib4'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib4'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/wslib4'
+Making install in wslib5
+make[1]: Entering directory '/home/Ace/src/apl-2.0/wslib5'
+Making install in APLComponentFiles
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib5/APLComponentFiles'
+ /usr/bin/install -c -m 644 AUTHORS LAST_GIT_PULL CF_README.txt LICENSE README_FIRST.txt SQL_README.txt ComponentFiles.apl README.md '/home/Ace/gnuapl/lib/apl/wslib5/APLComponentFiles'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/APLComponentFiles'
+Making install in DALY
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib5/DALY'
+ /usr/bin/install -c -m 644 README.md aparse.apl assert.apl cfg.apl cl.apl dom.apl export.apl fin.apl find_test_data.apl from-ods.apl import.apl lpr.apl parse_json.apl pref.apl prompt.apl pw.apl utf8.apl utl.apl wblg.apl wsinit.apl '/home/Ace/gnuapl/lib/apl/wslib5/DALY'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/DALY'
+Making install in iso-apl-cf
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib5/iso-apl-cf'
+ /usr/bin/install -c -m 644 AUTHORS LAST_GIT_PULL README.md _control_.apl _metadata_ iso_cf.apl perf.apl test.apl '/home/Ace/gnuapl/lib/apl/wslib5/iso-apl-cf'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib5/iso-apl-cf'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/wslib5'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/wslib5'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/wslib5'
+ /usr/bin/install -c -m 644 HTML.apl ASSERT.apl FILE_IO.apl FILE_IO1.apl ISO-13751.apl SQL.apl '/home/Ace/gnuapl/lib/apl/wslib5'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/wslib5'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/wslib5'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/wslib5'
+Making install in build
+make[1]: Entering directory '/home/Ace/src/apl-2.0/build'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/build'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/build'
+Making install in doc
+make[1]: Entering directory '/home/Ace/src/apl-2.0/doc'
+Making install in DALY
+make[2]: Entering directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl/doc/DALY'
+ /usr/bin/install -c -m 644 apl_kbd.texi apl-library.info apl-library.texi apl-pkg-mgr.texi arg_parser.texi assert.texi cfg.texi cl.texi date.texi dom.texi export.texi fdl-1.3.texi finance.texi fmt.texi html.texi import.texi lex1.texi lex.texi lpr.texi '/home/Ace/gnuapl/lib/apl/doc/DALY'
+ /usr/bin/mkdir -p /home/Ace/gnuapl/share/info
+ /usr/bin/install -c -m 644 ./apl-library.info   /home/Ace/gnuapl/share/info
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/doc/DALY'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/doc'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 apl.1 apl.texi apl.info apl-info.css apl.html libapl.texi libapl.info PLOT_circle.png PLOT_zigzag.png MX_distributions.png libapl.html '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/mkdir -p /home/Ace/gnuapl/share/info
+ /usr/bin/install -c -m 644 ./apl.info  ./libapl.info /home/Ace/gnuapl/share/info
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/man/man1'
+ /usr/bin/install -c -m 644 apl.1 '/home/Ace/gnuapl/share/man/man1'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/doc'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/doc'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/doc'
+Making install in erlang
+make[1]: Entering directory '/home/Ace/src/apl-2.0/erlang'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/erlang'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/erlang'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/erlang'
+Making install in gnu-apl.d
+make[1]: Entering directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/etc/gnu-apl.d'
+ /usr/bin/install -c -m 644 preferences keyboard1.txt parallel_thresholds '/home/Ace/gnuapl/etc/gnu-apl.d'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/gnu-apl.d'
+Making install in HOWTOs
+make[1]: Entering directory '/home/Ace/src/apl-2.0/HOWTOs'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/HOWTOs'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 APL-Communication-Cookbook.html Parallel-APL.html Quad-GTK.html GNU-APL-Memory-Management.html GNU-APL-Troubleshooting.html GNU-APL-Designers-Guide.html GNU-APL-Performance.html LApack-primer.html GNU-APL-Windows-11.html APL-Communication-Cookbook.asciidoc Parallel-APL.asciidoc Quad-GTK.asciidoc GNU-APL-Memory-Management.asciidoc GNU-APL-Troubleshooting.asciidoc GNU-APL-Designers-Guide.asciidoc GNU-APL-Performance.asciidoc LApack-primer.asciidoc GNU-APL-Windows-11.asciidoc APL-on-Macintosh.pdf Parallel-APL.pdf glade-0.png glade-1.png glade-2.png glade-3.png glade-4.png glade-5.png glade-6.png glade-7.png glade-8.png glade-9.png glade-10.png glade-11.png glade-12.png APL1.png APL2.png APL3.png APL4.png APL5.png '/home/Ace/gnuapl/share/doc/apl'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/HOWTOs'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/HOWTOs'
+Making install in src
+make[1]: Entering directory '/home/Ace/src/apl-2.0/src'
+Making install in native
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src/native'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/native'
+make[3]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   lib_file_io.la lib_template_F0.la lib_template_F12.la lib_template_OP1.la lib_template_OP2.la '/home/Ace/gnuapl/lib/apl'
+libtool: install: /usr/bin/install -c .libs/lib_file_io.so /home/Ace/gnuapl/lib/apl/lib_file_io.so
+libtool: install: /usr/bin/install -c .libs/lib_file_io.lai /home/Ace/gnuapl/lib/apl/lib_file_io.la
+libtool: install: /usr/bin/install -c .libs/lib_template_F0.so /home/Ace/gnuapl/lib/apl/lib_template_F0.so
+libtool: install: /usr/bin/install -c .libs/lib_template_F0.lai /home/Ace/gnuapl/lib/apl/lib_template_F0.la
+libtool: install: /usr/bin/install -c .libs/lib_template_F12.so /home/Ace/gnuapl/lib/apl/lib_template_F12.so
+libtool: install: /usr/bin/install -c .libs/lib_template_F12.lai /home/Ace/gnuapl/lib/apl/lib_template_F12.la
+libtool: install: /usr/bin/install -c .libs/lib_template_OP1.so /home/Ace/gnuapl/lib/apl/lib_template_OP1.so
+libtool: install: /usr/bin/install -c .libs/lib_template_OP1.lai /home/Ace/gnuapl/lib/apl/lib_template_OP1.la
+libtool: install: /usr/bin/install -c .libs/lib_template_OP2.so /home/Ace/gnuapl/lib/apl/lib_template_OP2.so
+libtool: install: /usr/bin/install -c .libs/lib_template_OP2.lai /home/Ace/gnuapl/lib/apl/lib_template_OP2.la
+libtool: install: /usr/bin/install -c .libs/lib_file_io.a /home/Ace/gnuapl/lib/apl/lib_file_io.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_file_io.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_file_io.a
+libtool: install: /usr/bin/install -c .libs/lib_template_F0.a /home/Ace/gnuapl/lib/apl/lib_template_F0.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_template_F0.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_template_F0.a
+libtool: install: /usr/bin/install -c .libs/lib_template_F12.a /home/Ace/gnuapl/lib/apl/lib_template_F12.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_template_F12.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_template_F12.a
+libtool: install: /usr/bin/install -c .libs/lib_template_OP1.a /home/Ace/gnuapl/lib/apl/lib_template_OP1.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_template_OP1.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_template_OP1.a
+libtool: install: /usr/bin/install -c .libs/lib_template_OP2.a /home/Ace/gnuapl/lib/apl/lib_template_OP2.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_template_OP2.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_template_OP2.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin" ldconfig -n /home/Ace/gnuapl/lib/apl
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/Ace/gnuapl/lib/apl
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/native'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src/native'
+Making install in APs
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src/APs'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/APs'
+make[3]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/bin'
+  /bin/bash ../../libtool   --mode=install /usr/bin/install -c AP100 AP210 APserver '/home/Ace/gnuapl/bin'
+libtool: install: /usr/bin/install -c AP100 /home/Ace/gnuapl/bin/AP100
+libtool: install: /usr/bin/install -c AP210 /home/Ace/gnuapl/bin/AP210
+libtool: install: /usr/bin/install -c APserver /home/Ace/gnuapl/bin/APserver
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/APs'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src/APs'
+Making install in emacs_mode
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libemacs.la '/home/Ace/gnuapl/lib/apl'
+libtool: install: /usr/bin/install -c .libs/libemacs.so.0.0.0 /home/Ace/gnuapl/lib/apl/libemacs.so.0.0.0
+libtool: install: (cd /home/Ace/gnuapl/lib/apl && { ln -s -f libemacs.so.0.0.0 libemacs.so.0 || { rm -f libemacs.so.0 && ln -s libemacs.so.0.0.0 libemacs.so.0; }; })
+libtool: install: (cd /home/Ace/gnuapl/lib/apl && { ln -s -f libemacs.so.0.0.0 libemacs.so || { rm -f libemacs.so && ln -s libemacs.so.0.0.0 libemacs.so; }; })
+libtool: install: /usr/bin/install -c .libs/libemacs.lai /home/Ace/gnuapl/lib/apl/libemacs.la
+libtool: install: /usr/bin/install -c .libs/libemacs.a /home/Ace/gnuapl/lib/apl/libemacs.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/libemacs.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/libemacs.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin" ldconfig -n /home/Ace/gnuapl/lib/apl
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/Ace/gnuapl/lib/apl
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src/emacs_mode'
+Making install in sql
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src/sql'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/sql'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/lib/apl'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   lib_sql.la '/home/Ace/gnuapl/lib/apl'
+libtool: install: /usr/bin/install -c .libs/lib_sql.so.0.0.0 /home/Ace/gnuapl/lib/apl/lib_sql.so.0.0.0
+libtool: install: (cd /home/Ace/gnuapl/lib/apl && { ln -s -f lib_sql.so.0.0.0 lib_sql.so.0 || { rm -f lib_sql.so.0 && ln -s lib_sql.so.0.0.0 lib_sql.so.0; }; })
+libtool: install: (cd /home/Ace/gnuapl/lib/apl && { ln -s -f lib_sql.so.0.0.0 lib_sql.so || { rm -f lib_sql.so && ln -s lib_sql.so.0.0.0 lib_sql.so; }; })
+libtool: install: /usr/bin/install -c .libs/lib_sql.lai /home/Ace/gnuapl/lib/apl/lib_sql.la
+libtool: install: /usr/bin/install -c .libs/lib_sql.a /home/Ace/gnuapl/lib/apl/lib_sql.a
+libtool: install: chmod 644 /home/Ace/gnuapl/lib/apl/lib_sql.a
+libtool: install: ranlib /home/Ace/gnuapl/lib/apl/lib_sql.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin" ldconfig -n /home/Ace/gnuapl/lib/apl
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/Ace/gnuapl/lib/apl
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 SQL.apl '/home/Ace/gnuapl/share/doc/apl'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/sql'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src/sql'
+Making install in workspaces
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src/workspaces'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/src'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/src'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c apl '/home/Ace/gnuapl/bin'
+libtool: install: /usr/bin/install -c apl /home/Ace/gnuapl/bin/apl
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/bin'
+ /usr/bin/install -c integral.py '/home/Ace/gnuapl/bin'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/src'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/src'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/src'
+Making install in support-files
+make[1]: Entering directory '/home/Ace/src/apl-2.0/support-files'
+Making install in Bill_Daly_Ubuntu
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Bill_Daly_Ubuntu'
+Making install in Dyalog-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dyalog-Keyboard'
+Making install in Dirk
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Dirk'
+Making install in Juergen-Mint-19
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-19'
+Making install in Juergen-Mint-21
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Juergen-Mint-21'
+Making install in old-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/old-Keyboard'
+Making install in OS-X-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/OS-X-Keyboard'
+Making install in Unicomp-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/Unicomp-Keyboard'
+Making install in WASD-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/WASD-Keyboard'
+Making install in 105-key-International-Keyboard
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files/105-key-International-Keyboard'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/support-files'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/support-files'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/support-files'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/support-files'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/support-files'
+Making install in tools
+make[1]: Entering directory '/home/Ace/src/apl-2.0/tools'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/tools'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/tools'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/tools'
+Making install in websock
+make[1]: Entering directory '/home/Ace/src/apl-2.0/websock'
+Making install in client
+make[2]: Entering directory '/home/Ace/src/apl-2.0/websock/client'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock/client'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 apl_js.html APL_keyboard.html APL_keyboard2.html '/home/Ace/gnuapl/share/doc/apl'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock/client'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/websock/client'
+Making install in server
+make[2]: Entering directory '/home/Ace/src/apl-2.0/websock/server'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock/server'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 apl_js.apache2 wsock.js '/home/Ace/gnuapl/share/doc/apl'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock/server'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/websock/server'
+make[2]: Entering directory '/home/Ace/src/apl-2.0/websock'
+make[3]: Entering directory '/home/Ace/src/apl-2.0/websock'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 README '/home/Ace/gnuapl/share/doc/apl'
+make[3]: Leaving directory '/home/Ace/src/apl-2.0/websock'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0/websock'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0/websock'
+make[1]: Entering directory '/home/Ace/src/apl-2.0'
+make[2]: Entering directory '/home/Ace/src/apl-2.0'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/etc'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/etc/gnu-apl.d'
+ /usr/bin/install -c -m 644  gnu-apl.d/preferences '/home/Ace/gnuapl/etc/gnu-apl.d'
+ /usr/bin/mkdir -p '/home/Ace/gnuapl/share/doc/apl'
+ /usr/bin/install -c -m 644 README README-1-prerequisites README-2-configure README-3-keyboard README-4-compliance README-5-WINDOWS README-6-porting README-7-more-info README-8-parallel README-9-post-installation README-10-python README-11-bogus-compiler-warnings README-12-vpath-builds README-13-build-pitfalls '/home/Ace/gnuapl/share/doc/apl'
+make[2]: Leaving directory '/home/Ace/src/apl-2.0'
+make[1]: Leaving directory '/home/Ace/src/apl-2.0'
+APLDONE

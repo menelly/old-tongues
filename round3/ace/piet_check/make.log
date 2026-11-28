@@ -1,0 +1,9 @@
+gcc -g -O2    -Wall -DHAVE_CONFIG_H   -c npiet.c
+npiet.c: In function ‘piet_step’:
+npiet.c:2273:17: warning: variable ‘pre_ypos’ set but not used [-Wunused-but-set-variable]
+ 2273 |   int pre_xpos, pre_ypos;
+      |                 ^~~~~~~~
+npiet.c:2273:7: warning: variable ‘pre_xpos’ set but not used [-Wunused-but-set-variable]
+ 2273 |   int pre_xpos, pre_ypos;
+      |       ^~~~~~~~
+gcc -g  -o npiet npiet.o -lz -lm 

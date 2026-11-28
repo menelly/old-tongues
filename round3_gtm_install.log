@@ -1,0 +1,68 @@
+[sudo] password for thereny: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gyp libc-ares2 libjs-events libjs-highlight.js libjs-inherits
+  libjs-is-typedarray libjs-psl libjs-source-map libjs-sprintf-js
+  libjs-typedarray-to-buffer libssl-dev libuv1-dev libwpe-1.0-1
+  libwpebackend-fdo-1.0-1 node-abbrev node-ansi-regex node-ansi-styles
+  node-ansistyles node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+  node-osenv node-p-cancelable node-p-map node-path-is-absolute
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-pump node-quick-lru node-read node-readable-stream
+  node-resolve node-retry node-safe-buffer node-set-blocking node-signal-exit
+  node-slash node-slice-ansi node-source-map node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sprintf-js node-stealthy-require node-string-decoder
+  node-supports-color node-text-table node-time-stamp node-tmatch
+  node-typedarray-to-buffer node-universalify node-util-deprecate
+  node-validate-npm-package-license node-webidl-conversions node-whatwg-fetch
+  node-wrappy node-yallist nvidia-firmware-550-550.144.03
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  fis-gtm-6.3-014 icu-devtools libicu-dev
+Suggested packages:
+  icu-doc
+The following NEW packages will be installed:
+  fis-gtm fis-gtm-6.3-014 icu-devtools libicu-dev
+0 upgraded, 4 newly installed, 0 to remove and 95 not upgraded.
+Need to get 22.4 MB of archives.
+After this operation, 154 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 icu-devtools amd64 70.1-2 [197 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 libicu-dev amd64 70.1-2 [11.6 MB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 fis-gtm-6.3-014 amd64 6.3-014-3 [10.6 MB]
+Get:4 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 fis-gtm amd64 6.3-014-3 [19.8 kB]
+Fetched 22.4 MB in 1s (27.3 MB/s)
+Selecting previously unselected package icu-devtools.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 248976 files and directories currently installed.)
+Preparing to unpack .../icu-devtools_70.1-2_amd64.deb ...
+Unpacking icu-devtools (70.1-2) ...
+Selecting previously unselected package libicu-dev:amd64.
+Preparing to unpack .../libicu-dev_70.1-2_amd64.deb ...
+Unpacking libicu-dev:amd64 (70.1-2) ...
+Selecting previously unselected package fis-gtm-6.3-014:amd64.
+Preparing to unpack .../fis-gtm-6.3-014_6.3-014-3_amd64.deb ...
+Unpacking fis-gtm-6.3-014:amd64 (6.3-014-3) ...
+Selecting previously unselected package fis-gtm.
+Preparing to unpack .../fis-gtm_6.3-014-3_amd64.deb ...
+Unpacking fis-gtm (6.3-014-3) ...
+Setting up icu-devtools (70.1-2) ...
+Setting up libicu-dev:amd64 (70.1-2) ...
+Setting up fis-gtm-6.3-014:amd64 (6.3-014-3) ...
+Setting up fis-gtm (6.3-014-3) ...
+Processing triggers for man-db (2.10.2-1) ...
+exit=0
+/usr/lib/x86_64-linux-gnu/fis-gtm/V6.3-014_x86_64
